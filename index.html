@@ -2,48 +2,47 @@
 <html lang="ckb" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>کارت ROYAL | شاکاری داوەتنامەی دیجیتاڵی لە کوردستان</title>
     
     <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         /* ==========================================================================
-           1. ENTERPRISE LUXURY DESIGN SYSTEM & THEME ENGINE (10 THEMES)
+           1. ENTERPRISE LUXURY MOBILE-FIRST DESIGN SYSTEM
            ========================================================================== */
         :root {
-            --bg-dark: #02040a;
+            --bg-obsidian: #02040a;
             --bg-card: rgba(10, 16, 30, 0.88);
             --gold-light: #FFF4D0;
             --gold-primary: #D4AF37;
             --gold-dark: #8C6D1F;
             --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
-            --gold-glow: rgba(212, 175, 55, 0.45);
+            --gold-glow: rgba(212, 175, 55, 0.4);
             
-            /* Dynamic Theme Defaults */
-            --inv-bg: #030712;
-            --inv-card-bg: rgba(15, 23, 42, 0.8);
+            /* Dynamic Theme Variables */
+            --inv-bg: #02040a;
+            --inv-card-bg: rgba(15, 23, 42, 0.85);
             --inv-text: #F8FAFC;
             --inv-accent: #D4AF37;
             --inv-border: rgba(212, 175, 55, 0.35);
             --inv-font: 'Vazirmatn', sans-serif;
             --inv-ornament: radial-gradient(#D4AF37 2px, transparent 2px);
-            --inv-shadow: 0 30px 80px rgba(0, 0, 0, 0.9);
+            --inv-shadow: 0 25px 60px rgba(0, 0, 0, 0.95);
 
-            --radius-sm: 8px;
-            --radius-md: 16px;
-            --radius-lg: 28px;
-            --transition-smooth: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-sm: 10px;
+            --radius-md: 18px;
+            --radius-lg: 32px;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         /* ---------------- THEME MATRIX DEFINITIONS (10 THEMES) ---------------- */
-        /* Theme 1: Luxury Gold (زێڕینی کلاسیك) */
         [data-theme="tpl-gold"] {
-            --inv-bg: radial-gradient(circle at center, #111827 0%, #030712 100%);
-            --inv-card-bg: rgba(17, 24, 39, 0.88);
+            --inv-bg: radial-gradient(circle at center, #111827 0%, #02040a 100%);
+            --inv-card-bg: rgba(17, 24, 39, 0.9);
             --inv-text: #F8FAFC;
             --inv-accent: #D4AF37;
             --inv-border: rgba(212, 175, 55, 0.45);
@@ -51,10 +50,9 @@
             --inv-ornament: radial-gradient(#D4AF37 2px, transparent 2px);
         }
 
-        /* Theme 2: Velvet Black (مەخمەری ڕەش) */
         [data-theme="tpl-black"] {
             --inv-bg: #000000;
-            --inv-card-bg: rgba(18, 18, 18, 0.92);
+            --inv-card-bg: rgba(18, 18, 18, 0.95);
             --inv-text: #FFFFFF;
             --inv-accent: #E2E8F0;
             --inv-border: rgba(255, 255, 255, 0.25);
@@ -62,10 +60,9 @@
             --inv-ornament: radial-gradient(#ffffff 1.5px, transparent 1.5px);
         }
 
-        /* Theme 3: Kurdish Traditional (کەلەپووری کوردی) */
         [data-theme="tpl-kurdish"] {
             --inv-bg: linear-gradient(180deg, #2A0404 0%, #0D0101 100%);
-            --inv-card-bg: rgba(45, 6, 6, 0.88);
+            --inv-card-bg: rgba(45, 6, 6, 0.92);
             --inv-text: #FEF08A;
             --inv-accent: #FACC15;
             --inv-border: rgba(250, 204, 21, 0.5);
@@ -73,91 +70,90 @@
             --inv-ornament: repeating-linear-gradient(45deg, #facc15 0, #facc15 2px, transparent 0, transparent 10px);
         }
 
-        /* Theme 4: Rose Gold (ڕۆز گۆڵد) */
         [data-theme="tpl-rose"] {
             --inv-bg: linear-gradient(180deg, #1C0A12 0%, #080205 100%);
-            --inv-card-bg: rgba(35, 12, 22, 0.88);
+            --inv-card-bg: rgba(35, 12, 22, 0.92);
             --inv-text: #FCE7F3;
             --inv-accent: #F472B6;
-            --inv-border: rgba(244, 114, 182, 0.4);
+            --inv-border: rgba(244, 114, 182, 0.45);
             --inv-font: 'Vazirmatn', sans-serif;
             --inv-ornament: radial-gradient(#f472b6 2px, transparent 2px);
         }
 
-        /* Theme 5: Emerald Islamic (زومرودی ئیسلامی) */
         [data-theme="tpl-emerald"] {
             --inv-bg: linear-gradient(180deg, #022C22 0%, #01120D 100%);
-            --inv-card-bg: rgba(4, 55, 43, 0.88);
+            --inv-card-bg: rgba(4, 55, 43, 0.92);
             --inv-text: #ECFDF5;
             --inv-accent: #34D399;
-            --inv-border: rgba(52, 211, 153, 0.4);
+            --inv-border: rgba(52, 211, 153, 0.45);
             --inv-font: 'Amiri', serif;
             --inv-ornament: radial-gradient(#34d399 2px, transparent 2px);
         }
 
-        /* Theme 6: White Marble (مەڕمەڕی سپی) */
         [data-theme="tpl-white"] {
             --inv-bg: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%);
-            --inv-card-bg: rgba(255, 255, 255, 0.95);
+            --inv-card-bg: rgba(255, 255, 255, 0.96);
             --inv-text: #0F172A;
             --inv-accent: #B45309;
             --inv-border: rgba(180, 83, 9, 0.35);
-            --inv-font: 'Noto Naskh Arabic', serif;
+            --inv-font: 'Vazirmatn', sans-serif;
             --inv-ornament: radial-gradient(#b45309 1.5px, transparent 1.5px);
         }
 
-        /* Theme 7: Midnight Blue (شینی شاهانە) */
         [data-theme="tpl-blue"] {
             --inv-bg: linear-gradient(180deg, #0F172A 0%, #020617 100%);
-            --inv-card-bg: rgba(30, 41, 59, 0.88);
+            --inv-card-bg: rgba(30, 41, 59, 0.92);
             --inv-text: #E2E8F0;
             --inv-accent: #38BDF8;
-            --inv-border: rgba(56, 189, 248, 0.4);
+            --inv-border: rgba(56, 189, 248, 0.45);
             --inv-font: 'Vazirmatn', sans-serif;
             --inv-ornament: radial-gradient(#38bdf8 2px, transparent 2px);
         }
 
-        /* Theme 8: Golden Floral (گوڵزاری زێڕین) */
         [data-theme="tpl-floral"] {
             --inv-bg: linear-gradient(180deg, #1A120B 0%, #080503 100%);
-            --inv-card-bg: rgba(40, 26, 15, 0.88);
+            --inv-card-bg: rgba(40, 26, 15, 0.92);
             --inv-text: #FEF3C7;
             --inv-accent: #F59E0B;
-            --inv-border: rgba(245, 158, 11, 0.4);
+            --inv-border: rgba(245, 158, 11, 0.45);
             --inv-font: 'Amiri', serif;
             --inv-ornament: radial-gradient(#f59e0b 2px, transparent 2px);
         }
 
-        /* Theme 9: Minimal Luxury (سادەی مۆدێرن) */
         [data-theme="tpl-minimal"] {
             --inv-bg: #050505;
-            --inv-card-bg: rgba(20, 20, 20, 0.9);
+            --inv-card-bg: rgba(22, 22, 22, 0.95);
             --inv-text: #FFFFFF;
             --inv-accent: #A855F7;
-            --inv-border: rgba(168, 85, 247, 0.4);
+            --inv-border: rgba(168, 85, 247, 0.45);
             --inv-font: 'Vazirmatn', sans-serif;
             --inv-ornament: radial-gradient(#a855f7 2px, transparent 2px);
         }
 
-        /* Theme 10: Burgundy Velvet (عەنابی شاهانە) */
         [data-theme="tpl-burgundy"] {
             --inv-bg: linear-gradient(180deg, #4A0E17 0%, #150306 100%);
-            --inv-card-bg: rgba(60, 12, 20, 0.88);
+            --inv-card-bg: rgba(60, 12, 20, 0.92);
             --inv-text: #FEE2E2;
             --inv-accent: #F87171;
-            --inv-border: rgba(248, 113, 113, 0.4);
+            --inv-border: rgba(248, 113, 113, 0.45);
             --inv-font: 'Amiri', serif;
             --inv-ornament: radial-gradient(#f87171 2px, transparent 2px);
         }
 
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
         html {
             scroll-behavior: smooth;
             font-family: 'Vazirmatn', sans-serif;
-            background-color: var(--bg-dark);
+            background-color: var(--bg-obsidian);
             color: #fff;
             overflow-x: hidden;
+            height: 100%;
+        }
+
+        body {
+            min-height: 100dvh;
+            position: relative;
         }
 
         #bg-canvas {
@@ -166,16 +162,17 @@
         }
 
         .hidden { display: none !important; }
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 16px; }
 
-        /* General Buttons */
+        /* Mobile First Buttons & UI */
         .glass-card {
             background: var(--bg-card);
-            backdrop-filter: blur(25px);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(212, 175, 55, 0.25);
             border-radius: var(--radius-md);
-            padding: 32px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+            padding: 24px 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
             transition: var(--transition-smooth);
         }
 
@@ -183,8 +180,9 @@
             background: var(--gold-gradient);
             color: #020617;
             font-weight: 800;
-            padding: 14px 30px;
-            border-radius: 12px;
+            min-height: 50px;
+            padding: 12px 24px;
+            border-radius: var(--radius-sm);
             border: none;
             cursor: pointer;
             display: inline-flex;
@@ -196,19 +194,18 @@
             box-shadow: 0 0 25px var(--gold-glow);
             font-family: inherit;
             text-decoration: none;
+            width: 100%;
         }
 
-        .btn-gold:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 40px rgba(212, 175, 55, 0.7);
-        }
+        .btn-gold:active { transform: scale(0.98); }
 
         .btn-glass {
-            background: rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.08);
             color: var(--gold-light);
             border: 1px solid rgba(212, 175, 55, 0.3);
-            padding: 12px 24px;
-            border-radius: 12px;
+            min-height: 48px;
+            padding: 10px 20px;
+            border-radius: var(--radius-sm);
             cursor: pointer;
             font-family: inherit;
             font-size: 0.9rem;
@@ -218,35 +215,31 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+            width: 100%;
         }
 
-        .btn-glass:hover {
-            background: rgba(255, 255, 255, 0.14);
-            border-color: var(--gold-primary);
-            color: #fff;
-        }
+        .btn-glass:active { background: rgba(255, 255, 255, 0.16); }
 
         .btn-danger {
             background: rgba(239, 68, 68, 0.15);
             color: #f87171;
             border: 1px solid rgba(239, 68, 68, 0.3);
-            padding: 8px 16px;
-            border-radius: 8px;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
             cursor: pointer;
             font-family: inherit;
-            font-size: 0.85rem;
-            transition: var(--transition-smooth);
+            font-size: 0.8rem;
         }
-        .btn-danger:hover { background: #ef4444; color: #fff; }
 
-        /* Form Inputs & File Upload Custom Styling */
-        .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
-        .form-group label { font-size: 0.88rem; color: var(--gold-light); font-weight: 500; }
+        /* Form Controls optimized for Mobile Inputs */
+        .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; text-align: right; }
+        .form-group label { font-size: 0.85rem; color: var(--gold-light); font-weight: 600; }
         .form-control {
-            background: rgba(3, 7, 18, 0.9);
+            background: rgba(3, 7, 18, 0.95);
             border: 1px solid rgba(212, 175, 55, 0.25);
-            border-radius: 10px;
-            padding: 14px 18px;
+            border-radius: var(--radius-sm);
+            min-height: 48px;
+            padding: 12px 14px;
             color: #fff;
             font-family: inherit;
             font-size: 0.95rem;
@@ -254,251 +247,230 @@
             transition: var(--transition-smooth);
             width: 100%;
         }
-        .form-control:focus { border-color: var(--gold-primary); box-shadow: 0 0 20px var(--gold-glow); }
+        .form-control:focus { border-color: var(--gold-primary); box-shadow: 0 0 15px var(--gold-glow); }
 
-        .file-upload-wrapper {
+        .file-upload-box {
             position: relative;
             background: rgba(212, 175, 55, 0.05);
             border: 2px dashed rgba(212, 175, 55, 0.3);
-            border-radius: 12px;
-            padding: 16px;
+            border-radius: var(--radius-sm);
+            padding: 18px;
             text-align: center;
             cursor: pointer;
             transition: var(--transition-smooth);
         }
-        .file-upload-wrapper:hover {
-            background: rgba(212, 175, 55, 0.1);
-            border-color: var(--gold-primary);
-        }
-        .file-upload-wrapper input[type="file"] {
+        .file-upload-box input[type="file"] {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             opacity: 0; cursor: pointer;
         }
 
         /* ==========================================================================
-           2. 3D ENVELOPE & WAX SEAL ANIMATION STYLES (GUEST EXPERIENCE)
+           2. MOBILE-FIRST 3D WAX SEAL ENVELOPE (GUEST VIEW)
            ========================================================================== */
         .envelope-viewport {
-            min-height: 100vh;
+            min-height: 100dvh;
             display: flex; flex-direction: column;
             align-items: center; justify-content: center;
-            perspective: 1200px;
-            padding: 20px;
+            perspective: 1000px;
+            padding: 16px;
             background: radial-gradient(circle at center, #1a150e 0%, #02040a 100%);
         }
 
         .envelope-3d {
-            width: 100%; max-width: 440px; height: 300px;
+            width: 100%; max-width: 380px; height: 260px;
             position: relative;
             transform-style: preserve-3d;
             transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
         }
 
-        .envelope-3d:hover {
-            transform: scale(1.03) rotateY(4deg);
-        }
-
         .env-back-panel {
             position: absolute; width: 100%; height: 100%;
-            background: #1e1b18; border-radius: 18px;
-            box-shadow: 0 35px 70px rgba(0,0,0,0.9);
-            border: 2px solid var(--gold-primary);
+            background: #181512; border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.9);
+            border: 1.5px solid var(--gold-primary);
         }
 
         .env-flap-panel {
-            position: absolute; top: 0; left: 0; width: 100%; height: 150px;
-            background: linear-gradient(180deg, #2a241e 0%, #1e1b18 100%);
+            position: absolute; top: 0; left: 0; width: 100%; height: 130px;
+            background: linear-gradient(180deg, #28211a 0%, #181512 100%);
             clip-path: polygon(0 0, 100% 0, 50% 100%);
             transform-origin: top;
             transition: transform 0.8s ease-in-out;
             z-index: 4;
-            border-top: 2px solid var(--gold-primary);
+            border-top: 1.5px solid var(--gold-primary);
         }
 
         .env-pocket-panel {
-            position: absolute; bottom: 0; left: 0; width: 100%; height: 190px;
-            background: linear-gradient(0deg, #14110f 0%, #221c17 100%);
+            position: absolute; bottom: 0; left: 0; width: 100%; height: 160px;
+            background: linear-gradient(0deg, #100d0b 0%, #1d1714 100%);
             clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 50%, 0 0);
-            border-radius: 0 0 18px 18px;
+            border-radius: 0 0 16px 16px;
             z-index: 3;
-            border-bottom: 2px solid var(--gold-primary);
+            border-bottom: 1.5px solid var(--gold-primary);
         }
 
         .wax-seal-stamp {
-            position: absolute; top: 115px; left: 50%;
+            position: absolute; top: 100px; left: 50%;
             transform: translateX(-50%);
-            width: 75px; height: 75px;
+            width: 65px; height: 65px;
             background: radial-gradient(circle, #f59e0b 0%, #b45309 70%, #78350f 100%);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 2rem; color: #fff;
-            box-shadow: 0 0 30px rgba(245, 158, 11, 0.7), inset 0 0 10px rgba(0,0,0,0.6);
+            font-size: 1.8rem; color: #fff;
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.7), inset 0 0 8px rgba(0,0,0,0.6);
             z-index: 5;
             transition: transform 0.6s ease, opacity 0.6s ease;
             border: 2px solid #fef3c7;
         }
 
         .env-card-inside {
-            position: absolute; bottom: 15px; left: 50%;
+            position: absolute; bottom: 12px; left: 50%;
             transform: translateX(-50%);
-            width: 90%; height: 240px;
+            width: 92%; height: 210px;
             background: var(--gold-gradient);
-            border-radius: 12px; z-index: 2;
+            border-radius: 10px; z-index: 2;
             transition: transform 0.8s ease-in-out;
-            padding: 24px; color: #000;
+            padding: 20px; color: #000;
             text-align: center; font-weight: 800;
         }
 
-        /* Envelope Open Animation Trigger States */
-        .envelope-3d.open .env-flap-panel {
-            transform: rotateX(180deg);
-            z-index: 1;
-        }
-        .envelope-3d.open .wax-seal-stamp {
-            opacity: 0;
-            transform: translateX(-50%) scale(0.3);
-        }
-        .envelope-3d.open .env-card-inside {
-            transform: translateX(-50%) translateY(-200px);
-            z-index: 6;
-        }
+        /* Envelope Animation Triggered */
+        .envelope-3d.open .env-flap-panel { transform: rotateX(180deg); z-index: 1; }
+        .envelope-3d.open .wax-seal-stamp { opacity: 0; transform: translateX(-50%) scale(0.3); }
+        .envelope-3d.open .env-card-inside { transform: translateX(-50%) translateY(-170px); z-index: 6; }
 
         /* ==========================================================================
            3. MAIN PUBLIC GUEST INVITATION CARD
            ========================================================================== */
         .guest-invitation-card {
-            min-height: 100vh;
+            min-height: 100dvh;
             background: var(--inv-bg);
             color: var(--inv-text);
             font-family: var(--inv-font);
-            padding: 80px 20px;
+            padding: 40px 12px 80px;
             position: relative;
             transition: var(--transition-smooth);
         }
 
         .card-inner-frame {
-            max-width: 800px; margin: 0 auto;
+            max-width: 680px; margin: 0 auto;
             background: var(--inv-card-bg);
-            border: 2px solid var(--inv-border);
-            border-radius: var(--radius-lg);
-            padding: 60px 40px;
+            border: 1.5px solid var(--inv-border);
+            border-radius: var(--radius-md);
+            padding: 36px 18px;
             text-align: center;
             box-shadow: var(--inv-shadow);
             backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             position: relative;
         }
 
         .kurdish-ornament {
-            width: 100%; height: 28px;
+            width: 100%; height: 24px;
             background-image: var(--inv-ornament);
-            background-size: 14px 14px;
-            margin: 25px 0; opacity: 0.65;
+            background-size: 12px 12px;
+            margin: 20px 0; opacity: 0.65;
         }
 
         .card-names-title {
-            font-size: 3.8rem; font-weight: 900;
+            font-size: 2.8rem; font-weight: 900;
             color: var(--inv-accent);
-            margin: 20px 0; line-height: 1.25;
+            margin: 16px 0; line-height: 1.2;
         }
 
-        /* Rich Media Container */
-        .video-container {
-            width: 100%; border-radius: var(--radius-md);
+        .video-box-container {
+            width: 100%; border-radius: var(--radius-sm);
             overflow: hidden; border: 1px solid var(--inv-border);
-            margin: 30px 0; background: #000;
+            margin: 24px 0; background: #000;
         }
-        .video-container video { width: 100%; max-height: 420px; object-fit: cover; display: block; }
+        .video-box-container video { width: 100%; max-height: 360px; object-fit: cover; display: block; }
 
         .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 16px; margin: 30px 0;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 12px; margin: 24px 0;
         }
         .gallery-img {
-            width: 100%; height: 200px; object-fit: cover;
-            border-radius: 12px; border: 1px solid var(--inv-border);
-            transition: var(--transition-smooth);
+            width: 100%; height: 140px; object-fit: cover;
+            border-radius: 8px; border: 1px solid var(--inv-border);
         }
-        .gallery-img:hover { transform: scale(1.03); }
 
         /* Countdown */
         .countdown-grid {
-            display: flex; justify-content: center; gap: 18px; margin: 40px 0; flex-wrap: wrap;
+            display: flex; justify-content: center; gap: 10px; margin: 28px 0; flex-wrap: wrap;
         }
         .cd-box {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--inv-border);
-            border-radius: 14px; padding: 18px; min-width: 95px;
+            border-radius: 10px; padding: 12px 8px; min-width: 72px; flex: 1; max-width: 85px;
         }
-        .cd-val { font-size: 2.2rem; font-weight: 900; color: var(--inv-accent); }
-        .cd-lbl { font-size: 0.8rem; opacity: 0.8; margin-top: 4px; }
+        .cd-val { font-size: 1.6rem; font-weight: 900; color: var(--inv-accent); }
+        .cd-lbl { font-size: 0.75rem; opacity: 0.8; margin-top: 2px; }
 
-        /* Audio Toggle Floating Button */
+        /* Floating Audio Toggle Button */
         .audio-toggle-btn {
-            position: fixed; bottom: 30px; left: 30px;
-            width: 55px; height: 55px; border-radius: 50%;
+            position: fixed; bottom: 20px; left: 20px;
+            width: 48px; height: 48px; border-radius: 50%;
             background: var(--gold-gradient); color: #020617;
             border: none; cursor: pointer; z-index: 500;
             display: flex; align-items: center; justify-content: center;
-            font-size: 1.3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            font-size: 1.2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.8);
         }
 
-        /* Admin Workspace Responsive Builder Layout */
+        /* Admin Responsive Header & Layout */
         .admin-nav {
             background: rgba(2, 4, 10, 0.95);
             border-b: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 18px 0; position: sticky; top: 0; z-index: 200;
-            backdrop-filter: blur(20px);
+            padding: 14px 0; position: sticky; top: 0; z-index: 200;
+            backdrop-filter: blur(15px);
         }
-        .admin-flex { display: flex; align-items: center; justify-content: space-between; }
-        .admin-menu { display: flex; gap: 24px; list-style: none; }
-        .admin-menu a { color: #94a3b8; text-decoration: none; cursor: pointer; font-weight: 500; font-size: 0.95rem; }
-        .admin-menu a.active, .admin-menu a:hover { color: var(--gold-light); }
+        .admin-flex { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+        .admin-menu { display: flex; gap: 16px; list-style: none; overflow-x: auto; padding-bottom: 4px; }
+        .admin-menu a { color: #94a3b8; text-decoration: none; cursor: pointer; font-weight: 600; font-size: 0.88rem; whitespace: nowrap; }
+        .admin-menu a.active { color: var(--gold-light); border-bottom: 2px solid var(--gold-primary); }
 
         .builder-grid {
-            display: grid; grid-template-columns: 1fr 440px; gap: 32px; margin-top: 24px;
+            display: grid; grid-template-columns: 1fr 380px; gap: 24px; margin-top: 20px;
         }
         .phone-mockup-frame {
-            position: sticky; top: 100px;
-            width: 100%; height: 720px;
-            background: #000; border: 14px solid #1e293b;
-            border-radius: 44px; overflow-y: auto;
-            box-shadow: 0 30px 80px rgba(0,0,0,0.95);
+            position: sticky; top: 80px;
+            width: 100%; height: 680px;
+            background: #000; border: 10px solid #1e293b;
+            border-radius: 36px; overflow-y: auto;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
         }
-        .data-table { width: 100%; border-collapse: collapse; text-align: right; margin-top: 15px; }
-        .data-table th, .data-table td { padding: 16px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.9rem; }
-        .data-table th { color: var(--gold-light); background: rgba(255,255,255,0.02); font-weight: 600; }
+        .data-table-container { overflow-x: auto; }
+        .data-table { width: 100%; border-collapse: collapse; text-align: right; margin-top: 10px; min-width: 600px; }
+        .data-table th, .data-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.85rem; }
 
         @media (max-width: 992px) {
             .builder-grid { grid-template-columns: 1fr; }
             .phone-mockup-frame { display: none; }
-            .card-names-title { font-size: 2.6rem; }
-            .card-inner-frame { padding: 40px 20px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Dynamic Particle Background -->
+    <!-- Ambient Canvas Glow -->
     <canvas id="bg-canvas"></canvas>
 
     <!-- ==========================================================================
        VIEW 1: ADMIN LOGIN PAGE
        ========================================================================== -->
-    <section id="view-login" class="container" style="min-height: 100vh; display: flex; align-items: center; justify-content: center;">
-        <div class="glass-card" style="max-width: 440px; width: 100%; text-align: center;">
-            <div style="font-size: 3.8rem; margin-bottom: 12px;">👑</div>
-            <h1 style="font-size: 1.9rem; font-weight: 900; margin-bottom: 8px;">چوونەژوورەوەی بەڕێوەبەر</h1>
-            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 28px;">سیستەمی تایبەتی بەڕێوەبردنی کارتی داوەتنامەکان</p>
+    <section id="view-login" class="container" style="min-height: 100dvh; display: flex; align-items: center; justify-content: center;">
+        <div class="glass-card" style="max-width: 400px; width: 100%; text-align: center;">
+            <div style="font-size: 3.2rem; margin-bottom: 8px;">👑</div>
+            <h1 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 6px;">چوونەژوورەوەی بەڕێوەبەر</h1>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 24px;">سیستەمی تایبەتی بەڕێوەبردنی کارتی داوەتنامەکان</p>
             
             <form onsubmit="handleAdminLogin(event)">
                 <div class="form-group">
                     <label>پاسۆردی بەڕێوەبەر</label>
                     <input type="password" id="login-pass" class="form-control" required placeholder="پاسۆرد بنووسە...">
                 </div>
-                <button type="submit" class="btn-gold" style="width: 100%; margin-top: 10px;">چوونەژوورەوە</button>
+                <button type="submit" class="btn-gold" style="margin-top: 8px;">چوونەژوورەوە</button>
             </form>
-            <div id="login-err" style="color: #ef4444; font-size: 0.85rem; margin-top: 16px;" class="hidden">پاسۆرد هەڵەیە! (Default: admin123)</div>
+            <div id="login-err" style="color: #ef4444; font-size: 0.85rem; margin-top: 14px;" class="hidden">پاسۆرد هەڵەیە! (Default: admin123)</div>
         </div>
     </section>
 
@@ -508,71 +480,72 @@
     <section id="view-dashboard" class="hidden">
         <nav class="admin-nav">
             <div class="container admin-flex">
-                <div style="font-size: 1.4rem; font-weight: 900; display: flex; align-items: center; gap: 10px;">
+                <div style="font-size: 1.2rem; font-weight: 900; display: flex; align-items: center; gap: 8px;">
                     <span>👑</span>
                     <span style="background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">کارت ROYAL</span>
-                    <span style="font-size: 0.75rem; color: #94a3b8; font-weight: 400;">(v5.0 Ultra Luxury)</span>
                 </div>
                 <ul class="admin-menu">
                     <li><a onclick="switchAdminTab('dash-all')" id="nav-dash-all" class="active">سەرجەم کارتەکان</a></li>
                     <li><a onclick="switchAdminTab('dash-builder')" id="nav-dash-builder">دیزاینەر و دروستکردن</a></li>
-                    <li><a onclick="switchAdminTab('dash-rsvps')" id="nav-dash-rsvps">پەیامی میوانەکان (RSVP)</a></li>
+                    <li><a onclick="switchAdminTab('dash-rsvps')" id="nav-dash-rsvps">پەیامی میوانەکان</a></li>
                 </ul>
-                <button class="btn-glass" onclick="handleAdminLogout()">چوونەدەرەوە</button>
+                <button class="btn-glass" onclick="handleAdminLogout()" style="width: auto; min-height: 38px; padding: 6px 14px; font-size: 0.8rem;">چوونەدەرەوە</button>
             </div>
         </nav>
 
-        <div class="container" style="padding: 40px 0 80px;">
+        <div class="container" style="padding: 24px 0 60px;">
             
             <!-- TAB 1: ALL INVITATIONS LIST -->
             <div id="tab-dash-all">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; flex-wrap: wrap; gap: 16px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
                     <div>
-                        <h2 style="font-size: 1.9rem; font-weight: 900;">سەرجەم داوەتنامەکان</h2>
-                        <p style="color: #94a3b8; font-size: 0.9rem;">بەڕێوەبردن و داگرتنی بەستەر و کۆدی QR</p>
+                        <h2 style="font-size: 1.5rem; font-weight: 900;">سەرجەم داوەتنامەکان</h2>
+                        <p style="color: #94a3b8; font-size: 0.85rem;">بەڕێوەبردن و داگرتنی بەستەر و کۆدی QR</p>
                     </div>
-                    <button class="btn-gold" onclick="prepareNewInviteForm()">+ دروستکردنی داوەتنامەی نوێ</button>
+                    <button class="btn-gold" onclick="prepareNewInviteForm()" style="width: auto;">+ دروستکردنی کارتی نوێ</button>
                 </div>
 
                 <div class="glass-card">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>ناوی بۆنە</th>
-                                <th>کڕیار / داواکار</th>
-                                <th>دیزاین</th>
-                                <th>بەرواری بۆنە</th>
-                                <th>دۆخ</th>
-                                <th>کردارەکان (تایبەت بە ئەدمین)</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table-invites-body">
-                            <!-- Dynamic Rows -->
-                        </tbody>
-                    </table>
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ناوی بۆنە</th>
+                                    <th>کڕیار</th>
+                                    <th>دیزاین</th>
+                                    <th>بەروار</th>
+                                    <th>دۆخ</th>
+                                    <th>کردارەکان</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-invites-body">
+                                <!-- Dynamic Content -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
             <!-- TAB 2: VISUAL BUILDER & REALTIME SPLIT PREVIEW -->
             <div id="tab-dash-builder" class="hidden">
-                <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <h2 style="font-size: 1.9rem; font-weight: 900;" id="editor-heading">دیزاینەر و دروستکردنی کارت</h2>
-                    <span style="color: var(--gold-light); font-size: 0.9rem;">✨ گۆڕانکارییەکان ڕاستەوخۆ لەسەر مۆبایلەکە ببینە</span>
+                <div style="margin-bottom: 16px;">
+                    <h2 style="font-size: 1.5rem; font-weight: 900;" id="editor-heading">دیزاینەر و دروستکردنی کارت</h2>
+                    <p style="color: var(--gold-light); font-size: 0.85rem;">زانیارییەکان بنووسە و لە تەنیشتت بە ڕاستەوخۆ دیزاینەکە ببینە</p>
                 </div>
 
                 <div class="builder-grid">
-                    <!-- Form Controls with Direct File Uploads -->
+                    <!-- Form Controls -->
                     <div class="glass-card">
                         <form id="invite-form" onsubmit="saveInvitationForm(event)">
                             <input type="hidden" id="field-id">
 
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                                 <div class="form-group">
-                                    <label>ناوی یەکەم (زاوا / خاوەن بۆنە)</label>
+                                    <label>ناوی زاوا / خاوەن بۆنە</label>
                                     <input type="text" id="field-groom" class="form-control" value="ئاری" required oninput="syncLivePreview()">
                                 </div>
                                 <div class="form-group">
-                                    <label>ناوی دووەم (بووک / هاوبەش)</label>
+                                    <label>ناوی بووک / هاوبەش</label>
                                     <input type="text" id="field-bride" class="form-control" value="دەريا" required oninput="syncLivePreview()">
                                 </div>
                             </div>
@@ -582,9 +555,9 @@
                                 <input type="text" id="field-title" class="form-control" value="ئاهەنگی هاوسەرگیری شاهانە" required oninput="syncLivePreview()">
                             </div>
 
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                                 <div class="form-group">
-                                    <label>دیزاین (10 Themes Engine)</label>
+                                    <label>دیزاین (10 Dynamic Themes)</label>
                                     <select id="field-theme" class="form-control" onchange="syncLivePreview()">
                                         <option value="tpl-gold">زێڕینی کلاسیك (Luxury Gold)</option>
                                         <option value="tpl-black">مەخمەری ڕەش (Velvet Black)</option>
@@ -599,12 +572,12 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>ناوی کڕیار (تەنها بۆ بەڕێوەبەر)</label>
+                                    <label>ناوی کڕیار (تەنها بۆ ئەدمین)</label>
                                     <input type="text" id="field-customer" class="form-control" value="ئاری عوسمان" required>
                                 </div>
                             </div>
 
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                                 <div class="form-group">
                                     <label>بەرواری بۆنە (دەق)</label>
                                     <input type="text" id="field-date" class="form-control" value="٢٥ی تشرینی یەکەمی ٢٠٢٥" required oninput="syncLivePreview()">
@@ -620,7 +593,7 @@
                                 <input type="datetime-local" id="field-countdown" class="form-control" required onchange="syncLivePreview()">
                             </div>
 
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                                 <div class="form-group">
                                     <label>شوێن / ناوی هۆڵ</label>
                                     <input type="text" id="field-venue" class="form-control" value="هۆڵی سەعد عەبدوڵڵا - هەولێر" required oninput="syncLivePreview()">
@@ -636,10 +609,10 @@
                                 <textarea id="field-text" class="form-control" rows="3" oninput="syncLivePreview()">بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز و خۆشەویست دەکەین کە بەشدار و هاوبەشی خۆشییەکانمان بن لەم شەوە زێڕینەدا.</textarea>
                             </div>
 
-                            <!-- DIRECT MOBILE FILE UPLOAD CONTROLS -->
+                            <!-- FILE UPLOADS FROM MOBILE -->
                             <div class="form-group">
-                                <label>🎵 ئۆپلۆدکردنی فایلی مۆسیقا یان دەنگ لە مۆبایلەکەتەوە (Audio MP3)</label>
-                                <div class="file-upload-wrapper">
+                                <label>🎵 ئۆپلۆدکردنی فایلی دەنگ لە مۆبایلەکەتەوە (Audio MP3)</label>
+                                <div class="file-upload-box">
                                     <span id="label-audio-file">📁 فایلی دەنگ هەڵبژێره لە مۆبایلەکەت...</span>
                                     <input type="file" id="file-music" accept="audio/*" onchange="handleAudioFileUpload(event)">
                                 </div>
@@ -648,7 +621,7 @@
 
                             <div class="form-group">
                                 <label>🎬 ئۆپلۆدکردنی فایلی ڤیدیۆ لە مۆبایلەکەتەوە (Video MP4)</label>
-                                <div class="file-upload-wrapper">
+                                <div class="file-upload-box">
                                     <span id="label-video-file">📁 فایلی ڤیدیۆ هەڵبژێره لە مۆبایلەکەت...</span>
                                     <input type="file" id="file-video" accept="video/*" onchange="handleVideoFileUpload(event)">
                                 </div>
@@ -656,8 +629,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label>🖼️ ئۆپلۆدکردنی وێنەکانی گەلەری لە مۆبایلەکەتەوە (Photo Gallery)</label>
-                                <div class="file-upload-wrapper">
+                                <label>🖼️ ئۆپلۆدکردنی وێنەکانی گەلەری لە مۆبایلەکەتەوە</label>
+                                <div class="file-upload-box">
                                     <span id="label-gallery-files">📁 وێنەکان هەڵبژێره لە ئەلبومی مۆبایلەکەت...</span>
                                     <input type="file" id="file-gallery" accept="image/*" multiple onchange="handleGalleryFileUpload(event)">
                                 </div>
@@ -669,27 +642,24 @@
                                 <input type="text" id="field-slug" class="form-control" value="ari-wedding" required placeholder="ari-wedding">
                             </div>
 
-                            <div style="display: flex; gap: 14px; margin-top: 24px;">
+                            <div style="display: flex; gap: 10px; margin-top: 20px;">
                                 <button type="submit" class="btn-gold" style="flex: 1;">پاشەکەوتکردن و بڵاوکردنەوە</button>
-                                <button type="button" class="btn-glass" onclick="switchAdminTab('dash-all')">پەشیمانبوونەوە</button>
+                                <button type="button" class="btn-glass" onclick="switchAdminTab('dash-all')" style="width: auto;">پەشیمانبوونەوە</button>
                             </div>
                         </form>
                     </div>
 
-                    <!-- Dynamic Realtime Live Phone Mockup Frame -->
+                    <!-- Realtime Mobile Frame Preview -->
                     <div class="phone-mockup-frame">
-                        <div id="live-preview-container" class="guest-invitation-card" data-theme="tpl-gold" style="min-height: 100%; padding: 40px 18px;">
-                            <div class="card-inner-frame" style="padding: 36px 18px;">
-                                <div style="font-size: 0.8rem; letter-spacing: 2px; opacity: 0.8;">داوەتنامەی فەرمی</div>
-                                <div class="card-names-title" id="prev-names" style="font-size: 2.2rem;">ئاری & دەريا</div>
-                                <div id="prev-title" style="font-size: 1rem; margin-bottom: 15px;">ئاهەنگی هاوسەرگیری شاهانە</div>
-                                
+                        <div id="live-preview-container" class="guest-invitation-card" data-theme="tpl-gold" style="min-height: 100%; padding: 30px 14px;">
+                            <div class="card-inner-frame" style="padding: 24px 14px;">
+                                <div style="font-size: 0.75rem; letter-spacing: 2px; opacity: 0.8;">داوەتنامەی فەرمی</div>
+                                <div class="card-names-title" id="prev-names" style="font-size: 2rem;">ئاری & دەريا</div>
+                                <div id="prev-title" style="font-size: 0.95rem; margin-bottom: 12px;">ئاهەنگی هاوسەرگیری شاهانە</div>
                                 <div class="kurdish-ornament"></div>
-                                
-                                <p id="prev-text" style="font-size: 0.9rem; line-height: 1.8; margin-bottom: 20px;">بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز دەکەین...</p>
-                                
-                                <div id="prev-date" style="font-size: 0.95rem; font-weight: 700;">٢٥ی تشرینی یەکەم</div>
-                                <div id="prev-venue" style="font-size: 0.85rem; opacity: 0.8; margin-top: 4px;">هۆڵی سەعد عەبدوڵڵا</div>
+                                <p id="prev-text" style="font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px;">بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز دەکەین...</p>
+                                <div id="prev-date" style="font-size: 0.9rem; font-weight: 700;">٢٥ی تشرینی یەکەم</div>
+                                <div id="prev-venue" style="font-size: 0.8rem; opacity: 0.8; margin-top: 4px;">هۆڵی سەعد عەبدوڵڵا</div>
                             </div>
                         </div>
                     </div>
@@ -698,22 +668,24 @@
 
             <!-- TAB 3: GUEST RSVPs & WISHES TABLE -->
             <div id="tab-dash-rsvps" class="hidden">
-                <h2 style="font-size: 1.9rem; font-weight: 900; margin-bottom: 24px;">پەیام و پشتڕاستکردنەوەی میوانەکان (RSVP)</h2>
+                <h2 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 16px;">پەیام و پشتڕاستکردنەوەی میوانەکان (RSVP)</h2>
                 <div class="glass-card">
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>ناوی میوان</th>
-                                <th>ژمارەی مۆبایل</th>
-                                <th>دۆخی ئامادەبوون</th>
-                                <th>ژمارەی یاوەران</th>
-                                <th>پەیامی پیرۆزبایی</th>
-                            </tr>
-                        </thead>
-                        <tbody id="table-rsvps-body">
-                            <!-- Dynamic Rows -->
-                        </tbody>
-                    </table>
+                    <div class="data-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ناوی میوان</th>
+                                    <th>ژمارەی مۆبایل</th>
+                                    <th>دۆخی ئامادەبوون</th>
+                                    <th>ژمارەی یاوەران</th>
+                                    <th>پەیامی پیرۆزبایی</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-rsvps-body">
+                                <!-- Dynamic Content -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -725,19 +697,19 @@
        ========================================================================== -->
     <section id="view-guest" class="hidden">
         
-        <!-- STEP 1: 3D ENVELOPE WITH WAX SEAL ANIMATION -->
+        <!-- STEP 1: 3D WAX SEAL ENVELOPE -->
         <div id="guest-envelope-step" class="envelope-viewport">
             <div class="envelope-3d" id="envelope-3d-element" onclick="unseal3DEnvelope()">
                 <div class="env-back-panel"></div>
                 <div class="env-card-inside">
-                    <div style="font-size: 0.8rem; letter-spacing: 2px;">داوەتنامەی فەرمی</div>
-                    <div style="font-size: 1.8rem; margin-top: 15px;" id="env-card-names">ئاری & دەريا</div>
+                    <div style="font-size: 0.75rem; letter-spacing: 2px;">داوەتنامەی فەرمی</div>
+                    <div style="font-size: 1.6rem; margin-top: 12px;" id="env-card-names">ئاری & دەريا</div>
                 </div>
                 <div class="env-flap-panel"></div>
                 <div class="env-pocket-panel"></div>
                 <div class="wax-seal-stamp">👑</div>
             </div>
-            <div style="margin-top: 40px; color: var(--gold-light); font-size: 1rem; letter-spacing: 1px; animation: pulseText 2s infinite;">
+            <div style="margin-top: 30px; color: var(--gold-light); font-size: 0.9rem; letter-spacing: 1px;">
                 👇 پەنجە لە مۆرە زێڕینەکە بدە بۆ کردنەوەی زەرفەکە
             </div>
         </div>
@@ -749,14 +721,14 @@
             <audio id="guest-audio-element" loop></audio>
 
             <div class="card-inner-frame">
-                <div style="font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; opacity: 0.8;">داوەتنامەی فەرمی</div>
+                <div style="font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8;">داوەتنامەی فەرمی</div>
                 <h1 class="card-names-title" id="g-names">ئاری & دەريا</h1>
-                <div style="font-size: 1.4rem; font-weight: 600;" id="g-title">ئاهەنگی هاوسەرگیری شاهانە</div>
+                <div style="font-size: 1.25rem; font-weight: 600;" id="g-title">ئاهەنگی هاوسەرگیری شاهانە</div>
                 
                 <div class="kurdish-ornament"></div>
 
-                <!-- Video Section -->
-                <div id="g-video-box" class="video-container hidden">
+                <!-- Video Box -->
+                <div id="g-video-box" class="video-box-container hidden">
                     <video id="g-video-element" controls playsinline></video>
                 </div>
 
@@ -768,7 +740,7 @@
                     <div class="cd-box"><div class="cd-val" id="cd-s">00</div><div class="cd-lbl">چرکە</div></div>
                 </div>
 
-                <p style="font-size: 1.2rem; line-height: 2; margin: 35px 0;" id="g-text">
+                <p style="font-size: 1.1rem; line-height: 1.9; margin: 28px 0;" id="g-text">
                     بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز و خۆشەویست دەکەین کە بەشدار و هاوبەشی خۆشییەکانمان بن لەم شەوە زێڕینەدا.
                 </p>
 
@@ -777,13 +749,13 @@
 
                 <div class="kurdish-ornament"></div>
 
-                <div style="margin: 35px 0;">
-                    <div style="font-size: 1.4rem; font-weight: 800;" id="g-date">٢٥ی تشرینی یەکەمی ٢٠٢٥</div>
-                    <div style="opacity: 0.85; margin-top: 6px; font-size: 1.1rem;" id="g-time">کاتژمێر ٦:٠٠ی ئێوارە</div>
-                    <div style="color: var(--gold-light); font-weight: 700; margin-top: 18px; font-size: 1.2rem;" id="g-venue">هۆڵی سەعد عەبدوڵڵا - هەولێر</div>
+                <div style="margin: 28px 0;">
+                    <div style="font-size: 1.25rem; font-weight: 800;" id="g-date">٢٥ی تشرینی یەکەمی ٢٠٢٥</div>
+                    <div style="opacity: 0.85; margin-top: 4px; font-size: 1rem;" id="g-time">کاتژمێر ٦:٠٠ی ئێوارە</div>
+                    <div style="color: var(--gold-light); font-weight: 700; margin-top: 14px; font-size: 1.1rem;" id="g-venue">هۆڵی سەعد عەبدوڵڵا - هەولێر</div>
                 </div>
 
-                <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 30px;">
                     <a id="g-maps" href="#" target="_blank" class="btn-gold">📍 بینینی شوێن لە نەخشەدا</a>
                     <button class="btn-glass" onclick="openGuestRsvpModal()">💌 پشتڕاستکردنەوەی ئامادەبوون (RSVP)</button>
                 </div>
@@ -791,36 +763,36 @@
         </div>
 
         <!-- EXPIRED / DISABLED STATE -->
-        <div id="guest-expired-step" class="container hidden" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;">
-            <div class="glass-card" style="max-width: 520px; padding: 50px 30px;">
-                <div style="font-size: 4.5rem; margin-bottom: 18px;">⏳</div>
-                <h2 style="font-size: 1.9rem; font-weight: 900; color: var(--gold-light); margin-bottom: 12px;">ئەم داوەتنامەیە بەسەرچووە</h2>
-                <p style="color: #94a3b8; font-size: 1rem; line-height: 1.7;">داوای لێبوردن دەکەین، کاتی بەکارهێنانی ئەم کارتە بەسەرچووە یان ناچالاک کراوە لەلایەن بەڕێوەبەرەوە.</p>
+        <div id="guest-expired-step" class="container hidden" style="min-height: 100dvh; display: flex; align-items: center; justify-content: center; text-align: center;">
+            <div class="glass-card" style="max-width: 440px; padding: 40px 20px;">
+                <div style="font-size: 3.8rem; margin-bottom: 14px;">⏳</div>
+                <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--gold-light); margin-bottom: 10px;">ئەم داوەتنامەیە بەسەرچووە</h2>
+                <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">داوای لێبوردن دەکەین، کاتی بەکارهێنانی ئەم کارتە بەسەرچووە یان ناچالاک کراوە لەلایەن بەڕێوەبەرەوە.</p>
             </div>
         </div>
     </section>
 
     <!-- ADMIN ONLY PRIVATE QR CODE & SHARE MODAL -->
-    <div id="modal-admin-qr" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center;" class="hidden">
-        <div class="glass-card" style="max-width: 480px; width: 90%; text-align: center;">
-            <h3 style="font-size: 1.5rem; color: var(--gold-light); margin-bottom: 16px;">کۆدی QR و بەستەری کارت</h3>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 20px;">ئەم زانیارییانە تەنها بۆ بەڕێوەبەر دەردەکەون بۆ ناردن بۆ کڕیار</p>
+    <div id="modal-admin-qr" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center; padding: 16px;" class="hidden">
+        <div class="glass-card" style="max-width: 440px; width: 100%; text-align: center;">
+            <h3 style="font-size: 1.4rem; color: var(--gold-light); margin-bottom: 12px;">کۆدی QR و بەستەری کارت</h3>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 16px;">ئەم زانیارییانە تەنها بۆ بەڕێوەبەر دەردەکەون بۆ ناردن بۆ کڕیار</p>
             
-            <div id="admin-qr-img-box" style="margin: 20px 0;"></div>
+            <div id="admin-qr-img-box" style="margin: 16px 0;"></div>
             
-            <input type="text" id="admin-qr-link-input" class="form-control" readonly style="text-align: center; margin-bottom: 20px;">
+            <input type="text" id="admin-qr-link-input" class="form-control" readonly style="text-align: center; margin-bottom: 16px; font-size: 0.85rem;">
             
-            <div style="display: flex; gap: 12px;">
+            <div style="display: flex; gap: 10px;">
                 <button class="btn-gold" style="flex:1;" onclick="copyAdminLink()">کۆپیکردنی لینک</button>
-                <button class="btn-glass" onclick="closeAdminQrModal()">داخستن</button>
+                <button class="btn-glass" onclick="closeAdminQrModal()" style="width: auto;">داخستن</button>
             </div>
         </div>
     </div>
 
     <!-- GUEST RSVP MODAL -->
-    <div id="modal-guest-rsvp" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center;" class="hidden">
-        <div class="glass-card" style="max-width: 480px; width: 90%;">
-            <h3 style="font-size: 1.5rem; color: var(--gold-light); margin-bottom: 18px;">پشتڕاستکردنەوەی ئامادەبوون</h3>
+    <div id="modal-guest-rsvp" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center; padding: 16px;" class="hidden">
+        <div class="glass-card" style="max-width: 440px; width: 100%;">
+            <h3 style="font-size: 1.3rem; color: var(--gold-light); margin-bottom: 16px;">پشتڕاستکردنەوەی ئامادەبوون</h3>
             <form onsubmit="submitGuestRSVP(event)">
                 <div class="form-group">
                     <label>ناوی تەواوت بنووسە</label>
@@ -831,19 +803,19 @@
                     <input type="tel" id="rsvp-phone" class="form-control" required placeholder="0750 XXX XX XX">
                 </div>
                 <div class="form-group">
-                    <label>ئایا ئامادە دەبیت لە ئاهەنگەکە؟</label>
+                    <label>ئایا ئامادە دەبیت؟</label>
                     <select id="rsvp-status" class="form-control">
                         <option value="ئامادە دەبم">بەڵێ، بە خۆشحاڵییەوە ئامادە دەبم</option>
                         <option value="داوای لێبوردن دەکەم">داوای لێبوردن دەکەم، ناتوانم ئامادەبم</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>پەیامی پیرۆزبایی یان تێبینی</label>
-                    <textarea id="rsvp-note" class="form-control" rows="3" placeholder="پەیامەکەت بنووسە..."></textarea>
+                    <label>پەیامی پیرۆزبایی</label>
+                    <textarea id="rsvp-note" class="form-control" rows="2" placeholder="پەیامەکەت بنووسە..."></textarea>
                 </div>
-                <div style="display: flex; gap: 12px; margin-top: 24px;">
+                <div style="display: flex; gap: 10px; margin-top: 20px;">
                     <button type="submit" class="btn-gold" style="flex: 1;">ناردنی وەڵام</button>
-                    <button type="button" class="btn-glass" onclick="closeGuestRsvpModal()">داخستن</button>
+                    <button type="button" class="btn-glass" onclick="closeGuestRsvpModal()" style="width: auto;">داخستن</button>
                 </div>
             </form>
         </div>
@@ -854,10 +826,10 @@
        ========================================================================== -->
     <script>
         /* ----------------------------------------------------
-           1. LOCALSTORAGE & ENTERPRISE DATA ARCHITECTURE
+           1. LOCALSTORAGE & DATA ARCHITECTURE
            ---------------------------------------------------- */
-        const STORAGE_KEY_INVITES = 'kart_royal_invites_v5';
-        const STORAGE_KEY_RSVPS = 'kart_royal_rsvps_v5';
+        const STORAGE_KEY_INVITES = 'kart_royal_invites_v6';
+        const STORAGE_KEY_RSVPS = 'kart_royal_rsvps_v6';
         const DEFAULT_PASS = 'admin123';
 
         const INITIAL_INVITATIONS = [
@@ -901,7 +873,27 @@
         }
 
         /* ----------------------------------------------------
-           2. AMBIENT CANVAS PARTICLE ENGINE
+           2. WEB AUDIO SYNTHESIZER (SOUND EFFECTS)
+           ---------------------------------------------------- */
+        function playUnsealSound() {
+            try {
+                const ctx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(150, ctx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(40, ctx.currentTime + 0.3);
+                gain.gain.setValueAtTime(0.3, ctx.currentTime);
+                gain.gain.linearRampToValueAtTime(0.01, ctx.currentTime + 0.3);
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.start();
+                osc.stop(ctx.currentTime + 0.3);
+            } catch(e) {}
+        }
+
+        /* ----------------------------------------------------
+           3. AMBIENT CANVAS PARTICLE ENGINE
            ---------------------------------------------------- */
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
@@ -920,8 +912,8 @@
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
                 this.size = Math.random() * 2 + 1;
-                this.speedX = (Math.random() - 0.5) * 0.4;
-                this.speedY = (Math.random() - 0.5) * 0.4;
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.speedY = (Math.random() - 0.5) * 0.3;
                 this.alpha = Math.random() * 0.5 + 0.2;
             }
             update() {
@@ -933,7 +925,7 @@
                 ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
             }
         }
-        for (let i = 0; i < 45; i++) particles.push(new Particle());
+        for (let i = 0; i < 35; i++) particles.push(new Particle());
         function animParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             particles.forEach(p => { p.update(); p.draw(); });
@@ -942,7 +934,7 @@
         animParticles();
 
         /* ----------------------------------------------------
-           3. ROUTER & SYSTEM NAVIGATION
+           4. ROUTER & SYSTEM NAVIGATION
            ---------------------------------------------------- */
         function handleRouting() {
             const hash = window.location.hash;
@@ -966,7 +958,7 @@
         window.addEventListener('load', handleRouting);
 
         /* ----------------------------------------------------
-           4. ADMIN AUTHENTICATION & TAB NAVIGATION
+           5. ADMIN AUTHENTICATION & TAB NAVIGATION
            ---------------------------------------------------- */
         function handleAdminLogin(e) {
             e.preventDefault();
@@ -1005,15 +997,15 @@
                 tr.innerHTML = `
                     <td style="font-weight:700;">${inv.groomName} & ${inv.brideName}</td>
                     <td>${inv.customerName}</td>
-                    <td><span style="color:var(--gold-light); font-size:0.85rem;">${inv.theme}</span></td>
+                    <td><span style="color:var(--gold-light); font-size:0.8rem;">${inv.theme}</span></td>
                     <td>${inv.eventDate}</td>
                     <td><span style="color:${inv.status==='active'?'#4ade80':'#f87171'}; font-weight:600;">${inv.status==='active'?'چالاک':'ناچالاک'}</span></td>
                     <td>
-                        <button class="btn-glass" onclick="previewInvite('${inv.slug}')">👁️ بێنین</button>
-                        <button class="btn-glass" onclick="editInvite('${inv.id}')">✏️ دەستکاری</button>
-                        <button class="btn-glass" onclick="openAdminQrModal('${inv.slug}')">📱 QR & لینک</button>
-                        <button class="btn-glass" onclick="toggleInviteStatus('${inv.id}')">${inv.status==='active'?'🚫':'✅'}</button>
-                        <button class="btn-danger" onclick="deleteInvite('${inv.id}')">🗑️</button>
+                        <button class="btn-glass" onclick="previewInvite('${inv.slug}')" style="min-height:32px; padding:4px 8px; font-size:0.75rem;">👁️ بێنین</button>
+                        <button class="btn-glass" onclick="editInvite('${inv.id}')" style="min-height:32px; padding:4px 8px; font-size:0.75rem;">✏️ دەستکاری</button>
+                        <button class="btn-glass" onclick="openAdminQrModal('${inv.slug}')" style="min-height:32px; padding:4px 8px; font-size:0.75rem;">📱 QR</button>
+                        <button class="btn-glass" onclick="toggleInviteStatus('${inv.id}')" style="min-height:32px; padding:4px 8px; font-size:0.75rem;">${inv.status==='active'?'🚫':'✅'}</button>
+                        <button class="btn-danger" onclick="deleteInvite('${inv.id}')" style="padding:4px 8px; font-size:0.75rem;">🗑️</button>
                     </td>
                 `;
                 tbody.appendChild(tr);
@@ -1039,12 +1031,12 @@
         }
 
         /* ----------------------------------------------------
-           5. MOBILE FILE UPLOAD & READERS (BASE64)
+           6. MOBILE FILE UPLOADS (READ AS BASE64)
            ---------------------------------------------------- */
         function handleAudioFileUpload(e) {
             const file = e.target.files[0];
             if (file) {
-                document.getElementById('label-audio-file').textContent = `✅ فایلی دەنگ هەڵبژێردرا: ${file.name}`;
+                document.getElementById('label-audio-file').textContent = `✅ فایلی دەنگ: ${file.name}`;
                 const reader = new FileReader();
                 reader.onload = function(event) {
                     document.getElementById('field-music').value = event.target.result;
@@ -1056,7 +1048,7 @@
         function handleVideoFileUpload(e) {
             const file = e.target.files[0];
             if (file) {
-                document.getElementById('label-video-file').textContent = `✅ فایلی ڤیدیۆ هەڵبژێردرا: ${file.name}`;
+                document.getElementById('label-video-file').textContent = `✅ فایلی ڤیدیۆ: ${file.name}`;
                 const reader = new FileReader();
                 reader.onload = function(event) {
                     document.getElementById('field-video').value = event.target.result;
@@ -1089,7 +1081,7 @@
         }
 
         /* ----------------------------------------------------
-           6. BUILDER & REALTIME SPLIT PREVIEW ENGINE
+           7. BUILDER & REALTIME SPLIT PREVIEW ENGINE
            ---------------------------------------------------- */
         function syncLivePreview() {
             const theme = document.getElementById('field-theme').value;
@@ -1161,10 +1153,14 @@
                 invites.unshift(newObj);
             }
 
-            saveInvites(invites);
-            alert('داوەتنامەکە بە سەرکەوتوویی تۆمارکرا!');
-            renderAdminTable();
-            switchAdminTab('dash-all');
+            try {
+                saveInvites(invites);
+                alert('داوەتنامەکە بە سەرکەوتوویی تۆمارکرا!');
+                renderAdminTable();
+                switchAdminTab('dash-all');
+            } catch(err) {
+                alert('⚠️ داوای لێبوردن دەکەین، فایلی هەڵبژێردراو بەرزە! تکایە ڤیدیۆ یان وێنەی قەبارە بچووکتر هەڵبژێرە.');
+            }
         }
 
         function editInvite(id) {
@@ -1216,13 +1212,13 @@
         }
 
         /* ----------------------------------------------------
-           7. ADMIN ONLY QR & LINK GENERATOR MODAL
+           8. ADMIN ONLY PRIVATE QR CODE MODAL
            ---------------------------------------------------- */
         function openAdminQrModal(slug) {
             const fullUrl = `${window.location.origin}${window.location.pathname}#invite/${slug}`;
             const qrBox = document.getElementById('admin-qr-img-box');
             
-            qrBox.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(fullUrl)}" style="border-radius:12px; border:2px solid var(--gold-primary);" alt="Admin QR">`;
+            qrBox.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(fullUrl)}" style="border-radius:12px; border:2px solid var(--gold-primary);" alt="Admin QR">`;
             document.getElementById('admin-qr-link-input').value = fullUrl;
             document.getElementById('modal-admin-qr').classList.remove('hidden');
         }
@@ -1238,7 +1234,7 @@
         }
 
         /* ----------------------------------------------------
-           8. 3D WAX SEAL ENVELOPE & GUEST EXPERIENCE
+           9. 3D ENVELOPE & GUEST EXPERIENCE
            ---------------------------------------------------- */
         let activeTimer = null;
         let activeAudio = null;
@@ -1313,6 +1309,7 @@
         }
 
         function unseal3DEnvelope() {
+            playUnsealSound();
             const env = document.getElementById('envelope-3d-element');
             env.classList.add('open');
 
@@ -1321,7 +1318,7 @@
             setTimeout(() => {
                 document.getElementById('guest-envelope-step').classList.add('hidden');
                 document.getElementById('guest-card-step').classList.remove('hidden');
-            }, 1200);
+            }, 1000);
         }
 
         function toggleGuestAudio() {
@@ -1356,7 +1353,7 @@
         }
 
         /* ----------------------------------------------------
-           9. GUEST RSVP MODAL LOGIC
+           10. GUEST RSVP MODAL LOGIC
            ---------------------------------------------------- */
         function openGuestRsvpModal() { document.getElementById('modal-guest-rsvp').classList.remove('hidden'); }
         function closeGuestRsvpModal() { document.getElementById('modal-guest-rsvp').classList.add('hidden'); }
