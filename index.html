@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>کارت ROYAL | شاکاری داوەتنامەی دیجیتاڵی لە کوردستان</title>
+    <title>کارت ROYAL | پێشەنگی داوەتنامەی دیجیتاڵی لە کوردستان</title>
     
-    <!-- Premium Arabic & Kurdish Fonts -->
+    <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         /* ==========================================================================
-           1. LUXURY MOBILE-FIRST DESIGN SYSTEM (10 DYNAMIC THEMES)
+           1. MODERN DESIGN SYSTEM & DYNAMIC THEMES
            ========================================================================== */
         :root {
-            --bg-obsidian: #02040a;
-            --bg-card: rgba(10, 16, 30, 0.88);
+            --bg-obsidian: #030712;
+            --bg-card: rgba(15, 23, 42, 0.75);
             --gold-light: #FFF4D0;
             --gold-primary: #D4AF37;
             --gold-dark: #8C6D1F;
             --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
-            --gold-glow: rgba(212, 175, 55, 0.45);
+            --coral-accent: #f04d78;
+            --teal-accent: #14b8a6;
+            --gold-glow: rgba(212, 175, 55, 0.35);
             
             /* Dynamic Theme Variables */
             --inv-bg: #02040a;
@@ -36,30 +38,24 @@
             --radius-sm: 10px;
             --radius-md: 18px;
             --radius-lg: 32px;
-            --transition-smooth: all 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+            --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        /* ---------------- THEME MATRIX DEFINITIONS (10 THEMES) ---------------- */
+        /* Dynamic Theme Matrix (10 Luxury Themes) */
         [data-theme="tpl-gold"] {
             --inv-bg: radial-gradient(circle at center, #111827 0%, #02040a 100%);
             --inv-card-bg: rgba(17, 24, 39, 0.92);
             --inv-text: #F8FAFC;
             --inv-accent: #D4AF37;
             --inv-border: rgba(212, 175, 55, 0.45);
-            --inv-font: 'Vazirmatn', sans-serif;
-            --inv-ornament: radial-gradient(#D4AF37 2px, transparent 2px);
         }
-
         [data-theme="tpl-black"] {
             --inv-bg: #000000;
             --inv-card-bg: rgba(18, 18, 18, 0.95);
             --inv-text: #FFFFFF;
             --inv-accent: #E2E8F0;
             --inv-border: rgba(255, 255, 255, 0.25);
-            --inv-font: 'Vazirmatn', sans-serif;
-            --inv-ornament: radial-gradient(#ffffff 1.5px, transparent 1.5px);
         }
-
         [data-theme="tpl-kurdish"] {
             --inv-bg: linear-gradient(180deg, #2A0404 0%, #0D0101 100%);
             --inv-card-bg: rgba(45, 6, 6, 0.92);
@@ -67,77 +63,6 @@
             --inv-accent: #FACC15;
             --inv-border: rgba(250, 204, 21, 0.5);
             --inv-font: 'Amiri', serif;
-            --inv-ornament: repeating-linear-gradient(45deg, #facc15 0, #facc15 2px, transparent 0, transparent 10px);
-        }
-
-        [data-theme="tpl-rose"] {
-            --inv-bg: linear-gradient(180deg, #1C0A12 0%, #080205 100%);
-            --inv-card-bg: rgba(35, 12, 22, 0.92);
-            --inv-text: #FCE7F3;
-            --inv-accent: #F472B6;
-            --inv-border: rgba(244, 114, 182, 0.45);
-            --inv-font: 'Vazirmatn', sans-serif;
-            --inv-ornament: radial-gradient(#f472b6 2px, transparent 2px);
-        }
-
-        [data-theme="tpl-emerald"] {
-            --inv-bg: linear-gradient(180deg, #022C22 0%, #01120D 100%);
-            --inv-card-bg: rgba(4, 55, 43, 0.92);
-            --inv-text: #ECFDF5;
-            --inv-accent: #34D399;
-            --inv-border: rgba(52, 211, 153, 0.45);
-            --inv-font: 'Amiri', serif;
-            --inv-ornament: radial-gradient(#34d399 2px, transparent 2px);
-        }
-
-        [data-theme="tpl-white"] {
-            --inv-bg: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%);
-            --inv-card-bg: rgba(255, 255, 255, 0.96);
-            --inv-text: #0F172A;
-            --inv-accent: #B45309;
-            --inv-border: rgba(180, 83, 9, 0.35);
-            --inv-font: 'Noto Naskh Arabic', serif;
-            --inv-ornament: radial-gradient(#b45309 1.5px, transparent 1.5px);
-        }
-
-        [data-theme="tpl-blue"] {
-            --inv-bg: linear-gradient(180deg, #0F172A 0%, #020617 100%);
-            --inv-card-bg: rgba(30, 41, 59, 0.92);
-            --inv-text: #E2E8F0;
-            --inv-accent: #38BDF8;
-            --inv-border: rgba(56, 189, 248, 0.45);
-            --inv-font: 'Vazirmatn', sans-serif;
-            --inv-ornament: radial-gradient(#38bdf8 2px, transparent 2px);
-        }
-
-        [data-theme="tpl-floral"] {
-            --inv-bg: linear-gradient(180deg, #1A120B 0%, #080503 100%);
-            --inv-card-bg: rgba(40, 26, 15, 0.92);
-            --inv-text: #FEF3C7;
-            --inv-accent: #F59E0B;
-            --inv-border: rgba(245, 158, 11, 0.45);
-            --inv-font: 'Amiri', serif;
-            --inv-ornament: radial-gradient(#f59e0b 2px, transparent 2px);
-        }
-
-        [data-theme="tpl-minimal"] {
-            --inv-bg: #050505;
-            --inv-card-bg: rgba(22, 22, 22, 0.95);
-            --inv-text: #FFFFFF;
-            --inv-accent: #A855F7;
-            --inv-border: rgba(168, 85, 247, 0.45);
-            --inv-font: 'Vazirmatn', sans-serif;
-            --inv-ornament: radial-gradient(#a855f7 2px, transparent 2px);
-        }
-
-        [data-theme="tpl-burgundy"] {
-            --inv-bg: linear-gradient(180deg, #4A0E17 0%, #150306 100%);
-            --inv-card-bg: rgba(60, 12, 20, 0.92);
-            --inv-text: #FEE2E2;
-            --inv-accent: #F87171;
-            --inv-border: rgba(248, 113, 113, 0.45);
-            --inv-font: 'Amiri', serif;
-            --inv-ornament: radial-gradient(#f87171 2px, transparent 2px);
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -148,13 +73,9 @@
             background-color: var(--bg-obsidian);
             color: #fff;
             overflow-x: hidden;
-            height: 100%;
         }
 
-        body {
-            min-height: 100dvh;
-            position: relative;
-        }
+        body { min-height: 100dvh; position: relative; }
 
         #bg-canvas {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -162,17 +83,17 @@
         }
 
         .hidden { display: none !important; }
-        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 16px; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
 
-        /* Mobile First Glass Cards & Buttons */
+        /* Modern UI Controls & Buttons */
         .glass-card {
             background: var(--bg-card);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.25);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: var(--radius-md);
-            padding: 24px 18px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+            padding: 24px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
             transition: var(--transition-smooth);
         }
 
@@ -180,9 +101,9 @@
             background: var(--gold-gradient);
             color: #020617;
             font-weight: 800;
-            min-height: 52px;
+            min-height: 48px;
             padding: 12px 24px;
-            border-radius: var(--radius-sm);
+            border-radius: 99px;
             border: none;
             cursor: pointer;
             display: inline-flex;
@@ -191,21 +112,19 @@
             gap: 10px;
             font-size: 0.95rem;
             transition: var(--transition-smooth);
-            box-shadow: 0 0 25px var(--gold-glow);
+            box-shadow: 0 0 20px var(--gold-glow);
             font-family: inherit;
             text-decoration: none;
-            width: 100%;
         }
-
-        .btn-gold:active { transform: scale(0.98); }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
 
         .btn-glass {
             background: rgba(255, 255, 255, 0.08);
-            color: var(--gold-light);
-            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.15);
             min-height: 48px;
             padding: 10px 20px;
-            border-radius: var(--radius-sm);
+            border-radius: 99px;
             cursor: pointer;
             font-family: inherit;
             font-size: 0.9rem;
@@ -215,30 +134,17 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            width: 100%;
         }
+        .btn-glass:hover { background: rgba(255, 255, 255, 0.18); }
 
-        .btn-glass:active { background: rgba(255, 255, 255, 0.16); }
-
-        .btn-danger {
-            background: rgba(239, 68, 68, 0.15);
-            color: #f87171;
-            border: 1px solid rgba(239, 68, 68, 0.3);
-            padding: 8px 14px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 0.8rem;
-        }
-
-        /* Form Input Controls */
+        /* Form Inputs */
         .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; text-align: right; }
         .form-group label { font-size: 0.85rem; color: var(--gold-light); font-weight: 600; }
         .form-control {
-            background: rgba(3, 7, 18, 0.95);
+            background: rgba(3, 7, 18, 0.85);
             border: 1px solid rgba(212, 175, 55, 0.25);
             border-radius: var(--radius-sm);
-            min-height: 48px;
+            min-height: 46px;
             padding: 12px 14px;
             color: #fff;
             font-family: inherit;
@@ -249,244 +155,320 @@
         }
         .form-control:focus { border-color: var(--gold-primary); box-shadow: 0 0 15px var(--gold-glow); }
 
-        .file-upload-box {
-            position: relative;
-            background: rgba(212, 175, 55, 0.05);
-            border: 2px dashed rgba(212, 175, 55, 0.3);
-            border-radius: var(--radius-sm);
-            padding: 18px;
-            text-align: center;
-            cursor: pointer;
-            transition: var(--transition-smooth);
+        /* ==========================================================================
+           2. HEADER & LANDING PAGE STYLES (DA3WA STYLE INTEGRATED)
+           ========================================================================== */
+        .navbar {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 14px 0;
         }
-        .file-upload-box input[type="file"] {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            opacity: 0; cursor: pointer;
+        .nav-flex { display: flex; align-items: center; justify-content: space-between; }
+        .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: var(--transition-smooth); }
+        .nav-links a:hover { color: #fff; }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 80px 0 50px; text-align: center; position: relative;
         }
+        .hero-badge {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-light);
+            border: 1px solid var(--gold-primary);
+            padding: 6px 16px; border-radius: 99px; font-size: 0.85rem;
+            display: inline-block; margin-bottom: 20px; font-weight: 700;
+        }
+        .hero-title {
+            font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 900; line-height: 1.25; margin-bottom: 20px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero-subtitle { color: #94a3b8; font-size: clamp(1rem, 2.5vw, 1.25rem); max-width: 650px; margin: 0 auto 30px; line-height: 1.8; }
+
+        /* Stats Strip */
+        .stats-strip {
+            display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;
+            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255,255,255,0.06);
+            border-radius: var(--radius-md); padding: 20px; margin: 40px 0; text-align: center;
+        }
+        .stat-item b { font-size: 1.6rem; color: var(--gold-primary); display: block; }
+        .stat-item span { font-size: 0.85rem; color: #94a3b8; }
+
+        /* Interactive Showcase Section (Tabs Demo) */
+        .showcase-tabs { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 20px; }
+        .tab-btn {
+            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8; padding: 12px 18px; border-radius: var(--radius-sm);
+            cursor: pointer; font-family: inherit; font-size: 0.88rem; font-weight: 700;
+            white-space: nowrap; transition: var(--transition-smooth);
+        }
+        .tab-btn.active { background: var(--gold-gradient); color: #000; border-color: transparent; }
+
+        /* Pricing Cards Grid */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 30px; }
+        .price-card {
+            position: relative; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md); padding: 30px 20px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .price-card.popular { border: 2px solid var(--gold-primary); box-shadow: 0 0 30px var(--gold-glow); }
+        .popular-badge {
+            position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+            background: var(--gold-gradient); color: #000; font-weight: 800; font-size: 0.75rem;
+            padding: 4px 14px; border-radius: 99px;
+        }
+
+        /* Customer Reviews (WhatsApp Style) */
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 24px; }
+        .rev-bubble {
+            background: #0b141a; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px;
+            padding: 16px; text-align: right; font-size: 0.88rem; line-height: 1.6; position: relative;
+        }
+        .rev-time { font-size: 0.7rem; color: #8696a0; display: block; text-align: left; margin-top: 6px; }
 
         /* ==========================================================================
-           2. 3D WAX SEAL ENVELOPE (ALGEROIS & BUHARITA STYLE)
+           3. 3D ENVELOPE & PUBLIC GUEST CARD
            ========================================================================== */
         .envelope-viewport {
-            min-height: 100dvh;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            perspective: 1000px;
-            padding: 16px;
-            background: radial-gradient(circle at center, #1a150e 0%, #02040a 100%);
+            min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            perspective: 1000px; padding: 16px; background: radial-gradient(circle at center, #1a150e 0%, #02040a 100%);
         }
-
         .envelope-3d {
-            width: 100%; max-width: 380px; height: 260px;
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            cursor: pointer;
+            width: 100%; max-width: 380px; height: 260px; position: relative;
+            transform-style: preserve-3d; transition: transform 0.8s ease; cursor: pointer;
         }
-
         .env-back-panel {
-            position: absolute; width: 100%; height: 100%;
-            background: #181512; border-radius: 16px;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.9);
-            border: 1.5px solid var(--gold-primary);
+            position: absolute; width: 100%; height: 100%; background: #181512;
+            border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.9); border: 1.5px solid var(--gold-primary);
         }
-
         .env-flap-panel {
             position: absolute; top: 0; left: 0; width: 100%; height: 130px;
             background: linear-gradient(180deg, #28211a 0%, #181512 100%);
-            clip-path: polygon(0 0, 100% 0, 50% 100%);
-            transform-origin: top;
-            transition: transform 0.8s ease-in-out;
-            z-index: 4;
+            clip-path: polygon(0 0, 100% 0, 50% 100%); transform-origin: top; transition: transform 0.8s ease; z-index: 4;
             border-top: 1.5px solid var(--gold-primary);
         }
-
         .env-pocket-panel {
             position: absolute; bottom: 0; left: 0; width: 100%; height: 160px;
             background: linear-gradient(0deg, #100d0b 0%, #1d1714 100%);
-            clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 50%, 0 0);
-            border-radius: 0 0 16px 16px;
-            z-index: 3;
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 50%, 0 0); border-radius: 0 0 16px 16px; z-index: 3;
             border-bottom: 1.5px solid var(--gold-primary);
         }
-
         .wax-seal-stamp {
-            position: absolute; top: 100px; left: 50%;
-            transform: translateX(-50%);
-            width: 68px; height: 68px;
-            background: radial-gradient(circle, #f59e0b 0%, #b45309 70%, #78350f 100%);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.8rem; color: #fff;
-            box-shadow: 0 0 25px rgba(245, 158, 11, 0.7), inset 0 0 8px rgba(0,0,0,0.6);
-            z-index: 5;
-            transition: transform 0.6s ease, opacity 0.6s ease;
-            border: 2px solid #fef3c7;
+            position: absolute; top: 100px; left: 50%; transform: translateX(-50%);
+            width: 68px; height: 68px; background: radial-gradient(circle, #f59e0b 0%, #b45309 70%, #78350f 100%);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; color: #fff; box-shadow: 0 0 25px rgba(245, 158, 11, 0.7); z-index: 5;
+            transition: transform 0.6s ease, opacity 0.6s ease; border: 2px solid #fef3c7;
         }
-
         .env-card-inside {
-            position: absolute; bottom: 12px; left: 50%;
-            transform: translateX(-50%);
-            width: 92%; height: 210px;
-            background: var(--gold-gradient);
-            border-radius: 10px; z-index: 2;
-            transition: transform 0.8s ease-in-out;
-            padding: 20px; color: #000;
-            text-align: center; font-weight: 800;
+            position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+            width: 92%; height: 210px; background: var(--gold-gradient); border-radius: 10px; z-index: 2;
+            transition: transform 0.8s ease; padding: 20px; color: #000; text-align: center; font-weight: 800;
         }
-
-        /* Envelope Open Animation Trigger States */
         .envelope-3d.open .env-flap-panel { transform: rotateX(180deg); z-index: 1; }
         .envelope-3d.open .wax-seal-stamp { opacity: 0; transform: translateX(-50%) scale(0.3); }
         .envelope-3d.open .env-card-inside { transform: translateX(-50%) translateY(-170px); z-index: 6; }
 
-        /* ==========================================================================
-           3. MAIN PUBLIC GUEST INVITATION CARD (FULL SECTIONS)
-           ========================================================================== */
+        /* Public Guest View Frame */
         .guest-invitation-card {
-            min-height: 100dvh;
-            background: var(--inv-bg);
-            color: var(--inv-text);
-            font-family: var(--inv-font);
-            padding: 30px 12px 80px;
-            position: relative;
-            transition: var(--transition-smooth);
+            min-height: 100dvh; background: var(--inv-bg); color: var(--inv-text); font-family: var(--inv-font);
+            padding: 30px 12px 80px; position: relative;
         }
-
         .card-inner-frame {
-            max-width: 680px; margin: 0 auto;
-            background: var(--inv-card-bg);
-            border: 1.5px solid var(--inv-border);
-            border-radius: var(--radius-md);
-            padding: 36px 18px;
-            text-align: center;
-            box-shadow: var(--inv-shadow);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            position: relative;
+            max-width: 650px; margin: 0 auto; background: var(--inv-card-bg);
+            border: 1.5px solid var(--inv-border); border-radius: var(--radius-md); padding: 36px 20px;
+            text-align: center; box-shadow: var(--inv-shadow); backdrop-filter: blur(20px);
         }
+        .card-names-title { font-size: 2.8rem; font-weight: 900; color: var(--inv-accent); margin: 16px 0; }
+        
+        .countdown-grid { display: flex; justify-content: center; gap: 10px; margin: 28px 0; }
+        .cd-box { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--inv-border); border-radius: 10px; padding: 10px; min-width: 70px; }
+        .cd-val { font-size: 1.5rem; font-weight: 900; color: var(--inv-accent); }
 
-        .kurdish-ornament {
-            width: 100%; height: 24px;
-            background-image: var(--inv-ornament);
-            background-size: 12px 12px;
-            margin: 20px 0; opacity: 0.65;
-        }
-
-        .card-names-title {
-            font-size: 2.8rem; font-weight: 900;
-            color: var(--inv-accent);
-            margin: 16px 0; line-height: 1.2;
-        }
-
-        .video-box-container {
-            width: 100%; border-radius: var(--radius-sm);
-            overflow: hidden; border: 1px solid var(--inv-border);
-            margin: 24px 0; background: #000;
-        }
-        .video-box-container video { width: 100%; max-height: 360px; object-fit: cover; display: block; }
-
-        .gallery-grid {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 12px; margin: 24px 0;
-        }
-        .gallery-img {
-            width: 100%; height: 140px; object-fit: cover;
-            border-radius: 8px; border: 1px solid var(--inv-border);
-        }
-
-        /* Event Timeline Nodes */
-        .timeline-section {
-            margin: 30px 0; text-align: right;
-        }
-        .timeline-item {
-            display: flex; gap: 14px; align-items: flex-start;
-            margin-bottom: 20px; position: relative;
-        }
-        .timeline-time {
-            background: rgba(212, 175, 55, 0.15); color: var(--inv-accent);
-            border: 1px solid var(--inv-border); padding: 4px 10px;
-            border-radius: 20px; font-size: 0.8rem; font-weight: 700; whitespace: nowrap;
-        }
-        .timeline-desc { font-size: 0.9rem; font-weight: 600; line-height: 1.5; }
-
-        /* Guestbook Wishes Wall */
-        .wishes-wall {
-            margin: 30px 0; text-align: right;
-            display: flex; flex-direction: column; gap: 12px;
-        }
-        .wish-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid var(--inv-border);
-            border-radius: var(--radius-sm);
-            padding: 14px;
-        }
-        .wish-author { font-size: 0.85rem; font-weight: 700; color: var(--inv-accent); margin-bottom: 4px; }
-        .wish-text { font-size: 0.85rem; opacity: 0.9; line-height: 1.6; }
-
-        /* Countdown */
-        .countdown-grid {
-            display: flex; justify-content: center; gap: 10px; margin: 28px 0; flex-wrap: wrap;
-        }
-        .cd-box {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--inv-border);
-            border-radius: 10px; padding: 12px 8px; min-width: 72px; flex: 1; max-width: 85px;
-        }
-        .cd-val { font-size: 1.6rem; font-weight: 900; color: var(--inv-accent); }
-        .cd-lbl { font-size: 0.75rem; opacity: 0.8; margin-top: 2px; }
-
-        /* Audio Toggle Floating Button */
-        .audio-toggle-btn {
-            position: fixed; bottom: 20px; left: 20px;
-            width: 48px; height: 48px; border-radius: 50%;
-            background: var(--gold-gradient); color: #020617;
-            border: none; cursor: pointer; z-index: 500;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-        }
-
-        /* Admin Responsive Header & Layout */
-        .admin-nav {
-            background: rgba(2, 4, 10, 0.95);
-            border-b: 1px solid rgba(212, 175, 55, 0.2);
-            padding: 14px 0; position: sticky; top: 0; z-index: 200;
-            backdrop-filter: blur(15px);
-        }
-        .admin-flex { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
-        .admin-menu { display: flex; gap: 16px; list-style: none; overflow-x: auto; padding-bottom: 4px; }
-        .admin-menu a { color: #94a3b8; text-decoration: none; cursor: pointer; font-weight: 600; font-size: 0.88rem; whitespace: nowrap; }
-        .admin-menu a.active { color: var(--gold-light); border-bottom: 2px solid var(--gold-primary); }
-
-        .builder-grid {
-            display: grid; grid-template-columns: 1fr 380px; gap: 24px; margin-top: 20px;
-        }
+        /* Builder Mobile Mockup */
+        .builder-grid { display: grid; grid-template-columns: 1fr 380px; gap: 24px; margin-top: 20px; }
         .phone-mockup-frame {
-            position: sticky; top: 80px;
-            width: 100%; height: 680px;
-            background: #000; border: 10px solid #1e293b;
-            border-radius: 36px; overflow-y: auto;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.9);
+            position: sticky; top: 80px; width: 100%; height: 680px;
+            background: #000; border: 10px solid #1e293b; border-radius: 36px; overflow-y: auto;
         }
-        .data-table-container { overflow-x: auto; }
-        .data-table { width: 100%; border-collapse: collapse; text-align: right; margin-top: 10px; min-width: 600px; }
-        .data-table th, .data-table td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 0.85rem; }
 
         @media (max-width: 992px) {
             .builder-grid { grid-template-columns: 1fr; }
             .phone-mockup-frame { display: none; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Ambient Glow Canvas -->
+    <!-- Ambient Glow Canvas Background -->
     <canvas id="bg-canvas"></canvas>
 
     <!-- ==========================================================================
-       VIEW 1: ADMIN LOGIN PAGE
+       VIEW 1: PUBLIC LANDING PAGE (DA3WA HIGH CONVERTING STYLE)
        ========================================================================== -->
-    <section id="view-login" class="container" style="min-height: 100dvh; display: flex; align-items: center; justify-content: center;">
+    <div id="view-landing">
+        <!-- Navigation Header -->
+        <nav class="navbar">
+            <div class="container nav-flex">
+                <div style="font-size: 1.3rem; font-weight: 900; display: flex; align-items: center; gap: 8px;">
+                    <span>👑</span>
+                    <span style="background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">کارت ROYAL</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#templates">قالبەکان</a></li>
+                    <li><a href="#features">تایبەتمەندییەکان</a></li>
+                    <li><a href="#pricing">باقەکان و نرخ</a></li>
+                    <li><a href="#reviews">آراء العملاء</a></li>
+                    <li><a href="#faq">پرسیارە شایعەکان</a></li>
+                </ul>
+                <div style="display: flex; gap: 10px;">
+                    <select id="currency-select" class="form-control" style="min-height: 38px; width: auto; font-size: 0.8rem; font-weight: 700;">
+                        <option value="IQD">IQD (دیناری عێراقی)</option>
+                        <option value="USD" selected>USD ($ دۆلار)</option>
+                    </select>
+                    <button class="btn-gold" onclick="navigateToAdminLogin()" style="min-height: 38px; padding: 6px 16px; font-size: 0.85rem;">چوونەژوورەوەی ئەدمین</button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="container hero-section">
+            <div class="hero-badge">🎁 تاقیکردنەوەی بێبەرامبەر — داوەتنامەکەت بە ڕاستەوخۆ ببینە</div>
+            <h1 class="hero-title">داوەتنامەیەکی دیجیتاڵی فاخر<br>شایستەی خۆشییەکانتان</h1>
+            <p class="hero-subtitle">رابطێکی ئەلیکترۆنی سادە و شاهانە بنێرە بۆ میوانەکانت — بە ئۆپێنەری 3D کەیفی بگرە، وەڵامی میوانەکان (RSVP) بە ڕاستەوخۆ کۆبکەرەوە.</p>
+            <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+                <a href="#pricing" class="btn-gold" style="padding: 14px 32px; font-size: 1rem;">داواکردنی کارت ✨</a>
+                <button class="btn-glass" onclick="previewDemoEnvelope()" style="padding: 14px 28px; font-size: 1rem;">بینینی نموونەی زیندوو 👁️</button>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="stats-strip">
+                <div class="stat-item"><b>+850</b><span>داوەتنامەی دروستکراو</span></div>
+                <div class="stat-item"><b>★ 4.9 / 5</b><span>پلەی ڕەزامەندی کڕیاران</span></div>
+                <div class="stat-item"><b>100%</b><span>ئۆتۆماتیکی و خێرا</span></div>
+            </div>
+        </section>
+
+        <!-- Interactive Feature Showcase Tabs -->
+        <section id="features" class="container" style="padding: 40px 0;">
+            <h2 style="text-align: center; font-size: 1.8rem; font-weight: 900; margin-bottom: 8px;">تایبەتمەندییە ناوازەکان</h2>
+            <p style="text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 24px;">پەنجە لەسەر هەر مێزەیەک بدە بۆ بینینی کارکردنی ڕاستەوخۆ</p>
+
+            <div class="showcase-tabs">
+                <button class="tab-btn active" onclick="switchFeatureTab(0)">💌 پشتڕاستکردنەوەی ئامادەبوون (RSVP)</button>
+                <button class="tab-btn" onclick="switchFeatureTab(1)">🎵 مۆسیقا و دەنگی تایبەت</button>
+                <button class="tab-btn" onclick="switchFeatureTab(2)">📍 نەخشەی ژیرانە (Google Maps)</button>
+                <button class="tab-btn" onclick="switchFeatureTab(3)">💬 دیواری پیرۆزبایی میوانەکان</button>
+            </div>
+
+            <div class="glass-card" id="feature-display-box" style="text-align: right;">
+                <h3 style="color: var(--gold-light); font-size: 1.2rem; margin-bottom: 8px;" id="feat-title">پشتڕاستکردنەوەی ئامادەبوونی میوانەکان (RSVP)</h3>
+                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.7;" id="feat-desc">بەبێ پێویستی بە پەیوەندی تەلەفۆنی، بە وردی بزانە چەند میوان ئامادە دەبن. کۆنترۆڵی ژمارەی یاوەران بکە لەڕێگەی ژووری بەڕێوەبەر بە ڕاستەوخۆ.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Tiers (Adapted from Code 2) -->
+        <section id="pricing" class="container" style="padding: 50px 0;">
+            <h2 style="text-align: center; font-size: 2rem; font-weight: 900; margin-bottom: 8px;">باقەکان و نرخەکان</h2>
+            <p style="text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 30px;">کڕینی یەکجارە بەبێ تێچووی شاراوە</p>
+
+            <div class="pricing-grid">
+                <!-- Basic Tier -->
+                <div class="price-card">
+                    <div>
+                        <h3 style="font-size: 1.3rem; color: var(--gold-light);">باقەی سەرەتایی</h3>
+                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">کارتێکی ئاسایی و سەرنجڕاکێش</p>
+                        <div style="font-size: 2.2rem; font-weight: 900; color: #fff;" class="price-tag" data-usd="$19" data-iqd="25,000 IQD">$19</div>
+                    </div>
+                    <ul style="list-style: none; text-align: right; margin: 20px 0; font-size: 0.85rem; color: #cbd5e1; display: grid; gap: 10px;">
+                        <li>✔ بەستەری تایبەت بۆ داوەتنامە</li>
+                        <li>✔ نەخشەی Google Maps</li>
+                        <li>✔ کاتی پێچەوانە (Countdown)</li>
+                        <li>✔ پشتگیری تا 100 میوان</li>
+                    </ul>
+                    <button class="btn-glass" onclick="selectPackage('Basic')">دیارییکردنی باقە</button>
+                </div>
+
+                <!-- Premium Tier -->
+                <div class="price-card popular">
+                    <div class="popular-badge">پڕفۆلۆترین ⭐</div>
+                    <div>
+                        <h3 style="font-size: 1.3rem; color: var(--gold-primary);">باقەی کامڵ (Full Royal)</h3>
+                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">گشت تایبەتمەندییە پێشکەوتووەکان</p>
+                        <div style="font-size: 2.2rem; font-weight: 900; color: var(--gold-primary);" class="price-tag" data-usd="$30" data-iqd="40,000 IQD">$30</div>
+                    </div>
+                    <ul style="list-style: none; text-align: right; margin: 20px 0; font-size: 0.85rem; color: #cbd5e1; display: grid; gap: 10px;">
+                        <li>✔ هەموو تایبەتمەندییەکانی باقەی سەرەتایی</li>
+                        <li>✔ زەرفی 3D شاهانە بە مۆری زێڕین</li>
+                        <li>✔ ئۆپلۆدکردنی فایلی مۆسیقا و ڤیدیۆ</li>
+                        <li>✔ سیستەمی RSVP و دیواری پیرۆزبایی</li>
+                        <li>✔ ئەلبومی وێنەی گەلەری</li>
+                    </ul>
+                    <button class="btn-gold" onclick="selectPackage('Full')">دەستپێکردن بەم باقەیە</button>
+                </div>
+
+                <!-- VIP Tier -->
+                <div class="price-card">
+                    <div>
+                        <h3 style="font-size: 1.3rem; color: var(--gold-light);">باقەی تایبەت (VIP)</h3>
+                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">دیزاینی تایبەت بە کڕیار</p>
+                        <div style="font-size: 2.2rem; font-weight: 900; color: #fff;" class="price-tag" data-usd="$50" data-iqd="65,000 IQD">$50</div>
+                    </div>
+                    <ul style="list-style: none; text-align: right; margin: 20px 0; font-size: 0.85rem; color: #cbd5e1; display: grid; gap: 10px;">
+                        <li>✔ هەموو تایبەتمەندییەکانی باقەی کامڵ</li>
+                        <li>✔ کۆدی QRی تایبەت بە خێزانەکان</li>
+                        <li>✔ دیزاین کردنی تایبەت (Custom Design)</li>
+                        <li>✔ پشتیوانی بەپەلە لەواتسئاپ (24/7)</li>
+                    </ul>
+                    <button class="btn-glass" onclick="selectPackage('VIP')">دیارییکردنی باقە</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews Wall (WhatsApp Chat Mockup) -->
+        <section id="reviews" class="container" style="padding: 40px 0;">
+            <h2 style="text-align: center; font-size: 1.8rem; font-weight: 900; margin-bottom: 8px;">ڕای کڕیارە ئازیزەکانمان 💬</h2>
+            <p style="text-align: center; color: #94a3b8; font-size: 0.88rem; margin-bottom: 24px;">راستەوخۆ لە وەتسئاپەوە</p>
+
+            <div class="reviews-grid">
+                <div class="rev-bubble">
+                    دەستتان خۆش بێت بەڕاستی داوەتنامەکە زۆر شیک و ناوازە بوو! هەموو خزمەکانمان سەرسام بوون بە زەرفە 3Dەکەی. دەستی پێشەنگتان خۆش بێت. ❤️
+                    <span class="rev-time">10:44 PM • هەولێر</span>
+                </div>
+                <div class="rev-bubble">
+                    زۆر سوپاس بۆ خێرایی و وەڵامدانەوەتان. بەراستى کارتان نایابە و شایەنی ئەوەیە لە هەموو کوردستاندا ژمارە یەک بن. 🌹
+                    <span class="rev-time">01:20 AM • سلێمانی</span>
+                </div>
+                <div class="rev-bubble">
+                    سیستەمی RSVPکەتان زۆر هاوکاری کردین لە ڕێکخستنی ژمارەی میوانەکانی هۆڵەکە. سەرکەوتوو بن. 💯
+                    <span class="rev-time">05:15 PM • دهۆک</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container" style="padding: 40px 0 80px; max-width: 800px;">
+            <h2 style="text-align: center; font-size: 1.8rem; font-weight: 900; margin-bottom: 24px;">پرسیارە دووبارەبووەکان</h2>
+            <div style="display: grid; gap: 12px;">
+                <div class="glass-card" style="padding: 16px 20px;">
+                    <h4 style="color: var(--gold-light); margin-bottom: 6px;">کاتی ئامادەبوونی داوەتنامەکە چەند دەخایەنێت؟</h4>
+                    <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6;">کارتەکە بە شێوەیەکی دەستبەجێ (لە ماوەی چەند خولەکێکدا) دوای پڕکردنەوەی زانیارییەکان ئامادە دەبێت.</p>
+                </div>
+                <div class="glass-card" style="padding: 16px 20px;">
+                    <h4 style="color: var(--gold-light); margin-bottom: 6px;">چۆن پارەدان ئەنجام دەدرێت؟</h4>
+                    <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6;">پارەدان لەرێگەی زێن کێش (FastPay / FIB / ZainCash) یان فاست پەی و کارتە بانکییەکان وەردەگیرێت.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- ==========================================================================
+       VIEW 2: ADMIN LOGIN PAGE
+       ========================================================================== -->
+    <section id="view-login" class="container hidden" style="min-height: 100dvh; display: flex; align-items: center; justify-content: center;">
         <div class="glass-card" style="max-width: 400px; width: 100%; text-align: center;">
             <div style="font-size: 3.2rem; margin-bottom: 8px;">👑</div>
             <h1 style="font-size: 1.6rem; font-weight: 900; margin-bottom: 6px;">چوونەژوورەوەی بەڕێوەبەر</h1>
@@ -497,33 +479,33 @@
                     <label>پاسۆردی بەڕێوەبەر</label>
                     <input type="password" id="login-pass" class="form-control" required placeholder="پاسۆرد بنووسە...">
                 </div>
-                <button type="submit" class="btn-gold" style="margin-top: 8px;">چوونەژوورەوە</button>
+                <button type="submit" class="btn-gold" style="width:100%; margin-top: 8px;">چوونەژوورەوە</button>
             </form>
             <div id="login-err" style="color: #ef4444; font-size: 0.85rem; margin-top: 14px;" class="hidden">پاسۆرد هەڵەیە! (Default: admin123)</div>
+            <button class="btn-glass" onclick="showLandingView()" style="margin-top: 14px; width: 100%;">گەڕانەوە بۆ سەرەتا</button>
         </div>
     </section>
 
     <!-- ==========================================================================
-       VIEW 2: ADMIN DASHBOARD WORKSPACE
+       VIEW 3: ADMIN DASHBOARD WORKSPACE
        ========================================================================== -->
     <section id="view-dashboard" class="hidden">
-        <nav class="admin-nav">
-            <div class="container admin-flex">
+        <nav class="navbar">
+            <div class="container nav-flex">
                 <div style="font-size: 1.2rem; font-weight: 900; display: flex; align-items: center; gap: 8px;">
                     <span>👑</span>
-                    <span style="background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">کارت ROYAL</span>
+                    <span style="background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">کارت ROYAL - بەڕێوەبەر</span>
                 </div>
-                <ul class="admin-menu">
-                    <li><a onclick="switchAdminTab('dash-all')" id="nav-dash-all" class="active">سەرجەم کارتەکان</a></li>
-                    <li><a onclick="switchAdminTab('dash-builder')" id="nav-dash-builder">دیزاینەر و دروستکردن</a></li>
-                    <li><a onclick="switchAdminTab('dash-rsvps')" id="nav-dash-rsvps">پەیامی میوانەکان</a></li>
+                <ul class="nav-links">
+                    <li><a onclick="switchAdminTab('dash-all')" id="nav-dash-all" style="cursor:pointer;" class="active">سەرجەم کارتەکان</a></li>
+                    <li><a onclick="switchAdminTab('dash-builder')" id="nav-dash-builder" style="cursor:pointer;">دیزاینەر و دروستکردن</a></li>
+                    <li><a onclick="switchAdminTab('dash-rsvps')" id="nav-dash-rsvps" style="cursor:pointer;">پەیامی میوانەکان</a></li>
                 </ul>
-                <button class="btn-glass" onclick="handleAdminLogout()" style="width: auto; min-height: 38px; padding: 6px 14px; font-size: 0.8rem;">چوونەدەرەوە</button>
+                <button class="btn-glass" onclick="handleAdminLogout()" style="min-height: 38px; padding: 6px 14px; font-size: 0.8rem;">چوونەدەرەوە</button>
             </div>
         </nav>
 
-        <div class="container" style="padding: 24px 0 60px;">
-            
+        <div class="container" style="padding: 30px 0 60px;">
             <!-- TAB 1: ALL INVITATIONS LIST -->
             <div id="tab-dash-all">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
@@ -531,27 +513,25 @@
                         <h2 style="font-size: 1.5rem; font-weight: 900;">سەرجەم داوەتنامەکان</h2>
                         <p style="color: #94a3b8; font-size: 0.85rem;">بەڕێوەبردن و داگرتنی بەستەر و کۆدی QR</p>
                     </div>
-                    <button class="btn-gold" onclick="prepareNewInviteForm()" style="width: auto;">+ دروستکردنی کارتی نوێ</button>
+                    <button class="btn-gold" onclick="prepareNewInviteForm()">+ دروستکردنی کارتی نوێ</button>
                 </div>
 
-                <div class="glass-card">
-                    <div class="data-table-container">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>ناوی بۆنە</th>
-                                    <th>کڕیار</th>
-                                    <th>دیزاین</th>
-                                    <th>بەروار</th>
-                                    <th>دۆخ</th>
-                                    <th>کردارەکان</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table-invites-body">
-                                <!-- Dynamic Content -->
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="glass-card" style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: right; min-width: 600px;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--gold-light); font-size: 0.85rem;">
+                                <th style="padding: 12px;">ناوی بۆنە</th>
+                                <th style="padding: 12px;">کڕیار</th>
+                                <th style="padding: 12px;">دیزاین</th>
+                                <th style="padding: 12px;">بەروار</th>
+                                <th style="padding: 12px;">دۆخ</th>
+                                <th style="padding: 12px;">کردارەکان</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-invites-body">
+                            <!-- Dynamic Table Rows -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -586,29 +566,22 @@
 
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                                 <div class="form-group">
-                                    <label>دیزاین (10 Dynamic Themes)</label>
+                                    <label>دیزاین (Dynamic Themes)</label>
                                     <select id="field-theme" class="form-control" onchange="syncLivePreview()">
                                         <option value="tpl-gold">زێڕینی کلاسیك (Luxury Gold)</option>
                                         <option value="tpl-black">مەخمەری ڕەش (Velvet Black)</option>
                                         <option value="tpl-kurdish">کەلەپووری کوردی (Kurdish Traditional)</option>
-                                        <option value="tpl-rose">ڕۆز گۆڵد (Rose Gold)</option>
-                                        <option value="tpl-emerald">زومرودی ئیسلامی (Emerald Islamic)</option>
-                                        <option value="tpl-white">مەڕمەڕی سپی (White Marble)</option>
-                                        <option value="tpl-blue">شینی شاهانە (Midnight Blue)</option>
-                                        <option value="tpl-floral">گوڵزاری زێڕین (Golden Floral)</option>
-                                        <option value="tpl-minimal">سادەی مۆدێرن (Minimal Luxury)</option>
-                                        <option value="tpl-burgundy">عەنابی شاهانە (Burgundy Velvet)</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>ناوی کڕیار (تەنها بۆ ئەدمین)</label>
+                                    <label>ناوی کڕیار</label>
                                     <input type="text" id="field-customer" class="form-control" value="ئاری عوسمان" required>
                                 </div>
                             </div>
 
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                                 <div class="form-group">
-                                    <label>بەرواری بۆنە (دەق)</label>
+                                    <label>بەرواری بۆنە</label>
                                     <input type="text" id="field-date" class="form-control" value="٢٥ی تشرینی یەکەمی ٢٠٢٥" required oninput="syncLivePreview()">
                                 </div>
                                 <div class="form-group">
@@ -618,7 +591,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>بەرواری پێچەوانە (Countdown Target ISO Date)</label>
+                                <label>کاتی پێچەوانە (Target ISO Date)</label>
                                 <input type="datetime-local" id="field-countdown" class="form-control" required onchange="syncLivePreview()">
                             </div>
 
@@ -638,29 +611,9 @@
                                 <textarea id="field-text" class="form-control" rows="3" oninput="syncLivePreview()">بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز و خۆشەویست دەکەین کە بەشدار و هاوبەشی خۆشییەکانمان بن لەم شەوە زێڕینەدا.</textarea>
                             </div>
 
-                            <!-- FILE UPLOADS FROM MOBILE (INDEXEDDB POWERED) -->
                             <div class="form-group">
-                                <label>🎵 ئۆپلۆدکردنی فایلی دەنگ لە مۆبایلەکەتەوە (MP3 تا 20MB)</label>
-                                <div class="file-upload-box">
-                                    <span id="label-audio-file">📁 فایلی دەنگ هەڵبژێره لە مۆبایلەکەت...</span>
-                                    <input type="file" id="file-music" accept="audio/*" onchange="handleAudioFileUpload(event)">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>🎬 ئۆپلۆدکردنی فایلی ڤیدیۆ لە مۆبایلەکەتەوە (MP4 تا 20MB)</label>
-                                <div class="file-upload-box">
-                                    <span id="label-video-file">📁 فایلی ڤیدیۆ هەڵبژێره لە مۆبایلەکەت...</span>
-                                    <input type="file" id="file-video" accept="video/*" onchange="handleVideoFileUpload(event)">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>🖼️ ئۆپلۆدکردنی وێنەکانی گەلەری لە مۆبایلەکەتەوە</label>
-                                <div class="file-upload-box">
-                                    <span id="label-gallery-files">📁 وێنەکان هەڵبژێره لە ئەلبومی مۆبایلەکەت...</span>
-                                    <input type="file" id="file-gallery" accept="image/*" multiple onchange="handleGalleryFileUpload(event)">
-                                </div>
+                                <label>🎵 ئۆپلۆدکردنی فایلی دەنگ (MP3)</label>
+                                <input type="file" id="file-music" class="form-control" accept="audio/*" onchange="handleAudioFileUpload(event)">
                             </div>
 
                             <div class="form-group">
@@ -670,66 +623,60 @@
 
                             <div style="display: flex; gap: 10px; margin-top: 20px;">
                                 <button type="submit" class="btn-gold" style="flex: 1;">پاشەکەوتکردن و بڵاوکردنەوە</button>
-                                <button type="button" class="btn-glass" onclick="switchAdminTab('dash-all')" style="width: auto;">پەشیمانبوونەوە</button>
+                                <button type="button" class="btn-glass" onclick="switchAdminTab('dash-all')">پەشیمانبوونەوە</button>
                             </div>
                         </form>
                     </div>
 
                     <!-- Realtime Mobile Frame Preview -->
                     <div class="phone-mockup-frame">
-                        <div id="live-preview-container" class="guest-invitation-card" data-theme="tpl-gold" style="min-height: 100%; padding: 30px 14px;">
-                            <div class="card-inner-frame" style="padding: 24px 14px;">
+                        <div id="live-preview-container" class="guest-invitation-card" data-theme="tpl-gold" style="min-height: 100%; padding: 20px 10px;">
+                            <div class="card-inner-frame" style="padding: 20px 10px;">
                                 <div style="font-size: 0.75rem; letter-spacing: 2px; opacity: 0.8;">داوەتنامەی فەرمی</div>
-                                <div class="card-names-title" id="prev-names" style="font-size: 2rem;">ئاری & دەريا</div>
-                                <div id="prev-title" style="font-size: 0.95rem; margin-bottom: 12px;">ئاهەنگی هاوسەرگیری شاهانە</div>
-                                <div class="kurdish-ornament"></div>
-                                <p id="prev-text" style="font-size: 0.85rem; line-height: 1.7; margin-bottom: 16px;">بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز دەکەین...</p>
-                                <div id="prev-date" style="font-size: 0.9rem; font-weight: 700;">٢٥ی تشرینی یەکەم</div>
-                                <div id="prev-venue" style="font-size: 0.8rem; opacity: 0.8; margin-top: 4px;">هۆڵی سەعد عەبدوڵڵا</div>
+                                <div class="card-names-title" id="prev-names" style="font-size: 1.8rem;">ئاری & دەريا</div>
+                                <div id="prev-title" style="font-size: 0.9rem; margin-bottom: 12px;">ئاهەنگی هاوسەرگیری شاهانە</div>
+                                <p id="prev-text" style="font-size: 0.8rem; line-height: 1.6; margin-bottom: 16px;">بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز دەکەین...</p>
+                                <div id="prev-date" style="font-size: 0.85rem; font-weight: 700;">٢٥ی تشرینی یەکەم</div>
+                                <div id="prev-venue" style="font-size: 0.75rem; opacity: 0.8; margin-top: 4px;">هۆڵی سەعد عەبدوڵڵا</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- TAB 3: GUEST RSVPs & WISHES TABLE -->
+            <!-- TAB 3: GUEST RSVPs -->
             <div id="tab-dash-rsvps" class="hidden">
                 <h2 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 16px;">پەیام و پشتڕاستکردنەوەی میوانەکان (RSVP)</h2>
-                <div class="glass-card">
-                    <div class="data-table-container">
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>ناوی میوان</th>
-                                    <th>ژمارەی مۆبایل</th>
-                                    <th>دۆخی ئامادەبوون</th>
-                                    <th>ژمارەی یاوەران</th>
-                                    <th>پەیامی پیرۆزبایی</th>
-                                </tr>
-                            </thead>
-                            <tbody id="table-rsvps-body">
-                                <!-- Dynamic Content -->
-                            </tbody>
-                        </table>
-                    </div>
+                <div class="glass-card" style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; text-align: right; min-width: 500px;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: var(--gold-light); font-size: 0.85rem;">
+                                <th style="padding: 12px;">ناوی میوان</th>
+                                <th style="padding: 12px;">ژمارەی مۆبایل</th>
+                                <th style="padding: 12px;">دۆخی ئامادەبوون</th>
+                                <th style="padding: 12px;">پەیامی پیرۆزبایی</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-rsvps-body">
+                            <!-- Dynamic RSVPs -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- ==========================================================================
-       VIEW 3: PUBLIC GUEST EXPERIENCE (BUHARITA & ALGEROIS STYLE)
+       VIEW 4: PUBLIC GUEST EXPERIENCE (3D ENVELOPE + UNVEILED CARD)
        ========================================================================== -->
     <section id="view-guest" class="hidden">
-        
         <!-- STEP 1: 3D WAX SEAL ENVELOPE -->
         <div id="guest-envelope-step" class="envelope-viewport">
             <div class="envelope-3d" id="envelope-3d-element" onclick="unseal3DEnvelope()">
                 <div class="env-back-panel"></div>
                 <div class="env-card-inside">
                     <div style="font-size: 0.75rem; letter-spacing: 2px;">داوەتنامەی فەرمی</div>
-                    <div style="font-size: 1.6rem; margin-top: 12px;" id="env-card-names">ئاری & دەريا</div>
+                    <div style="font-size: 1.5rem; margin-top: 12px;" id="env-card-names">ئاری & دەريا</div>
                 </div>
                 <div class="env-flap-panel"></div>
                 <div class="env-pocket-panel"></div>
@@ -740,65 +687,31 @@
             </div>
         </div>
 
-        <!-- STEP 2: MAIN UNVEILED LUXURY CARD (FULL SECTIONS) -->
+        <!-- STEP 2: MAIN UNVEILED LUXURY CARD -->
         <div id="guest-card-step" class="guest-invitation-card hidden" data-theme="tpl-gold">
-            
-            <button class="audio-toggle-btn" onclick="toggleGuestAudio()" title="مۆسیقا">🎵</button>
             <audio id="guest-audio-element" loop></audio>
 
             <div class="card-inner-frame">
                 <div style="font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8;">داوەتنامەی فەرمی</div>
                 <h1 class="card-names-title" id="g-names">ئاری & دەريا</h1>
-                <div style="font-size: 1.25rem; font-weight: 600;" id="g-title">ئاهەنگی هاوسەرگیری شاهانە</div>
-                
-                <div class="kurdish-ornament"></div>
-
-                <!-- Video Box -->
-                <div id="g-video-box" class="video-box-container hidden">
-                    <video id="g-video-element" controls playsinline></video>
-                </div>
+                <div style="font-size: 1.2rem; font-weight: 600;" id="g-title">ئاهەنگی هاوسەرگیری شاهانە</div>
 
                 <!-- Countdown Timer -->
                 <div class="countdown-grid">
-                    <div class="cd-box"><div class="cd-val" id="cd-d">00</div><div class="cd-lbl">ڕۆژ</div></div>
-                    <div class="cd-box"><div class="cd-val" id="cd-h">00</div><div class="cd-lbl">کاتژمێر</div></div>
-                    <div class="cd-box"><div class="cd-val" id="cd-m">00</div><div class="cd-lbl">خولەک</div></div>
-                    <div class="cd-box"><div class="cd-val" id="cd-s">00</div><div class="cd-lbl">چرکە</div></div>
+                    <div class="cd-box"><div class="cd-val" id="cd-d">00</div><div style="font-size: 0.7rem;">ڕۆژ</div></div>
+                    <div class="cd-box"><div class="cd-val" id="cd-h">00</div><div style="font-size: 0.7rem;">کاتژمێر</div></div>
+                    <div class="cd-box"><div class="cd-val" id="cd-m">00</div><div style="font-size: 0.7rem;">خولەک</div></div>
+                    <div class="cd-box"><div class="cd-val" id="cd-s">00</div><div style="font-size: 0.7rem;">چرکە</div></div>
                 </div>
 
-                <!-- Verse & Custom Message -->
-                <p style="font-size: 1.1rem; line-height: 1.9; margin: 28px 0;" id="g-text">
+                <p style="font-size: 1.05rem; line-height: 1.8; margin: 24px 0;" id="g-text">
                     بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز و خۆشەویست دەکەین کە بەشدار و هاوبەشی خۆشییەکانمان بن لەم شەوە زێڕینەدا.
                 </p>
 
-                <!-- Program Schedule Timeline Section -->
-                <div class="kurdish-ornament"></div>
-                <h3 style="font-size: 1.2rem; color: var(--inv-accent); margin-bottom: 20px;">بەرنامەی بەڕێوەچوونی ئاهەنگەکە</h3>
-                <div class="timeline-section">
-                    <div class="timeline-item">
-                        <span class="timeline-time">٦:٠٠ی ئێوارە</span>
-                        <div class="timeline-desc">پێشوازیکردن لە میوانە ئازیزەکان</div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-time">٧:٣٠ی ئێوارە</span>
-                        <div class="timeline-desc">خواردنی نانی ئێوارە و بڕینی کێکی شاهانە</div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-time">٩:٠٠ی شەو</span>
-                        <div class="timeline-desc">دەستپێکردنی هەڵپەڕکێ و ئاهەنگگێڕان</div>
-                    </div>
-                </div>
-
-                <!-- Photo Gallery Grid -->
-                <div id="g-gallery-box" class="gallery-grid hidden"></div>
-
-                <div class="kurdish-ornament"></div>
-
-                <!-- Venue & Dates -->
-                <div style="margin: 28px 0;">
-                    <div style="font-size: 1.25rem; font-weight: 800;" id="g-date">٢٥ی تشرینی یەکەمی ٢٠٢٥</div>
-                    <div style="opacity: 0.85; margin-top: 4px; font-size: 1rem;" id="g-time">کاتژمێر ٦:٠٠ی ئێوارە</div>
-                    <div style="color: var(--gold-light); font-weight: 700; margin-top: 14px; font-size: 1.1rem;" id="g-venue">هۆڵی سەعد عەبدوڵڵا - هەولێر</div>
+                <div style="margin: 24px 0;">
+                    <div style="font-size: 1.2rem; font-weight: 800;" id="g-date">٢٥ی تشرینی یەکەمی ٢٠٢٥</div>
+                    <div style="opacity: 0.85; margin-top: 4px; font-size: 0.95rem;" id="g-time">کاتژمێر ٦:٠٠ی ئێوارە</div>
+                    <div style="color: var(--gold-light); font-weight: 700; margin-top: 10px; font-size: 1rem;" id="g-venue">هۆڵی سەعد عەبدوڵڵا - هەولێر</div>
                 </div>
 
                 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px;">
@@ -806,48 +719,19 @@
                     <button class="btn-glass" onclick="openGuestRsvpModal()">💌 پشتڕاستکردنەوەی ئامادەبوون (RSVP)</button>
                 </div>
 
-                <!-- Guestbook Wishes Wall Section -->
-                <div class="kurdish-ornament"></div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                    <h3 style="font-size: 1.2rem; color: var(--inv-accent);">دیواری پیرۆزبایی میوانەکان</h3>
-                    <button class="btn-glass" onclick="openAddWishModal()" style="width: auto; min-height: 36px; padding: 4px 12px; font-size: 0.8rem;">+ بنووسە</button>
+                <!-- Wishes Wall -->
+                <div style="margin-top: 30px; text-align: right;">
+                    <h3 style="font-size: 1.1rem; color: var(--gold-light); margin-bottom: 12px;">پەیامی پیرۆزبایی میوانەکان</h3>
+                    <div id="g-wishes-container" style="display: grid; gap: 10px;"></div>
                 </div>
-                <div class="wishes-wall" id="g-wishes-container">
-                    <!-- Dynamic Guest Wishes -->
-                </div>
-            </div>
-        </div>
-
-        <!-- EXPIRED / DISABLED STATE -->
-        <div id="guest-expired-step" class="container hidden" style="min-height: 100dvh; display: flex; align-items: center; justify-content: center; text-align: center;">
-            <div class="glass-card" style="max-width: 440px; padding: 40px 20px;">
-                <div style="font-size: 3.8rem; margin-bottom: 14px;">⏳</div>
-                <h2 style="font-size: 1.6rem; font-weight: 900; color: var(--gold-light); margin-bottom: 10px;">ئەم داوەتنامەیە بەسەرچووە</h2>
-                <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7;">داوای لێبوردن دەکەین، کاتی بەکارهێنانی ئەم کارتە بەسەرچووە یان ناچالاک کراوە لەلایەن بەڕێوەبەرەوە.</p>
             </div>
         </div>
     </section>
 
-    <!-- ADMIN ONLY PRIVATE QR CODE & SHARE MODAL -->
-    <div id="modal-admin-qr" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center; padding: 16px;" class="hidden">
-        <div class="glass-card" style="max-width: 440px; width: 100%; text-align: center;">
-            <h3 style="font-size: 1.4rem; color: var(--gold-light); margin-bottom: 12px;">کۆدی QR و بەستەری کارت</h3>
-            <p style="color: #94a3b8; font-size: 0.85rem; margin-bottom: 16px;">ئەم زانیارییانە تەنها بۆ بەڕێوەبەر دەردەکەون بۆ ناردن بۆ کڕیار</p>
-            
-            <div id="admin-qr-img-box" style="margin: 16px 0;"></div>
-            <input type="text" id="admin-qr-link-input" class="form-control" readonly style="text-align: center; margin-bottom: 16px; font-size: 0.85rem;">
-            
-            <div style="display: flex; gap: 10px;">
-                <button class="btn-gold" style="flex:1;" onclick="copyAdminLink()">کۆپیکردنی لینک</button>
-                <button class="btn-glass" onclick="closeAdminQrModal()" style="width: auto;">داخستن</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- GUEST RSVP MODAL -->
-    <div id="modal-guest-rsvp" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center; padding: 16px;" class="hidden">
-        <div class="glass-card" style="max-width: 440px; width: 100%;">
-            <h3 style="font-size: 1.3rem; color: var(--gold-light); margin-bottom: 16px;">پشتڕاستکردنەوەی ئامادەبوون</h3>
+    <!-- MODAL: RSVP GUEST -->
+    <div id="modal-guest-rsvp" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center; padding: 16px;" class="hidden">
+        <div class="glass-card" style="max-width: 400px; width: 100%;">
+            <h3 style="font-size: 1.2rem; color: var(--gold-light); margin-bottom: 16px;">پشتڕاستکردنەوەی ئامادەبوون</h3>
             <form onsubmit="submitGuestRSVP(event)">
                 <div class="form-group">
                     <label>ناوی تەواوت بنووسە</label>
@@ -860,101 +744,25 @@
                 <div class="form-group">
                     <label>ئایا ئامادە دەبیت؟</label>
                     <select id="rsvp-status" class="form-control">
-                        <option value="ئامادە دەبم">بەڵێ، بە خۆشحاڵییەوە ئامادە دەبم</option>
-                        <option value="داوای لێبوردن دەکەم">داوای لێبوردن دەکەم، ناتوانم ئامادەبم</option>
+                        <option value="ئامادە دەبم">بەڵێ، ئامادە دەبم</option>
+                        <option value="داوای لێبوردن دەکەم">داوای لێبوردن دەکەم، ناتوانم</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label>پەیامی پیرۆزبایی</label>
-                    <textarea id="rsvp-note" class="form-control" rows="2" placeholder="پەیامەکەت بنووسە..."></textarea>
-                </div>
                 <div style="display: flex; gap: 10px; margin-top: 20px;">
-                    <button type="submit" class="btn-gold" style="flex: 1;">ناردنی وەڵام</button>
-                    <button type="button" class="btn-glass" onclick="closeGuestRsvpModal()" style="width: auto;">داخستن</button>
+                    <button type="submit" class="btn-gold" style="flex: 1;">ناردن</button>
+                    <button type="button" class="btn-glass" onclick="closeGuestRsvpModal()">داخستن</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- GUESTBOOK WISH MODAL -->
-    <div id="modal-guest-wish" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center; padding: 16px;" class="hidden">
-        <div class="glass-card" style="max-width: 440px; width: 100%;">
-            <h3 style="font-size: 1.3rem; color: var(--gold-light); margin-bottom: 16px;">نوسینی پەیامی پیرۆزبایی</h3>
-            <form onsubmit="submitGuestWish(event)">
-                <div class="form-group">
-                    <label>ناوت</label>
-                    <input type="text" id="wish-author" class="form-control" required placeholder="ناوی خۆت بنووسە">
-                </div>
-                <div class="form-group">
-                    <label>پەیامی پیرۆزبایی</label>
-                    <textarea id="wish-text" class="form-control" rows="3" required placeholder="جوانترین پەیامی پیرۆزبایی بنووسە..."></textarea>
-                </div>
-                <div style="display: flex; gap: 10px; margin-top: 20px;">
-                    <button type="submit" class="btn-gold" style="flex: 1;">پاشەکەوتکردن</button>
-                    <button type="button" class="btn-glass" onclick="closeAddWishModal()" style="width: auto;">داخستن</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- ==========================================================================
-       VANILLA JAVASCRIPT SYSTEM ENGINE (INDEXEDDB POWERED MEDIA STORAGE)
-       ========================================================================== -->
+    <!-- JavaScript Core Engine -->
     <script>
-        /* ----------------------------------------------------
-           1. INDEXEDDB ENGINE (HANDLES UP TO 50MB+ FILES PERSISTENTLY)
-           ---------------------------------------------------- */
-        const DB_NAME = 'KartRoyalDB';
-        const DB_VERSION = 1;
-        let db = null;
-
-        function initIDB() {
-            return new Promise((resolve, reject) => {
-                const req = indexedDB.open(DB_NAME, DB_VERSION);
-                req.onupgradeneeded = (e) => {
-                    db = e.target.result;
-                    if (!db.objectStoreNames.contains('mediaFiles')) {
-                        db.createObjectStore('mediaFiles');
-                    }
-                };
-                req.onsuccess = (e) => {
-                    db = e.target.result;
-                    resolve(db);
-                };
-                req.onerror = (e) => reject(e);
-            });
-        }
-
-        function saveBlobToIDB(key, blob) {
-            return new Promise((resolve, reject) => {
-                if (!db) return resolve(null);
-                const tx = db.transaction('mediaFiles', 'readwrite');
-                const store = tx.objectStore('mediaFiles');
-                store.put(blob, key);
-                tx.oncomplete = () => resolve(key);
-                tx.onerror = (e) => reject(e);
-            });
-        }
-
-        function getBlobFromIDB(key) {
-            return new Promise((resolve, reject) => {
-                if (!db) return resolve(null);
-                const tx = db.transaction('mediaFiles', 'readonly');
-                const store = tx.objectStore('mediaFiles');
-                const req = store.get(key);
-                req.onsuccess = () => resolve(req.result);
-                req.onerror = (e) => reject(e);
-            });
-        }
-
-        /* ----------------------------------------------------
-           2. STORAGE & DATA ARCHITECTURE
-           ---------------------------------------------------- */
-        const STORAGE_KEY_INVITES = 'kart_royal_invites_v7';
-        const STORAGE_KEY_RSVPS = 'kart_royal_rsvps_v7';
-        const STORAGE_KEY_WISHES = 'kart_royal_wishes_v7';
         const DEFAULT_PASS = 'admin123';
+        const STORAGE_KEY_INVITES = 'kart_royal_invites_v8';
+        const STORAGE_KEY_RSVPS = 'kart_royal_rsvps_v8';
 
+        /* Sample Invitations */
         const INITIAL_INVITATIONS = [
             {
                 id: 'inv_101',
@@ -970,9 +778,6 @@
                 venueName: 'هۆڵی سەعد عەبدوڵڵا - هەولێر',
                 mapsUrl: 'https://maps.google.com',
                 inviteText: 'بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز و خۆشەویست دەکەین کە بەشدار و هاوبەشی خۆشییەکانمان بن لەم شەوە زێڕینەدا.',
-                musicKey: '',
-                videoKey: '',
-                galleryKeys: [],
                 status: 'active'
             }
         ];
@@ -995,85 +800,11 @@
             localStorage.setItem(STORAGE_KEY_RSVPS, JSON.stringify(data));
         }
 
-        function getWishes() {
-            const data = localStorage.getItem(STORAGE_KEY_WISHES);
-            return data ? JSON.parse(data) : [
-                { author: 'هاوڕێ عوسمان', text: 'پیرۆزە بەهیوای ژیانێکی پر لە خۆشی و بەختەوەری' },
-                { author: 'سۆران ئەحمەد', text: 'بەختەوەر بن شایستەی باشترینەکانن' }
-            ];
-        }
-
-        function saveWishes(data) {
-            localStorage.setItem(STORAGE_KEY_WISHES, JSON.stringify(data));
-        }
-
-        /* ----------------------------------------------------
-           3. WEB AUDIO SYNTHESIZER (UNSEAL SOUND)
-           ---------------------------------------------------- */
-        function playUnsealSound() {
-            try {
-                const ctx = new (window.AudioContext || window.webkitAudioContext)();
-                const osc = ctx.createOscillator();
-                const gain = ctx.createGain();
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(150, ctx.currentTime);
-                osc.frequency.exponentialRampToValueAtTime(45, ctx.currentTime + 0.35);
-                gain.gain.setValueAtTime(0.35, ctx.currentTime);
-                gain.gain.linearRampToValueAtTime(0.01, ctx.currentTime + 0.35);
-                osc.connect(gain);
-                gain.connect(ctx.destination);
-                osc.start();
-                osc.stop(ctx.currentTime + 0.35);
-            } catch(e) {}
-        }
-
-        /* ----------------------------------------------------
-           4. AMBIENT CANVAS PARTICLE ENGINE
-           ---------------------------------------------------- */
-        const canvas = document.getElementById('bg-canvas');
-        const ctx = canvas.getContext('2d');
-        let particles = [];
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
-
-        class Particle {
-            constructor() { this.reset(); }
-            reset() {
-                this.x = Math.random() * canvas.width;
-                this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
-                this.speedX = (Math.random() - 0.5) * 0.3;
-                this.speedY = (Math.random() - 0.5) * 0.3;
-                this.alpha = Math.random() * 0.5 + 0.2;
-            }
-            update() {
-                this.x += this.speedX; this.y += this.speedY;
-                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
-            }
-            draw() {
-                ctx.fillStyle = `rgba(212, 175, 55, ${this.alpha})`;
-                ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill();
-            }
-        }
-        for (let i = 0; i < 35; i++) particles.push(new Particle());
-        function animParticles() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => { p.update(); p.draw(); });
-            requestAnimationFrame(animParticles);
-        }
-        animParticles();
-
-        /* ----------------------------------------------------
-           5. ROUTER & SYSTEM NAVIGATION
-           ---------------------------------------------------- */
+        /* Routing Engine */
         function handleRouting() {
             const hash = window.location.hash;
 
+            document.getElementById('view-landing').classList.add('hidden');
             document.getElementById('view-login').classList.add('hidden');
             document.getElementById('view-dashboard').classList.add('hidden');
             document.getElementById('view-guest').classList.add('hidden');
@@ -1081,30 +812,64 @@
             if (hash.startsWith('#invite/')) {
                 const slug = hash.replace('#invite/', '');
                 renderGuestView(slug);
-            } else if (localStorage.getItem('kart_royal_logged') === 'true') {
+            } else if (hash === '#admin-login') {
+                document.getElementById('view-login').classList.remove('hidden');
+            } else if (hash === '#dashboard' && localStorage.getItem('kart_royal_logged') === 'true') {
                 document.getElementById('view-dashboard').classList.remove('hidden');
                 renderAdminTable();
                 renderRSVPTable();
             } else {
-                document.getElementById('view-login').classList.remove('hidden');
+                document.getElementById('view-landing').classList.remove('hidden');
             }
         }
         window.addEventListener('hashchange', handleRouting);
-        window.addEventListener('load', async () => {
-            await initIDB();
-            handleRouting();
-        });
+        window.addEventListener('load', handleRouting);
 
-        /* ----------------------------------------------------
-           6. ADMIN AUTHENTICATION & TAB NAVIGATION
-           ---------------------------------------------------- */
+        /* Landing Page Interactive Features */
+        const currencySelect = document.getElementById('currency-select');
+        if (currencySelect) {
+            currencySelect.addEventListener('change', (e) => {
+                const isIQD = e.target.value === 'IQD';
+                document.querySelectorAll('.price-tag').forEach(tag => {
+                    tag.textContent = isIQD ? tag.getAttribute('data-iqd') : tag.getAttribute('data-usd');
+                });
+            });
+        }
+
+        const featureData = [
+            { title: 'پشتڕاستکردنەوەی ئامادەبوونی میوانەکان (RSVP)', desc: 'بەبێ پێویستی بە پەیوەندی تەلەفۆنی، بە وردی بزانە چەند میوان ئامادە دەبن. کۆنترۆڵی ژمارەی یاوەران بکە لەڕێگەی ژووری بەڕێوەبەر بە ڕاستەوخۆ.' },
+            { title: 'مۆسیقا و دەنگی تایبەت 🎵', desc: 'دەتوانیت گۆرانی یان میوزیکی دڵخوازی خۆت ئۆپلۆد بکەیت تا لەگەڵ کردنەوەی زەرفەکەدا بۆ میوانەکانت لێبدات.' },
+            { title: 'نەخشەی ژیرانە (Google Maps) 📍', desc: 'میوانەکانت تەنها بە پەنجەداگرتنێک ڕاستەوخۆ نەخشەی هۆڵەکە لە گۆگل ماپس دەکەنەوە بەبێ سەرلێشێوان.' },
+            { title: 'دیواری پیرۆزبایی میوانەکان 💬', desc: 'دیوارێکی تایبەت تا میوانەکانت پیرۆزباییەکانیان بنووسن و بۆ هەمیشەیی وەک یادگاری بمێنێتەوە.' }
+        ];
+
+        function switchFeatureTab(index) {
+            document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
+            document.getElementById('feat-title').textContent = featureData[index].title;
+            document.getElementById('feat-desc').textContent = featureData[index].desc;
+        }
+
+        function previewDemoEnvelope() {
+            window.location.hash = '#invite/ari-wedding';
+        }
+
+        function navigateToAdminLogin() {
+            window.location.hash = '#admin-login';
+        }
+
+        function showLandingView() {
+            window.location.hash = '';
+        }
+
+        /* Admin Auth & Actions */
         function handleAdminLogin(e) {
             e.preventDefault();
             const pass = document.getElementById('login-pass').value;
             if (pass === DEFAULT_PASS) {
                 localStorage.setItem('kart_royal_logged', 'true');
                 window.location.hash = '#dashboard';
-                handleRouting();
             } else {
                 document.getElementById('login-err').classList.remove('hidden');
             }
@@ -1113,16 +878,13 @@
         function handleAdminLogout() {
             localStorage.removeItem('kart_royal_logged');
             window.location.hash = '';
-            handleRouting();
         }
 
         function switchAdminTab(tabId) {
             ['dash-all', 'dash-builder', 'dash-rsvps'].forEach(t => {
                 document.getElementById(`tab-${t}`).classList.add('hidden');
-                document.getElementById(`nav-${t}`).classList.remove('active');
             });
             document.getElementById(`tab-${tabId}`).classList.remove('hidden');
-            document.getElementById(`nav-${tabId}`).classList.add('active');
         }
 
         function renderAdminTable() {
@@ -1132,18 +894,15 @@
 
             invites.forEach(inv => {
                 const tr = document.createElement('tr');
+                tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
                 tr.innerHTML = `
-                    <td style="font-weight:700;">${inv.groomName} & ${inv.brideName}</td>
-                    <td>${inv.customerName}</td>
-                    <td><span style="color:var(--gold-light); font-size:0.8rem;">${inv.theme}</span></td>
-                    <td>${inv.eventDate}</td>
-                    <td><span style="color:${inv.status==='active'?'#4ade80':'#f87171'}; font-weight:600;">${inv.status==='active'?'چالاک':'ناچالاک'}</span></td>
-                    <td>
-                        <button class="btn-glass" onclick="previewInvite('${inv.slug}')" style="min-height:32px; padding:4px 8px; font-size:0.75rem;">👁️ بێنین</button>
-                        <button class="btn-glass" onclick="editInvite('${inv.id}')" style="min-height:32px; padding:4px 8px; font-size:0.75rem;">✏️ دەستکاری</button>
-                        <button class="btn-glass" onclick="openAdminQrModal('${inv.slug}')" style="min-height:32px; padding:4px 8px; font-size:0.75rem;">📱 QR</button>
-                        <button class="btn-glass" onclick="toggleInviteStatus('${inv.id}')" style="min-height:32px; padding:4px 8px; font-size:0.75rem;">${inv.status==='active'?'🚫':'✅'}</button>
-                        <button class="btn-danger" onclick="deleteInvite('${inv.id}')" style="padding:4px 8px; font-size:0.75rem;">🗑️</button>
+                    <td style="padding:12px; font-weight:700;">${inv.groomName} & ${inv.brideName}</td>
+                    <td style="padding:12px;">${inv.customerName}</td>
+                    <td style="padding:12px; color:var(--gold-light);">${inv.theme}</td>
+                    <td style="padding:12px;">${inv.eventDate}</td>
+                    <td style="padding:12px; color:#4ade80;">چالاک</td>
+                    <td style="padding:12px;">
+                        <button class="btn-glass" onclick="previewInvite('${inv.slug}')" style="min-height:30px; padding:4px 10px; font-size:0.75rem;">👁️ بینین</button>
                     </td>
                 `;
                 tbody.appendChild(tr);
@@ -1157,103 +916,35 @@
 
             rsvps.forEach(r => {
                 const tr = document.createElement('tr');
+                tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
                 tr.innerHTML = `
-                    <td style="font-weight:700;">${r.name}</td>
-                    <td>${r.phone}</td>
-                    <td><span style="color:${r.status==='ئامادە دەبم'?'#4ade80':'#f87171'}; font-weight:600;">${r.status}</span></td>
-                    <td>1</td>
-                    <td>${r.note || '-'}</td>
+                    <td style="padding:12px; font-weight:700;">${r.name}</td>
+                    <td style="padding:12px;">${r.phone}</td>
+                    <td style="padding:12px; color:#4ade80;">${r.status}</td>
+                    <td style="padding:12px;">-</td>
                 `;
                 tbody.appendChild(tr);
             });
         }
 
-        /* ----------------------------------------------------
-           7. MEDIA FILE UPLOADS TO INDEXEDDB (NO 5MB LIMIT!)
-           ---------------------------------------------------- */
-        let currentMusicBlobKey = '';
-        let currentVideoBlobKey = '';
-        let currentGalleryBlobKeys = [];
-
-        async function handleAudioFileUpload(e) {
-            const file = e.target.files[0];
-            if (file) {
-                document.getElementById('label-audio-file').textContent = `⏳ باردەکرێت: ${file.name}...`;
-                const key = 'audio_' + Date.now();
-                await saveBlobToIDB(key, file);
-                currentMusicBlobKey = key;
-                document.getElementById('label-audio-file').textContent = `✅ فایلی دەنگ تۆمارکرا: ${file.name}`;
-            }
-        }
-
-        async function handleVideoFileUpload(e) {
-            const file = e.target.files[0];
-            if (file) {
-                document.getElementById('label-video-file').textContent = `⏳ باردەکرێت: ${file.name}...`;
-                const key = 'video_' + Date.now();
-                await saveBlobToIDB(key, file);
-                currentVideoBlobKey = key;
-                document.getElementById('label-video-file').textContent = `✅ فایلی ڤیدیۆ تۆمارکرا: ${file.name}`;
-            }
-        }
-
-        async function handleGalleryFileUpload(e) {
-            const files = Array.from(e.target.files);
-            if (files.length > 0) {
-                document.getElementById('label-gallery-files').textContent = `⏳ ${files.length} وێنە باردەکرێت...`;
-                currentGalleryBlobKeys = [];
-
-                for (let i = 0; i < files.length; i++) {
-                    const key = `gallery_${Date.now()}_${i}`;
-                    await saveBlobToIDB(key, files[i]);
-                    currentGalleryBlobKeys.push(key);
-                }
-                document.getElementById('label-gallery-files').textContent = `✅ ${files.length} وێنە پاشەکەوتکران`;
-            }
-        }
-
-        /* ----------------------------------------------------
-           8. BUILDER & REALTIME SPLIT PREVIEW ENGINE
-           ---------------------------------------------------- */
-        function syncLivePreview() {
-            const theme = document.getElementById('field-theme').value;
-            const groom = document.getElementById('field-groom').value;
-            const bride = document.getElementById('field-bride').value;
-            const title = document.getElementById('field-title').value;
-            const date = document.getElementById('field-date').value;
-            const venue = document.getElementById('field-venue').value;
-            const text = document.getElementById('field-text').value;
-
-            const preview = document.getElementById('live-preview-container');
-            preview.setAttribute('data-theme', theme);
-            document.getElementById('prev-names').textContent = `${groom} & ${bride}`;
-            document.getElementById('prev-title').textContent = title;
-            document.getElementById('prev-date').textContent = date;
-            document.getElementById('prev-venue').textContent = venue;
-            document.getElementById('prev-text').textContent = text;
-        }
-
         function prepareNewInviteForm() {
             document.getElementById('invite-form').reset();
-            document.getElementById('field-id').value = '';
-            currentMusicBlobKey = '';
-            currentVideoBlobKey = '';
-            currentGalleryBlobKeys = [];
-            document.getElementById('label-audio-file').textContent = '📁 فایلی دەنگ هەڵبژێره لە مۆبایلەکەت...';
-            document.getElementById('label-video-file').textContent = '📁 فایلی ڤیدیۆ هەڵبژێره لە مۆبایلەکەت...';
-            document.getElementById('label-gallery-files').textContent = '📁 وێنەکان هەڵبژێره لە ئەلبومی مۆبایلەکەت...';
-            document.getElementById('editor-heading').textContent = 'دروستکردنی داوەتنامەی نوێ';
-            syncLivePreview();
             switchAdminTab('dash-builder');
+        }
+
+        function syncLivePreview() {
+            document.getElementById('prev-names').textContent = `${document.getElementById('field-groom').value} & ${document.getElementById('field-bride').value}`;
+            document.getElementById('prev-title').textContent = document.getElementById('field-title').value;
+            document.getElementById('prev-date').textContent = document.getElementById('field-date').value;
+            document.getElementById('prev-venue').textContent = document.getElementById('field-venue').value;
+            document.getElementById('prev-text').textContent = document.getElementById('field-text').value;
         }
 
         function saveInvitationForm(e) {
             e.preventDefault();
             const invites = getInvites();
-            const id = document.getElementById('field-id').value;
-
             const newObj = {
-                id: id || 'inv_' + Date.now(),
+                id: 'inv_' + Date.now(),
                 groomName: document.getElementById('field-groom').value,
                 brideName: document.getElementById('field-bride').value,
                 eventTitle: document.getElementById('field-title').value,
@@ -1265,249 +956,69 @@
                 venueName: document.getElementById('field-venue').value,
                 mapsUrl: document.getElementById('field-maps').value,
                 inviteText: document.getElementById('field-text').value,
-                musicKey: currentMusicBlobKey,
-                videoKey: currentVideoBlobKey,
-                galleryKeys: currentGalleryBlobKeys,
-                slug: document.getElementById('field-slug').value.trim().toLowerCase().replace(/\s+/g, '-'),
+                slug: document.getElementById('field-slug').value.trim().toLowerCase(),
                 status: 'active'
             };
-
-            if (id) {
-                const idx = invites.findIndex(i => i.id === id);
-                if (idx !== -1) invites[idx] = newObj;
-            } else {
-                invites.unshift(newObj);
-            }
-
+            invites.unshift(newObj);
             saveInvites(invites);
-            alert('داوەتنامەکە بە سەرکەوتوویی تۆمارکرا!');
+            alert('داوەتنامەکە بە سەرکەوتوویی دروستکرا!');
             renderAdminTable();
             switchAdminTab('dash-all');
-        }
-
-        function editInvite(id) {
-            const inv = getInvites().find(i => i.id === id);
-            if (!inv) return;
-
-            document.getElementById('field-id').value = inv.id;
-            document.getElementById('field-groom').value = inv.groomName;
-            document.getElementById('field-bride').value = inv.brideName;
-            document.getElementById('field-title').value = inv.eventTitle;
-            document.getElementById('field-theme').value = inv.theme;
-            document.getElementById('field-customer').value = inv.customerName;
-            document.getElementById('field-date').value = inv.eventDate;
-            document.getElementById('field-time').value = inv.eventTime;
-            document.getElementById('field-countdown').value = inv.countdownDate;
-            document.getElementById('field-venue').value = inv.venueName;
-            document.getElementById('field-maps').value = inv.mapsUrl;
-            document.getElementById('field-text').value = inv.inviteText;
-            currentMusicBlobKey = inv.musicKey || '';
-            currentVideoBlobKey = inv.videoKey || '';
-            currentGalleryBlobKeys = inv.galleryKeys || [];
-            document.getElementById('field-slug').value = inv.slug;
-
-            document.getElementById('editor-heading').textContent = 'دەستکاریکردنی داوەتنامە';
-            syncLivePreview();
-            switchAdminTab('dash-builder');
-        }
-
-        function toggleInviteStatus(id) {
-            const invites = getInvites();
-            const inv = invites.find(i => i.id === id);
-            if (inv) {
-                inv.status = inv.status === 'active' ? 'disabled' : 'active';
-                saveInvites(invites);
-                renderAdminTable();
-            }
-        }
-
-        function deleteInvite(id) {
-            if (confirm('ئایا بڵنیت لە سڕینەوەی ئەم کارتە؟')) {
-                const invites = getInvites().filter(i => i.id !== id);
-                saveInvites(invites);
-                renderAdminTable();
-            }
         }
 
         function previewInvite(slug) {
             window.location.hash = `#invite/${slug}`;
         }
 
-        /* ----------------------------------------------------
-           9. ADMIN ONLY PRIVATE QR CODE MODAL
-           ---------------------------------------------------- */
-        function openAdminQrModal(slug) {
-            const fullUrl = `${window.location.origin}${window.location.pathname}#invite/${slug}`;
-            const qrBox = document.getElementById('admin-qr-img-box');
-            
-            qrBox.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(fullUrl)}" style="border-radius:12px; border:2px solid var(--gold-primary);" alt="Admin QR">`;
-            document.getElementById('admin-qr-link-input').value = fullUrl;
-            document.getElementById('modal-admin-qr').classList.remove('hidden');
-        }
-
-        function closeAdminQrModal() {
-            document.getElementById('modal-admin-qr').classList.add('hidden');
-        }
-
-        function copyAdminLink() {
-            const input = document.getElementById('admin-qr-link-input');
-            navigator.clipboard.writeText(input.value);
-            alert('لینکی داوەتنامەکە کۆپی کرا:\n' + input.value);
-        }
-
-        /* ----------------------------------------------------
-           10. 3D ENVELOPE & FULL GUEST EXPERIENCE ENGINE
-           ---------------------------------------------------- */
-        let activeTimer = null;
-        let activeAudio = null;
-
-        async function renderGuestView(slug) {
+        /* 3D Envelope & Guest View Engine */
+        function renderGuestView(slug) {
             const inv = getInvites().find(i => i.slug === slug);
             document.getElementById('view-guest').classList.remove('hidden');
 
             const envStep = document.getElementById('guest-envelope-step');
             const cardStep = document.getElementById('guest-card-step');
-            const expStep = document.getElementById('guest-expired-step');
 
-            if (!inv || inv.status !== 'active') {
-                envStep.classList.add('hidden');
-                cardStep.classList.add('hidden');
-                expStep.classList.remove('hidden');
-                return;
-            }
-
-            expStep.classList.add('hidden');
             envStep.classList.remove('hidden');
             cardStep.classList.add('hidden');
-
-            // Reset Envelope State
             document.getElementById('envelope-3d-element').classList.remove('open');
-            document.getElementById('env-card-names').textContent = `${inv.groomName} & ${inv.brideName}`;
 
-            // Populate Main Card Elements
-            cardStep.setAttribute('data-theme', inv.theme || 'tpl-gold');
-            document.getElementById('g-names').textContent = `${inv.groomName} & ${inv.brideName}`;
-            document.getElementById('g-title').textContent = inv.eventTitle;
-            document.getElementById('g-text').textContent = inv.inviteText;
-            document.getElementById('g-date').textContent = inv.eventDate;
-            document.getElementById('g-time').textContent = inv.eventTime;
-            document.getElementById('g-venue').textContent = inv.venueName;
-            document.getElementById('g-maps').href = inv.mapsUrl || '#';
-
-            // Video Handling from IndexedDB
-            const videoBox = document.getElementById('g-video-box');
-            const videoElem = document.getElementById('g-video-element');
-            if (inv.videoKey) {
-                const videoBlob = await getBlobFromIDB(inv.videoKey);
-                if (videoBlob) {
-                    videoElem.src = URL.createObjectURL(videoBlob);
-                    videoBox.classList.remove('hidden');
-                } else {
-                    videoBox.classList.add('hidden');
-                }
-            } else {
-                videoBox.classList.add('hidden');
+            if (inv) {
+                document.getElementById('env-card-names').textContent = `${inv.groomName} & ${inv.brideName}`;
+                document.getElementById('g-names').textContent = `${inv.groomName} & ${inv.brideName}`;
+                document.getElementById('g-title').textContent = inv.eventTitle;
+                document.getElementById('g-text').textContent = inv.inviteText;
+                document.getElementById('g-date').textContent = inv.eventDate;
+                document.getElementById('g-time').textContent = inv.eventTime;
+                document.getElementById('g-venue').textContent = inv.venueName;
+                document.getElementById('g-maps').href = inv.mapsUrl || '#';
+                startGuestCountdown(inv.countdownDate);
             }
-
-            // Photo Gallery Handling from IndexedDB
-            const galleryBox = document.getElementById('g-gallery-box');
-            galleryBox.innerHTML = '';
-            if (inv.galleryKeys && inv.galleryKeys.length > 0) {
-                for (const key of inv.galleryKeys) {
-                    const imgBlob = await getBlobFromIDB(key);
-                    if (imgBlob) {
-                        const img = document.createElement('img');
-                        img.src = URL.createObjectURL(imgBlob);
-                        img.className = 'gallery-img';
-                        galleryBox.appendChild(img);
-                    }
-                }
-                galleryBox.classList.remove('hidden');
-            } else {
-                galleryBox.classList.add('hidden');
-            }
-
-            // Audio Player Setup from IndexedDB
-            if (inv.musicKey) {
-                const musicBlob = await getBlobFromIDB(inv.musicKey);
-                if (musicBlob) {
-                    activeAudio = document.getElementById('guest-audio-element');
-                    activeAudio.src = URL.createObjectURL(musicBlob);
-                }
-            }
-
-            renderGuestWishes();
-            startGuestCountdown(inv.countdownDate);
         }
 
         function unseal3DEnvelope() {
-            playUnsealSound();
             const env = document.getElementById('envelope-3d-element');
             env.classList.add('open');
-
-            if (activeAudio) activeAudio.play().catch(()=>{});
-
             setTimeout(() => {
                 document.getElementById('guest-envelope-step').classList.add('hidden');
                 document.getElementById('guest-card-step').classList.remove('hidden');
             }, 1000);
         }
 
-        function toggleGuestAudio() {
-            if (!activeAudio) return;
-            if (activeAudio.paused) activeAudio.play();
-            else activeAudio.pause();
-        }
-
         function startGuestCountdown(targetIso) {
-            if (activeTimer) clearInterval(activeTimer);
-
             function update() {
-                const target = new Date(targetIso).getTime();
-                const now = new Date().getTime();
-                const diff = target - now;
-
-                if (diff <= 0) {
-                    document.getElementById('cd-d').textContent = '00';
-                    document.getElementById('cd-h').textContent = '00';
-                    document.getElementById('cd-m').textContent = '00';
-                    document.getElementById('cd-s').textContent = '00';
-                    return;
-                }
-
+                const diff = new Date(targetIso).getTime() - new Date().getTime();
+                if (diff <= 0) return;
                 document.getElementById('cd-d').textContent = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
                 document.getElementById('cd-h').textContent = String(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
                 document.getElementById('cd-m').textContent = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
                 document.getElementById('cd-s').textContent = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
             }
             update();
-            activeTimer = setInterval(update, 1000);
-        }
-
-        /* ----------------------------------------------------
-           11. GUESTBOOK WISHES & RSVP MODAL LOGIC
-           ---------------------------------------------------- */
-        function renderGuestWishes() {
-            const wishes = getWishes();
-            const container = document.getElementById('g-wishes-container');
-            container.innerHTML = '';
-
-            wishes.forEach(w => {
-                const div = document.createElement('div');
-                div.className = 'wish-card';
-                div.innerHTML = `
-                    <div class="wish-author">${w.author}</div>
-                    <div class="wish-text">${w.text}</div>
-                `;
-                container.appendChild(div);
-            });
+            setInterval(update, 1000);
         }
 
         function openGuestRsvpModal() { document.getElementById('modal-guest-rsvp').classList.remove('hidden'); }
         function closeGuestRsvpModal() { document.getElementById('modal-guest-rsvp').classList.add('hidden'); }
-
-        function openAddWishModal() { document.getElementById('modal-guest-wish').classList.remove('hidden'); }
-        function closeAddWishModal() { document.getElementById('modal-guest-wish').classList.add('hidden'); }
 
         function submitGuestRSVP(e) {
             e.preventDefault();
@@ -1515,26 +1026,36 @@
             rsvps.unshift({
                 name: document.getElementById('rsvp-name').value,
                 phone: document.getElementById('rsvp-phone').value,
-                status: document.getElementById('rsvp-status').value,
-                note: document.getElementById('rsvp-note').value
+                status: document.getElementById('rsvp-status').value
             });
             saveRSVPs(rsvps);
             closeGuestRsvpModal();
-            alert('سوپاس! وەڵامەکەت بە سەرکەوتوویی نێردرا.');
+            alert('سوپاس! وەڵامەکەت تۆمارکرا.');
         }
 
-        function submitGuestWish(e) {
-            e.preventDefault();
-            const wishes = getWishes();
-            wishes.unshift({
-                author: document.getElementById('wish-author').value,
-                text: document.getElementById('wish-text').value
+        /* Ambient Particle Canvas */
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
+        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        let particles = Array.from({length: 25}, () => ({
+            x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+            size: Math.random() * 2 + 1, speedX: (Math.random() - 0.5) * 0.3, speedY: (Math.random() - 0.5) * 0.3
+        }));
+
+        function animParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = 'rgba(212, 175, 55, 0.3)';
+            particles.forEach(p => {
+                p.x += p.speedX; p.y += p.speedY;
+                if(p.x < 0 || p.x > canvas.width || p.y < 0 || p.y > canvas.height) { p.x = Math.random() * canvas.width; p.y = Math.random() * canvas.height; }
+                ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
             });
-            saveWishes(wishes);
-            renderGuestWishes();
-            closeAddWishModal();
-            alert('سوپاس! پەیامی پیرۆزباییەکەت لەسەر کارتەکە دەربکەوێت.');
+            requestAnimationFrame(animParticles);
         }
+        animParticles();
     </script>
 </body>
 </html>
