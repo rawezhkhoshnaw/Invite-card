@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="ckb" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>کارت ROYAL | شاهکاری داوەتنامەی دیجیتاڵی لە کوردستان</title>
+    <title>کارت ROYAL | شاکاری داوەتنامەی دیجیتاڵی لە کوردستان</title>
     
     <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,205 +12,176 @@
 
     <style>
         /* ==========================================================================
-           1. LUXURY MODERN DESIGN SYSTEM & MULTI-THEME ENGINE (12 THEMES)
+           1. CINEMATIC LUXURY DESIGN SYSTEM
            ========================================================================== */
         :root {
             --bg-obsidian: #02040a;
-            --bg-card: rgba(15, 23, 42, 0.85);
             --gold-light: #FFF4D0;
             --gold-primary: #D4AF37;
             --gold-dark: #8C6D1F;
             --gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
-            --gold-glow: rgba(212, 175, 55, 0.4);
-            --coral-pink: #f04d78;
-            --teal-bright: #14b8a6;
+            --gold-glow: rgba(212, 175, 55, 0.45);
+            --coral-accent: #f04d78;
+            --teal-accent: #14b8a6;
             
-            /* Dynamic Active Theme Variables */
+            /* Dynamic Canvas & Theme Variables */
             --inv-bg: #02040a;
-            --inv-card-bg: rgba(15, 23, 42, 0.88);
+            --inv-card-bg: rgba(15, 23, 42, 0.9);
             --inv-text: #F8FAFC;
             --inv-accent: #D4AF37;
             --inv-border: rgba(212, 175, 55, 0.35);
             --inv-font: 'Vazirmatn', sans-serif;
-            --inv-ornament: radial-gradient(#D4AF37 2px, transparent 2px);
-            --inv-shadow: 0 30px 80px rgba(0, 0, 0, 0.95);
 
-            --radius-sm: 10px;
-            --radius-md: 18px;
-            --radius-lg: 32px;
-            --transition-smooth: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius-sm: 12px;
+            --radius-md: 20px;
+            --radius-lg: 36px;
+            --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
-        /* Dynamic Template Themes (12 Unique Themes) */
-        [data-theme="tpl-gold"] { --inv-bg: radial-gradient(circle, #111827 0%, #02040a 100%); --inv-card-bg: rgba(17, 24, 39, 0.92); --inv-text: #F8FAFC; --inv-accent: #D4AF37; --inv-border: rgba(212, 175, 55, 0.45); }
-        [data-theme="tpl-black"] { --inv-bg: #000; --inv-card-bg: rgba(18, 18, 18, 0.95); --inv-text: #FFF; --inv-accent: #E2E8F0; --inv-border: rgba(255, 255, 255, 0.25); }
-        [data-theme="tpl-kurdish"] { --inv-bg: linear-gradient(180deg, #2A0404 0%, #0D0101 100%); --inv-card-bg: rgba(45, 6, 6, 0.92); --inv-text: #FEF08A; --inv-accent: #FACC15; --inv-border: rgba(250, 204, 21, 0.5); --inv-font: 'Amiri', serif; }
-        [data-theme="tpl-rose"] { --inv-bg: linear-gradient(180deg, #1C0A12 0%, #080205 100%); --inv-card-bg: rgba(35, 12, 22, 0.92); --inv-text: #FCE7F3; --inv-accent: #F472B6; --inv-border: rgba(244, 114, 182, 0.45); }
-        [data-theme="tpl-swans"] { --inv-bg: linear-gradient(160deg, #061e14 0%, #020a07 100%); --inv-card-bg: rgba(8, 45, 30, 0.9); --inv-text: #ecfdf5; --inv-accent: #34d399; --inv-border: rgba(52, 211, 153, 0.4); }
-        [data-theme="tpl-ring"] { --inv-bg: linear-gradient(160deg, #2c0915 0%, #0a0106 100%); --inv-card-bg: rgba(58, 14, 29, 0.9); --inv-text: #ffe4e6; --inv-accent: #fb7185; --inv-border: rgba(251, 113, 133, 0.4); }
-        [data-theme="tpl-vangogh"] { --inv-bg: linear-gradient(160deg, #09132e 0%, #020512 100%); --inv-card-bg: rgba(14, 29, 68, 0.9); --inv-text: #e0f2fe; --inv-accent: #38bdf8; --inv-border: rgba(56, 189, 248, 0.4); }
-        [data-theme="tpl-disney"] { --inv-bg: linear-gradient(160deg, #1f0b2b 0%, #08020c 100%); --inv-card-bg: rgba(45, 17, 61, 0.9); --inv-text: #f5d0fe; --inv-accent: #c084fc; --inv-border: rgba(192, 132, 252, 0.4); }
-        [data-theme="tpl-emerald"] { --inv-bg: linear-gradient(180deg, #022C22 0%, #01120D 100%); --inv-card-bg: rgba(4, 55, 43, 0.92); --inv-text: #ECFDF5; --inv-accent: #34D399; --inv-border: rgba(52, 211, 153, 0.45); }
-        [data-theme="tpl-white"] { --inv-bg: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%); --inv-card-bg: rgba(255, 255, 255, 0.96); --inv-text: #0F172A; --inv-accent: #B45309; --inv-border: rgba(180, 83, 9, 0.35); }
-        [data-theme="tpl-floral"] { --inv-bg: linear-gradient(180deg, #1A120B 0%, #080503 100%); --inv-card-bg: rgba(40, 26, 15, 0.92); --inv-text: #FEF3C7; --inv-accent: #F59E0B; --inv-border: rgba(245, 158, 11, 0.45); }
-        [data-theme="tpl-burgundy"] { --inv-bg: linear-gradient(180deg, #4A0E17 0%, #150306 100%); --inv-card-bg: rgba(60, 12, 20, 0.92); --inv-text: #FEE2E2; --inv-accent: #F87171; --inv-border: rgba(248, 113, 113, 0.45); }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
-        html {
-            scroll-behavior: smooth; font-family: 'Vazirmatn', sans-serif;
-            background-color: var(--bg-obsidian); color: #fff; overflow-x: hidden;
-        }
-
+        html { scroll-behavior: smooth; font-family: 'Vazirmatn', sans-serif; background-color: var(--bg-obsidian); color: #fff; overflow-x: hidden; }
         body { min-height: 100dvh; position: relative; }
         #bg-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
         .hidden { display: none !important; }
-        .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+        .container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 16px; }
 
-        /* Modern UI Controls & Glassmorphism Cards */
+        /* UI Controls & Glass Cards */
         .glass-card {
-            background: var(--bg-card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.22); border-radius: var(--radius-md); padding: 24px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8); transition: var(--transition-smooth);
+            background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 175, 55, 0.25); border-radius: var(--radius-md); padding: 24px;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85); transition: var(--transition-smooth);
         }
 
         .btn-gold {
-            background: var(--gold-gradient); color: #020617; font-weight: 800; min-height: 48px;
-            padding: 12px 24px; border-radius: 99px; border: none; cursor: pointer;
+            background: var(--gold-gradient); color: #020617; font-weight: 800; min-height: 50px;
+            padding: 12px 28px; border-radius: 99px; border: none; cursor: pointer;
             display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            font-size: 0.92rem; transition: var(--transition-smooth); box-shadow: 0 0 25px var(--gold-glow);
+            font-size: 0.95rem; transition: var(--transition-smooth); box-shadow: 0 0 25px var(--gold-glow);
             font-family: inherit; text-decoration: none;
         }
-        .btn-gold:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 0 35px rgba(212, 175, 55, 0.6); }
+        .btn-gold:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 0 35px rgba(212, 175, 55, 0.7); }
 
         .btn-glass {
             background: rgba(255, 255, 255, 0.08); color: #fff; border: 1px solid rgba(212, 175, 55, 0.3);
-            min-height: 46px; padding: 10px 20px; border-radius: 99px; cursor: pointer;
-            font-family: inherit; font-size: 0.88rem; transition: var(--transition-smooth);
+            min-height: 48px; padding: 10px 22px; border-radius: 99px; cursor: pointer;
+            font-family: inherit; font-size: 0.9rem; transition: var(--transition-smooth);
             text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
         }
         .btn-glass:hover { background: rgba(255, 255, 255, 0.18); border-color: var(--gold-primary); }
 
-        /* Form Inputs */
+        /* Forms */
         .form-group { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; text-align: right; }
         .form-group label { font-size: 0.85rem; color: var(--gold-light); font-weight: 600; }
         .form-control {
             background: rgba(3, 7, 18, 0.95); border: 1px solid rgba(212, 175, 55, 0.25);
-            border-radius: var(--radius-sm); min-height: 46px; padding: 12px 14px; color: #fff;
-            font-family: inherit; font-size: 0.92rem; outline: none; transition: var(--transition-smooth); width: 100%;
+            border-radius: var(--radius-sm); min-height: 48px; padding: 12px 14px; color: #fff;
+            font-family: inherit; font-size: 0.95rem; outline: none; transition: var(--transition-smooth); width: 100%;
         }
         .form-control:focus { border-color: var(--gold-primary); box-shadow: 0 0 15px var(--gold-glow); }
 
-        /* ==========================================================================
-           2. HEADER & LANDING PAGE STYLES (DA3WA COMPETITOR INTEGRATED)
-           ========================================================================== */
+        /* Navigation Header */
         .navbar {
-            position: sticky; top: 0; z-index: 100; background: rgba(2, 4, 10, 0.9);
+            position: sticky; top: 0; z-index: 100; background: rgba(2, 4, 10, 0.92);
             backdrop-filter: blur(15px); border-bottom: 1px solid rgba(212, 175, 55, 0.2); padding: 14px 0;
         }
         .nav-flex { display: flex; align-items: center; justify-content: space-between; }
         .nav-links { display: flex; gap: 20px; list-style: none; align-items: center; }
-        .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: var(--transition-smooth); }
+        .nav-links a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: var(--transition-smooth); }
         .nav-links a:hover { color: var(--gold-light); }
-
-        /* Hero Section */
-        .hero-section { padding: 70px 0 40px; text-align: center; position: relative; }
-        .hero-badge {
-            background: rgba(212, 175, 55, 0.12); color: var(--gold-light); border: 1px solid var(--gold-primary);
-            padding: 6px 18px; border-radius: 99px; font-size: 0.85rem; display: inline-block; margin-bottom: 20px; font-weight: 700;
-        }
-        .hero-title {
-            font-size: clamp(2.2rem, 5.5vw, 3.8rem); font-weight: 900; line-height: 1.25; margin-bottom: 18px;
-            background: linear-gradient(180deg, #FFFFFF 0%, #CBD5E1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .hero-subtitle { color: #94a3b8; font-size: clamp(0.95rem, 2vw, 1.2rem); max-width: 680px; margin: 0 auto 30px; line-height: 1.8; }
-
-        /* Stats Strip */
-        .stats-strip {
-            display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px;
-            background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: var(--radius-md); padding: 20px; margin: 30px 0; text-align: center;
-        }
-        .stat-item b { font-size: 1.6rem; color: var(--gold-primary); display: block; }
-        .stat-item span { font-size: 0.82rem; color: #94a3b8; }
-
-        /* Dynamic Template Showcase Cards Grid (Competitor's Horizontal Scrolling List) */
-        .tc-block { margin-bottom: 30px; }
-        .tc-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px; }
-        .tc-head h3 { font-size: 1.3rem; color: var(--gold-light); font-weight: 800; }
-        .tc-row {
-            display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory;
-            padding-bottom: 14px; scrollbar-width: none; -webkit-overflow-scrolling: touch;
-        }
-        .tc-row::-webkit-scrollbar { display: none; }
-        .tc-card {
-            scroll-snap-align: start; flex: 0 0 clamp(160px, 42vw, 200px);
-            background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: var(--radius-md); padding: 12px; display: flex; flex-direction: column; gap: 8px;
-            text-decoration: none; color: inherit; transition: var(--transition-smooth);
-        }
-        .tc-card:hover { border-color: var(--gold-primary); transform: translateY(-4px); }
-        .tc-shot { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 9/16; background: #000; }
-        .tc-shot img { width: 100%; height: 100%; object-fit: cover; }
-        .tc-badge {
-            position: absolute; top: 8px; right: 8px; background: var(--coral-pink);
-            color: #fff; font-size: 0.65rem; font-weight: 800; padding: 3px 8px; border-radius: 99px;
-        }
-        .tc-card b { font-size: 0.95rem; color: #fff; margin-top: 4px; }
-        .tc-card small { color: #94a3b8; font-size: 0.75rem; line-height: 1.4; }
-        .tc-acts { display: flex; gap: 6px; margin-top: auto; }
-
-        /* Interactive Phone Demo Stage */
-        .showcase-tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; margin-bottom: 20px; }
-        .tab-btn {
-            background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #94a3b8; padding: 10px 16px; border-radius: 99px; cursor: pointer;
-            font-family: inherit; font-size: 0.85rem; font-weight: 700; white-space: nowrap; transition: var(--transition-smooth);
-        }
-        .tab-btn.active { background: var(--gold-gradient); color: #000; border-color: transparent; }
-
-        .demo-phone-display {
-            background: #000; border: 8px solid #1e293b; border-radius: 32px;
-            max-width: 320px; margin: 0 auto; padding: 20px 14px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.9);
-        }
-
-        /* Pricing Grid */
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 24px; }
-        .price-card {
-            position: relative; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255, 255, 255, 0.12);
-            border-radius: var(--radius-md); padding: 28px 20px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;
-        }
-        .price-card.popular { border: 2px solid var(--gold-primary); box-shadow: 0 0 35px var(--gold-glow); }
-        .popular-badge {
-            position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
-            background: var(--gold-gradient); color: #000; font-weight: 800; font-size: 0.72rem; padding: 4px 14px; border-radius: 99px;
-        }
-
-        /* Customer Reviews (WhatsApp Style) */
-        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }
-        .rev-bubble {
-            background: #0b141a; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px;
-            padding: 16px; text-align: right; font-size: 0.85rem; line-height: 1.6; position: relative;
-        }
-        .rev-time { font-size: 0.7rem; color: #8696a0; display: block; text-align: left; margin-top: 6px; }
 
         /* Floating WhatsApp Button */
         .wa-fab {
-            position: fixed; left: 20px; bottom: 20px; width: 54px; height: 56px; border-radius: 50%;
+            position: fixed; left: 20px; bottom: 20px; width: 58px; height: 58px; border-radius: 50%;
             background: #25d366; color: #fff; display: flex; align-items: center; justify-content: center;
-            font-size: 1.6rem; text-decoration: none; box-shadow: 0 10px 25px rgba(37,211,102,0.5); z-index: 500;
+            font-size: 1.8rem; text-decoration: none; box-shadow: 0 10px 30px rgba(37,211,102,0.5); z-index: 500;
+            transition: var(--transition-smooth);
         }
+        .wa-fab:hover { transform: scale(1.1); }
+
+        /* Hero & Section Typography */
+        .hero-section { padding: 80px 0 40px; text-align: center; }
+        .hero-title {
+            font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 900; line-height: 1.2; margin-bottom: 20px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #94A3B8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
+        .hero-subtitle { color: #94a3b8; font-size: clamp(1rem, 2.2vw, 1.25rem); max-width: 720px; margin: 0 auto 32px; line-height: 1.8; }
 
         /* ==========================================================================
-           3. 3D WAX SEAL ENVELOPE & PUBLIC GUEST CARD
+           2. REALISTIC TEMPLATES CATALOGUE (REAL COVER CARDS LIKE DA3WA)
            ========================================================================== */
+        .tc-block { margin-bottom: 40px; }
+        .tc-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; }
+        .tc-head h3 { font-size: 1.4rem; color: var(--gold-light); font-weight: 800; }
+        .tc-row {
+            display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory;
+            padding-bottom: 16px; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+        }
+        .tc-row::-webkit-scrollbar { display: none; }
+        
+        .tc-card {
+            scroll-snap-align: start; flex: 0 0 clamp(180px, 45vw, 220px);
+            background: rgba(15, 23, 42, 0.85); border: 1.5px solid rgba(212, 175, 55, 0.25);
+            border-radius: var(--radius-md); padding: 12px; display: flex; flex-direction: column; gap: 10px;
+            text-decoration: none; color: inherit; transition: var(--transition-smooth); position: relative;
+        }
+        .tc-card:hover { border-color: var(--gold-primary); transform: translateY(-6px); box-shadow: 0 15px 35px var(--gold-glow); }
+        
+        .tc-shot {
+            position: relative; border-radius: 14px; overflow: hidden; aspect-ratio: 9/16;
+            background: #000; border: 1px solid rgba(255,255,255,0.1);
+            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 12px;
+        }
+        .tc-badge {
+            position: absolute; top: 10px; right: 10px; background: var(--coral-accent);
+            color: #fff; font-size: 0.68rem; font-weight: 800; padding: 3px 10px; border-radius: 99px; z-index: 2;
+        }
+        .tc-card b { font-size: 1rem; color: #fff; margin-top: 4px; font-weight: 800; }
+        .tc-card small { color: #94a3b8; font-size: 0.78rem; line-height: 1.4; }
+
+        /* ==========================================================================
+           3. SPECIAL VISUAL OPENING ANIMATIONS FOR GUEST VIEW
+           ========================================================================== */
+        
+        /* 1. WOODEN DOOR TEMPLATE (باب الفرح) */
+        .door-viewport {
+            perspective: 1200px; width: 100%; max-width: 360px; height: 500px; position: relative; margin: 0 auto;
+        }
+        .door-panel {
+            position: absolute; top: 0; width: 50%; height: 100%;
+            background: linear-gradient(135deg, #3d2314, #1a0a04); border: 3px solid #8c532b;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.8); transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+            z-index: 5; display: flex; align-items: center; justify-content: center;
+        }
+        .door-left { left: 0; border-radius: 16px 0 0 16px; transform-origin: left; }
+        .door-right { right: 0; border-radius: 0 16px 16px 0; transform-origin: right; }
+        .door-handle { width: 18px; height: 50px; background: var(--gold-gradient); border-radius: 10px; box-shadow: 0 0 10px #000; }
+        .door-viewport.open .door-left { transform: rotateY(-110deg); }
+        .door-viewport.open .door-right { transform: rotateY(110deg); }
+
+        /* 2. VELVET RING BOX TEMPLATE (الخاتم) */
+        .ringbox-viewport { width: 100%; max-width: 340px; height: 380px; position: relative; margin: 0 auto; perspective: 1000px; }
+        .ringbox-lid {
+            width: 100%; height: 50%; background: linear-gradient(180deg, #4a0e17, #1f0307);
+            border: 2px solid var(--gold-primary); border-radius: 20px 20px 0 0;
+            transform-origin: top; transition: transform 1s ease; position: absolute; top: 0; z-index: 4;
+            display: flex; align-items: center; justify-content: center; font-size: 3rem;
+        }
+        .ringbox-base {
+            width: 100%; height: 50%; background: #1f0307; border: 2px solid var(--gold-primary);
+            border-radius: 0 0 20px 20px; position: absolute; bottom: 0; z-index: 3;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .ringbox-viewport.open .ringbox-lid { transform: rotateX(-140deg); }
+
+        /* 3D Wax Seal Envelope */
         .envelope-viewport {
             min-height: 100dvh; display: flex; flex-direction: column; align-items: center; justify-content: center;
             perspective: 1000px; padding: 16px; background: radial-gradient(circle at center, #1a150e 0%, #02040a 100%);
         }
         .envelope-3d {
             width: 100%; max-width: 380px; height: 260px; position: relative;
-            transform-style: preserve-3d; transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: pointer;
+            transform-style: preserve-3d; transition: transform 0.8s ease; cursor: pointer;
         }
         .env-back-panel {
             position: absolute; width: 100%; height: 100%; background: #181512;
@@ -245,7 +215,7 @@
         .envelope-3d.open .wax-seal-stamp { opacity: 0; transform: translateX(-50%) scale(0.3); }
         .envelope-3d.open .env-card-inside { transform: translateX(-50%) translateY(-170px); z-index: 6; }
 
-        /* Public Guest View Frame */
+        /* Public Guest Frame */
         .guest-invitation-card {
             min-height: 100dvh; background: var(--inv-bg); color: var(--inv-text); font-family: var(--inv-font);
             padding: 30px 12px 80px; position: relative;
@@ -261,12 +231,31 @@
         .cd-box { background: rgba(255, 255, 255, 0.05); border: 1px solid var(--inv-border); border-radius: 10px; padding: 10px; min-width: 70px; }
         .cd-val { font-size: 1.5rem; font-weight: 900; color: var(--inv-accent); }
 
-        /* Builder Mobile Mockup */
+        /* Builder Mockup Frame */
         .builder-grid { display: grid; grid-template-columns: 1fr 380px; gap: 24px; margin-top: 20px; }
         .phone-mockup-frame {
             position: sticky; top: 80px; width: 100%; height: 680px;
             background: #000; border: 10px solid #1e293b; border-radius: 36px; overflow-y: auto;
         }
+
+        /* Pricing & Reviews */
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-top: 24px; }
+        .price-card {
+            position: relative; background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-md); padding: 28px 20px; text-align: center; display: flex; flex-direction: column; justify-content: space-between;
+        }
+        .price-card.popular { border: 2px solid var(--gold-primary); box-shadow: 0 0 35px var(--gold-glow); }
+        .popular-badge {
+            position: absolute; top: -13px; left: 50%; transform: translateX(-50%);
+            background: var(--gold-gradient); color: #000; font-weight: 800; font-size: 0.72rem; padding: 4px 14px; border-radius: 99px;
+        }
+
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px; }
+        .rev-bubble {
+            background: #0b141a; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px;
+            padding: 16px; text-align: right; font-size: 0.85rem; line-height: 1.6;
+        }
+        .rev-time { font-size: 0.7rem; color: #8696a0; display: block; text-align: left; margin-top: 6px; }
 
         @media (max-width: 992px) {
             .builder-grid { grid-template-columns: 1fr; }
@@ -277,17 +266,16 @@
 </head>
 <body>
 
-    <!-- Ambient Particle Glow Canvas -->
+    <!-- Ambient Glow Particles Canvas -->
     <canvas id="bg-canvas"></canvas>
 
-    <!-- Floating WhatsApp FAB Button -->
-    <a href="https://wa.me/9647500000000" target="_blank" class="wa-fab" title="واتسئاپ">💬</a>
+    <!-- WhatsApp Direct FAB (Linked to 0751174292) -->
+    <a href="https://wa.me/964751174292?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%F0%9F%91%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%AF%D8%B9%D9%88%D8%A9%20%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A9" target="_blank" class="wa-fab" title="واتسئاپ">💬</a>
 
     <!-- ==========================================================================
        VIEW 1: PUBLIC LANDING PAGE
        ========================================================================== -->
     <div id="view-landing">
-        <!-- Navigation Bar -->
         <nav class="navbar">
             <div class="container nav-flex">
                 <div style="font-size: 1.3rem; font-weight: 900; display: flex; align-items: center; gap: 8px;">
@@ -313,217 +301,181 @@
 
         <!-- Hero Section -->
         <section class="container hero-section">
-            <div class="hero-badge">🎁 تاقیکردنەوەی بێبەرامبەر — داوەتنامەکەت بە ڕاستەوخۆ ببینە</div>
+            <div style="background: rgba(212,175,55,0.12); color: var(--gold-light); border: 1px solid var(--gold-primary); padding: 6px 18px; border-radius: 99px; font-size: 0.85rem; display: inline-block; margin-bottom: 20px; font-weight: 700;">🎁 تاقیکردنەوەی بێبەرامبەر — داوەتنامەکەت بە ڕاستەوخۆ ببینە</div>
             <h1 class="hero-title">داوەتنامەیەکی دیجیتاڵی فاخر<br>شایستەی خۆشییەکانتان</h1>
-            <p class="hero-subtitle">رابطێکی ئەلیکترۆنی سادە و شاهانە بنێرە بۆ میوانەکانت — بە زەرفی 3D کەیفی بگرە، وەڵامی میوانەکان (RSVP) بە ڕاستەوخۆ کۆبکەرەوە.</p>
+            <p class="hero-subtitle">بەسترێکی ئەلیکترۆنی سادە و شاهانە بنێرە بۆ میوانەکانت — بە ئۆپێنەری دەرگای دار، سندوقی ئەڵقە، و زەرفی 3D کەیفی بگرە.</p>
             <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-                <a href="#pricing" class="btn-gold" style="padding: 14px 32px; font-size: 1rem;">داواکردنی کارت ✨</a>
-                <button class="btn-glass" onclick="previewDemoEnvelope()" style="padding: 14px 28px; font-size: 1rem;">بینینی نموونەی زیندوو 👁️</button>
-            </div>
-
-            <!-- Stats Strip -->
-            <div class="stats-strip">
-                <div class="stat-item"><b>+850</b><span>داوەتنامەی دروستکراو</span></div>
-                <div class="stat-item"><b>★ 4.9 / 5</b><span>پلەی ڕەزامەندی کڕیاران</span></div>
-                <div class="stat-item"><b>🇮🇶 🇸🇦 🇦🇪</b><span>لە کوردستان و کەنداو</span></div>
+                <a href="https://wa.me/964751174292?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A3%D8%B7%D9%84%D8%A8%20%D8%AF%D8%B9%D9%88%D8%A9" target="_blank" class="btn-gold" style="padding: 14px 32px; font-size: 1rem;">داواکردنی ڕاستەوخۆ ✨</a>
+                <button class="btn-glass" onclick="previewSpecificTheme('tpl-bab')" style="padding: 14px 28px; font-size: 1rem;">بینینی نموونەی دەرگا (باب الفرح) 🚪</button>
             </div>
         </section>
 
-        <!-- Dynamic Templates Carousel Section (Competitor Integration) -->
-        <section id="templates" class="container" style="padding: 40px 0;">
+        <!-- Dynamic Templates Catalogue (All Competitor Ideas Integrated) -->
+        <section id="templates" class="container" style="padding: 20px 0 50px;">
             <div class="tc-block">
                 <div class="tc-head">
-                    <h3>بەرچاوترین و پڕفۆلۆترین تێمپلەیتەکان 🔥</h3>
-                    <span style="color: #94a3b8; font-size: 0.8rem;">ڕابکێشە بۆ بینینی زۆرتری تێمپلەیتەکان 👈</span>
+                    <h3>الأكثر مبيعاً 🔥 (پڕفۆلۆترین دیزاینەکان)</h3>
+                    <span style="color: #94a3b8; font-size: 0.8rem;">ڕابکێشە بۆ بینینی هەموو تێمپلەیتەکان 👈</span>
                 </div>
                 
                 <div class="tc-row">
-                    <!-- Template Card 1 -->
+                    <!-- Template 1: Classic Gold Wax Seal -->
                     <div class="tc-card">
-                        <div class="tc-shot">
-                            <span class="tc-badge">پڕفۆلۆترین</span>
-                            <div style="width:100%; height:100%; background: linear-gradient(135deg, #bf953f, #000); display:flex; align-items:center; justify-content:center; font-size:2rem;">👑</div>
+                        <div class="tc-shot" style="background: linear-gradient(135deg, #181512, #000);">
+                            <span class="tc-badge">الأكثر طلباً</span>
+                            <div style="font-size:2.8rem; margin-bottom: 8px;">👑</div>
+                            <div style="font-size:0.75rem; color:var(--gold-light);">زەرفی 3D بە مۆری زێڕین</div>
                         </div>
                         <b>کلاسیك زێڕین</b>
-                        <small>زەرفی 3D + مۆری زێڕین</small>
-                        <div class="tc-acts">
-                            <button class="btn-gold" style="flex:1; padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-gold')">تەماشا بکە ↗</button>
-                        </div>
+                        <small>باب يُفتح + مۆری زێڕین</small>
+                        <button class="btn-gold" style="padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-gold')">معاينة ↗</button>
                     </div>
 
-                    <!-- Template Card 2 -->
+                    <!-- Template 2: Bab Al Farah (Wooden Door) -->
                     <div class="tc-card">
-                        <div class="tc-shot">
-                            <span class="tc-badge">نوێ</span>
-                            <div style="width:100%; height:100%; background: linear-gradient(135deg, #022c22, #000); display:flex; align-items:center; justify-content:center; font-size:2rem;">🦢</div>
+                        <div class="tc-shot" style="background: linear-gradient(135deg, #3d2314, #1a0a04);">
+                            <span class="tc-badge">تایبەت</span>
+                            <div style="font-size:2.8rem; margin-bottom: 8px;">🚪</div>
+                            <div style="font-size:0.75rem; color:#fef08a;">دەرگای دار بە ٣ لەدەرگادان</div>
                         </div>
-                        <b>بحيرة البجع (سوان)</b>
-                        <small>دەریاچەی قازە سپییەکان</small>
-                        <div class="tc-acts">
-                            <button class="btn-gold" style="flex:1; padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-swans')">تەماشا بکە ↗</button>
-                        </div>
+                        <b>باب الفرح</b>
+                        <small>دُقّوا ثلاثاً ويُفتح الباب</small>
+                        <button class="btn-gold" style="padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-bab')">معاينة ↗</button>
                     </div>
 
-                    <!-- Template Card 3 -->
+                    <!-- Template 3: Swan Lake -->
                     <div class="tc-card">
-                        <div class="tc-shot">
-                            <div style="width:100%; height:100%; background: linear-gradient(135deg, #2c0915, #000); display:flex; align-items:center; justify-content:center; font-size:2rem;">💍</div>
+                        <div class="tc-shot" style="background: linear-gradient(135deg, #022c22, #000);">
+                            <span class="tc-badge">جديد</span>
+                            <div style="font-size:2.8rem; margin-bottom: 8px;">🦢</div>
+                            <div style="font-size:0.75rem; color:#6ee7b7;">دەریاچەی قازە سپییەکان</div>
                         </div>
-                        <b>الخاتم (ئەڵقەی زێڕین)</b>
-                        <small>صندوقی ئەڵقەی مارەبڕین</small>
-                        <div class="tc-acts">
-                            <button class="btn-gold" style="flex:1; padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-ring')">تەماشا بکە ↗</button>
-                        </div>
+                        <b>بحيرة البجع</b>
+                        <small>ظرف ينفتح على بحيرة</small>
+                        <button class="btn-gold" style="padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-swans')">معاينة ↗</button>
                     </div>
 
-                    <!-- Template Card 4 -->
+                    <!-- Template 4: Ring Box -->
                     <div class="tc-card">
-                        <div class="tc-shot">
-                            <div style="width:100%; height:100%; background: linear-gradient(135deg, #2a0404, #000); display:flex; align-items:center; justify-content:center; font-size:2rem;">☀️</div>
+                        <div class="tc-shot" style="background: linear-gradient(135deg, #4a0e17, #000);">
+                            <div style="font-size:2.8rem; margin-bottom: 8px;">💍</div>
+                            <div style="font-size:0.75rem; color:#f472b6;">صندوقی ئەڵقەی مەخمەری</div>
+                        </div>
+                        <b>الخاتم</b>
+                        <small>صندوق خاتم يُفتح</small>
+                        <button class="btn-gold" style="padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-ring')">معاينة ↗</button>
+                    </div>
+
+                    <!-- Template 5: Starry Night Van Gogh -->
+                    <div class="tc-card">
+                        <div class="tc-shot" style="background: linear-gradient(135deg, #09132e, #000);">
+                            <div style="font-size:2.8rem; margin-bottom: 8px;">✨</div>
+                            <div style="font-size:0.75rem; color:#38bdf8;">ئاسمانی شینی ئەستێرەیی</div>
+                        </div>
+                        <b>ليلة النجوم</b>
+                        <small>سماء فان كوخ تُرسَم حيّاً</small>
+                        <button class="btn-gold" style="padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-vangogh')">معاينة ↗</button>
+                    </div>
+
+                    <!-- Template 6: Disney Castle -->
+                    <div class="tc-card">
+                        <div class="tc-shot" style="background: linear-gradient(135deg, #1f0b2b, #000);">
+                            <div style="font-size:2.8rem; margin-bottom: 8px;">🏰</div>
+                            <div style="font-size:0.75rem; color:#c084fc;">قەسر و دەروازەی سیحراوی</div>
+                        </div>
+                        <b>ديزني</b>
+                        <small>قصر وبوّابة سحرية</small>
+                        <button class="btn-gold" style="padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-disney')">معاينة ↗</button>
+                    </div>
+
+                    <!-- Template 7: Kurdish Traditional -->
+                    <div class="tc-card">
+                        <div class="tc-shot" style="background: linear-gradient(135deg, #2a0404, #000);">
+                            <div style="font-size:2.8rem; margin-bottom: 8px;">☀️</div>
+                            <div style="font-size:0.75rem; color:#facc15;">نەخشی کەلەپووری کوردی</div>
                         </div>
                         <b>کەلەپووری کوردی</b>
-                        <small>دیزاینی نەریتی و زێڕین</small>
-                        <div class="tc-acts">
-                            <button class="btn-gold" style="flex:1; padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-kurdish')">تەماشا بکە ↗</button>
-                        </div>
-                    </div>
-
-                    <!-- Template Card 5 -->
-                    <div class="tc-card">
-                        <div class="tc-shot">
-                            <div style="width:100%; height:100%; background: linear-gradient(135deg, #09132e, #000); display:flex; align-items:center; justify-content:center; font-size:2rem;">✨</div>
-                        </div>
-                        <b>لیلة النجوم (ئەستێرە)</b>
-                        <small>ئاسمانی درەوشاوەی شین</small>
-                        <div class="tc-acts">
-                            <button class="btn-gold" style="flex:1; padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-vangogh')">تەماشا بکە ↗</button>
-                        </div>
-                    </div>
-
-                    <!-- Template Card 6 -->
-                    <div class="tc-card">
-                        <div class="tc-shot">
-                            <div style="width:100%; height:100%; background: linear-gradient(135deg, #1f0b2b, #000); display:flex; align-items:center; justify-content:center; font-size:2rem;">🏰</div>
-                        </div>
-                        <b>دیزنی شاهانە</b>
-                        <small>کۆشکی ئەفسانەیی و دەروازە</small>
-                        <div class="tc-acts">
-                            <button class="btn-gold" style="flex:1; padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-disney')">تەماشا بکە ↗</button>
-                        </div>
+                        <small>خۆری زێڕین + نەخشی ئاوریشم</small>
+                        <button class="btn-gold" style="padding:4px; font-size:0.75rem; min-height:32px;" onclick="previewSpecificTheme('tpl-kurdish')">معاينة ↗</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic Phone Showcase Interactive Section (Competitor Feature Demo Stage) -->
-        <section id="features" class="container" style="padding: 40px 0;">
-            <h2 style="text-align: center; font-size: 1.8rem; font-weight: 900; margin-bottom: 8px;">تایبەتمەندییە ناوازەکان</h2>
-            <p style="text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 24px;">پەنجە لەسەر هەر مێزەیەک بدە بۆ بینینی نموونەی زیندوو لەناو مۆبایلەکەدا</p>
-
-            <div class="showcase-tabs" style="justify-content: center;">
-                <button class="tab-btn active" onclick="switchFeatureTab(0)">💌 پشتڕاستکردنەوە (RSVP)</button>
-                <button class="tab-btn" onclick="switchFeatureTab(1)">🎵 مۆسیقای تایبەت</button>
-                <button class="tab-btn" onclick="switchFeatureTab(2)">📍 نەخشەی ژیرانە</button>
-                <button class="tab-btn" onclick="switchFeatureTab(3)">💬 دیواری پیرۆزبایی</button>
-            </div>
-
-            <div class="glass-card" style="max-width: 600px; margin: 0 auto; text-align: center;">
-                <div class="demo-phone-display" id="phone-demo-stage">
-                    <!-- Dynamic Phone Display Content -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Pricing Tiers (Adapted from Competitor) -->
-        <section id="pricing" class="container" style="padding: 50px 0;">
-            <h2 style="text-align: center; font-size: 2rem; font-weight: 900; margin-bottom: 8px;">باقەکان و نرخەکان</h2>
-            <p style="text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 30px;">کڕینی یەکجارە بەبێ تێچووی شاراوە</p>
+        <!-- Pricing Tiers (Linked to WhatsApp 0751174292) -->
+        <section id="pricing" class="container" style="padding: 40px 0;">
+            <h2 style="text-align: center; font-size: 2rem; font-weight: 900; margin-bottom: 8px;">اختار الباقة اللي تناسبك (باقەکان)</h2>
+            <p style="text-align: center; color: #94a3b8; font-size: 0.9rem; margin-bottom: 30px;">دفعة واحدة آمنة، ونبدأ تجهيز دعوتك فوراً</p>
 
             <div class="pricing-grid">
-                <!-- Basic Tier -->
+                <!-- Basic -->
                 <div class="price-card">
                     <div>
-                        <h3 style="font-size: 1.3rem; color: var(--gold-light);">باقەی سەرەتایی</h3>
-                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">کارتێکی ئاسایی و سەرنجڕاکێش</p>
+                        <h3 style="font-size: 1.3rem; color: var(--gold-light);">🌱 الأساسية (سەرەتایی)</h3>
+                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">دعوة أنيقة بأهم المميزات</p>
                         <div style="font-size: 2.2rem; font-weight: 900; color: #fff;" class="price-tag" data-usd="$19" data-iqd="25,000 IQD">$19</div>
                     </div>
                     <ul style="list-style: none; text-align: right; margin: 20px 0; font-size: 0.85rem; color: #cbd5e1; display: grid; gap: 10px;">
                         <li>✔ بەستەری تایبەت بۆ داوەتنامە</li>
                         <li>✔ نەخشەی Google Maps</li>
-                        <li>✔ کاتی پێچەوانە (Countdown)</li>
-                        <li>✔ پشتگیری تا 100 میوان</li>
+                        <li>✔ عدّاد تنازلي (کاتی پێچەوانە)</li>
                     </ul>
-                    <button class="btn-glass" onclick="selectPackage('Basic')">دیارییکردنی باقە</button>
+                    <a href="https://wa.me/964751174292?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A7%D8%B3%D9%8A%D8%A9" target="_blank" class="btn-glass">ابدأ بهذه الباقة</a>
                 </div>
 
-                <!-- Premium Tier -->
+                <!-- Full Royal -->
                 <div class="price-card popular">
-                    <div class="popular-badge">پڕفۆلۆترین ⭐</div>
+                    <div class="popular-badge">الأكثر طلباً ⭐</div>
                     <div>
-                        <h3 style="font-size: 1.3rem; color: var(--gold-primary);">باقەی کامڵ (Full Royal)</h3>
-                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">گشت تایبەتمەندییە پێشکەوتووەکان</p>
+                        <h3 style="font-size: 1.3rem; color: var(--gold-primary);">⭐ الشاملة (كامڵ شاهانە)</h3>
+                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">كل شيء مفتوح — الخيار الأذكى</p>
                         <div style="font-size: 2.2rem; font-weight: 900; color: var(--gold-primary);" class="price-tag" data-usd="$30" data-iqd="40,000 IQD">$30</div>
                     </div>
                     <ul style="list-style: none; text-align: right; margin: 20px 0; font-size: 0.85rem; color: #cbd5e1; display: grid; gap: 10px;">
-                        <li>✔ هەموو تایبەتمەندییەکانی باقەی سەرەتایی</li>
-                        <li>✔ زەرفی 3D شاهانە بە مۆری زێڕین</li>
-                        <li>✔ ئۆپلۆدکردنی فایلی مۆسیقا و ڤیدیۆ</li>
-                        <li>✔ سیستەمی RSVP و دیواری پیرۆزبایی</li>
-                        <li>✔ ئەلبومی وێنەی گەلەری</li>
+                        <li>✔ هەموو مێزەکانی باقەی سەرەتایی</li>
+                        <li>✔ زەرفی 3D / دەرگای دار / سندوقی ئەڵقە</li>
+                        <li>✔ ئۆپلۆدکردنی فایلی مۆسیقا 🎵</li>
+                        <li>✔ تأكيد الحضور (RSVP) بە ڕاستەوخۆ</li>
+                        <li>✔ جدار التهاني (دیواری پیرۆزبایی)</li>
                     </ul>
-                    <button class="btn-gold" onclick="selectPackage('Full')">دەستپێکردن بەم باقەیە</button>
+                    <a href="https://wa.me/964751174292?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84%D8%A9" target="_blank" class="btn-gold">ابدأ بهذه الباقة</a>
                 </div>
 
-                <!-- VIP Tier -->
+                <!-- VIP -->
                 <div class="price-card">
                     <div>
-                        <h3 style="font-size: 1.3rem; color: var(--gold-light);">باقەی تایبەت (VIP)</h3>
-                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">دیزاینی تایبەت بە کڕیار</p>
-                        <div style="font-size: 2.2rem; font-weight: 900; color: #fff;" class="price-tag" data-usd="$50" data-iqd="65,000 IQD">$50</div>
+                        <h3 style="font-size: 1.3rem; color: var(--gold-light);">👑 الملكية (تایبەت VIP)</h3>
+                        <p style="color: #94a3b8; font-size: 0.8rem; margin: 6px 0 16px;">تفصيل على ذوقك وأولوية كاملة</p>
+                        <div style="font-size: 2.2rem; font-weight: 900; color: #fff;" class="price-tag" data-usd="$52" data-iqd="70,000 IQD">$52</div>
                     </div>
                     <ul style="list-style: none; text-align: right; margin: 20px 0; font-size: 0.85rem; color: #cbd5e1; display: grid; gap: 10px;">
-                        <li>✔ هەموو تایبەتمەندییەکانی باقەی کامڵ</li>
-                        <li>✔ کۆدی QRی تایبەت بە خێزانەکان</li>
-                        <li>✔ دیزاین کردنی تایبەت (Custom Design)</li>
+                        <li>✔ هەموو مێزەکانی باقەی الشاملة</li>
+                        <li>✔ بطاقات دخول القاعة برمز QR</li>
+                        <li>✔ ئۆپلۆدکردنی ڤیدیۆ و ئەلبومی وێنە</li>
                         <li>✔ پشتیوانی بەپەلە لەواتسئاپ (24/7)</li>
                     </ul>
-                    <button class="btn-glass" onclick="selectPackage('VIP')">دیارییکردنی باقە</button>
+                    <a href="https://wa.me/964751174292?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%85%D9%84%D9%83%D9%8A%D8%A9" target="_blank" class="btn-glass">ابدأ بهذه الباقة</a>
                 </div>
             </div>
         </section>
 
         <!-- Customer Reviews Wall (WhatsApp Chat Mockup) -->
         <section id="reviews" class="container" style="padding: 40px 0;">
-            <h2 style="text-align: center; font-size: 1.8rem; font-weight: 900; margin-bottom: 8px;">ڕای کڕیارە ئازیزەکانمان 💬</h2>
+            <h2 style="text-align: center; font-size: 1.8rem; font-weight: 900; margin-bottom: 8px;">قالوا عن دعوة 💬 (ڕای کڕیاران)</h2>
             <p style="text-align: center; color: #94a3b8; font-size: 0.88rem; margin-bottom: 24px;">راستەوخۆ لە وەتسئاپەوە</p>
 
             <div class="reviews-grid">
                 <div class="rev-bubble">
-                    دەستتان خۆش بێت بەڕاستی داوەتنامەکە زۆر شیک و ناوازە بوو! هەموو خزمەکانمان سەرسام بوون بە زەرفە 3Dەکەی. دەستی پێشەنگتان خۆش بێت. ❤️
-                    <span class="rev-time">10:44 PM • هەولێر</span>
+                    تعبتكم هواية هواية و كلش جنتوا متعاونين و تعاملكم الحلو فوك كل شي .. الله يحفظكم و يوفقكم .. عاشت ايدكم عيوني 🥺🙏
+                    <span class="rev-time">10:44 PM • +964 774 ••• •••• (العراق)</span>
                 </div>
                 <div class="rev-bubble">
-                    زۆر سوپاس بۆ خێرایی و وەڵامدانەوەتان. بەراستى کارتان نایابە و شایەنی ئەوەیە لە هەموو کوردستاندا ژمارە یەک بن. 🌹
-                    <span class="rev-time">01:20 AM • سلێمانی</span>
+                    عمل متقن في الدعوة ينافس الإتقان في المانيا صدقاً 🌹 وأسعار مناسبة وخدمة سريعة 💯 Number One 1️⃣
+                    <span class="rev-time">01:20 AM • +49 15• ••• •••• (ألمانيا)</span>
                 </div>
                 <div class="rev-bubble">
-                    سیستەمی RSVPکەتان زۆر هاوکاری کردین لە ڕێکخستنی ژمارەی میوانەکانی هۆڵەکە. سەرکەوتوو بن. 💯
-                    <span class="rev-time">05:15 PM • دهۆک</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section id="faq" class="container" style="padding: 40px 0 80px; max-width: 800px;">
-            <h2 style="text-align: center; font-size: 1.8rem; font-weight: 900; margin-bottom: 24px;">پرسیارە دووبارەبووەکان</h2>
-            <div style="display: grid; gap: 12px;">
-                <div class="glass-card" style="padding: 16px 20px;">
-                    <h4 style="color: var(--gold-light); margin-bottom: 6px;">کاتی ئامادەبوونی داوەتنامەکە چەند دەخایەنێت؟</h4>
-                    <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6;">کارتەکە بە شێوەیەکی دەستبەجێ (لە ماوەی چەند خولەکێکدا) دوای پڕکردنەوەی زانیارییەکان ئامادە دەبێت.</p>
-                </div>
-                <div class="glass-card" style="padding: 16px 20px;">
-                    <h4 style="color: var(--gold-light); margin-bottom: 6px;">چۆن پارەدان ئەنجام دەدرێت؟</h4>
-                    <p style="color: #94a3b8; font-size: 0.88rem; line-height: 1.6;">پارەدان لەرێگەی زێن کێش (ZainCash / FastPay / FIB) یان فاست پەی و کارتە بانکییەکان وەردەگیرێت.</p>
+                    شكرا جزيلا على كل التعديلات و تعبكم معاي ما قصرتوا و احلى دعوه صارت لهالسنه و كلشي مرتب و ذوق راقي جدا 🌸
+                    <span class="rev-time">01:49 AM • +971 52• ••• •••• (الإمارات)</span>
                 </div>
             </div>
         </section>
@@ -570,7 +522,6 @@
         </nav>
 
         <div class="container" style="padding: 30px 0 60px;">
-            <!-- TAB 1: ALL INVITATIONS LIST -->
             <div id="tab-dash-all">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
                     <div>
@@ -592,22 +543,14 @@
                                 <th style="padding: 12px;">کردارەکان</th>
                             </tr>
                         </thead>
-                        <tbody id="table-invites-body">
-                            <!-- Dynamic Table Rows -->
-                        </tbody>
+                        <tbody id="table-invites-body"></tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- TAB 2: VISUAL BUILDER & REALTIME SPLIT PREVIEW -->
+            <!-- Builder Tab -->
             <div id="tab-dash-builder" class="hidden">
-                <div style="margin-bottom: 16px;">
-                    <h2 style="font-size: 1.5rem; font-weight: 900;" id="editor-heading">دیزاینەر و دروستکردنی کارت</h2>
-                    <p style="color: var(--gold-light); font-size: 0.85rem;">زانیارییەکان بنووسە و لە تەنیشتت بە ڕاستەوخۆ دیزاینەکە ببینە</p>
-                </div>
-
                 <div class="builder-grid">
-                    <!-- Form Controls -->
                     <div class="glass-card">
                         <form id="invite-form" onsubmit="saveInvitationForm(event)">
                             <input type="hidden" id="field-id">
@@ -630,15 +573,15 @@
 
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
                                 <div class="form-group">
-                                    <label>دیزاین (12 Dynamic Themes)</label>
+                                    <label>دیزاین و ئۆپێنەر (All Cinematic Themes)</label>
                                     <select id="field-theme" class="form-control" onchange="syncLivePreview()">
-                                        <option value="tpl-gold">زێڕینی کلاسیك (Luxury Gold)</option>
-                                        <option value="tpl-swans">بحيرة البجع (Swan Lake)</option>
-                                        <option value="tpl-ring">الخاتم (Rose Ring)</option>
-                                        <option value="tpl-kurdish">کەلەپووری کوردی (Kurdish)</option>
+                                        <option value="tpl-gold">زێڕینی کلاسیك (Wax Seal Envelope)</option>
+                                        <option value="tpl-bab">باب الفرح (Wooden Door Knock)</option>
+                                        <option value="tpl-ring">الخاتم (Red Velvet Ring Box)</option>
+                                        <option value="tpl-swans">بحيرة البجع (Swan Lake Emerald)</option>
                                         <option value="tpl-vangogh">لیلة النجوم (Starry Blue)</option>
-                                        <option value="tpl-disney">دیزنی شاهانە (Disney Purple)</option>
-                                        <option value="tpl-black">مەخمەری ڕەش (Velvet Black)</option>
+                                        <option value="tpl-disney">دیزنی شاهانە (Disney Castle)</option>
+                                        <option value="tpl-kurdish">کەلەپووری کوردی (Kurdish Heritage)</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -681,12 +624,12 @@
 
                             <div class="form-group">
                                 <label>🎵 ئۆپلۆدکردنی فایلی دەنگ (MP3)</label>
-                                <input type="file" id="file-music" class="form-control" accept="audio/*" onchange="handleAudioFileUpload(event)">
+                                <input type="file" id="file-music" class="form-control" accept="audio/*">
                             </div>
 
                             <div class="form-group">
                                 <label>لینکی تایبەت (Custom URL Slug)</label>
-                                <input type="text" id="field-slug" class="form-control" value="ari-wedding" required placeholder="ari-wedding">
+                                <input type="text" id="field-slug" class="form-control" value="ari-wedding" required>
                             </div>
 
                             <div style="display: flex; gap: 10px; margin-top: 20px;">
@@ -696,23 +639,22 @@
                         </form>
                     </div>
 
-                    <!-- Realtime Mobile Frame Preview -->
+                    <!-- Phone Mockup Frame -->
                     <div class="phone-mockup-frame">
                         <div id="live-preview-container" class="guest-invitation-card" data-theme="tpl-gold" style="min-height: 100%; padding: 20px 10px;">
                             <div class="card-inner-frame" style="padding: 20px 10px;">
-                                <div style="font-size: 0.75rem; letter-spacing: 2px; opacity: 0.8;">داوەتنامەی فەرمی</div>
+                                <div style="font-size: 0.75rem; opacity: 0.8;">داوەتنامەی فەرمی</div>
                                 <div class="card-names-title" id="prev-names" style="font-size: 1.8rem;">ئاری & دەريا</div>
                                 <div id="prev-title" style="font-size: 0.9rem; margin-bottom: 12px;">ئاهەنگی هاوسەرگیری شاهانە</div>
                                 <p id="prev-text" style="font-size: 0.8rem; line-height: 1.6; margin-bottom: 16px;">بەخۆشحاڵییەوە داوا لە ئێوەی ئازیز دەکەین...</p>
                                 <div id="prev-date" style="font-size: 0.85rem; font-weight: 700;">٢٥ی تشرینی یەکەم</div>
-                                <div id="prev-venue" style="font-size: 0.75rem; opacity: 0.8; margin-top: 4px;">هۆڵی سەعد عەبدوڵڵا</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- TAB 3: GUEST RSVPs -->
+            <!-- RSVPs Tab -->
             <div id="tab-dash-rsvps" class="hidden">
                 <h2 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 16px;">پەیام و پشتڕاستکردنەوەی میوانەکان (RSVP)</h2>
                 <div class="glass-card" style="overflow-x: auto;">
@@ -722,12 +664,9 @@
                                 <th style="padding: 12px;">ناوی میوان</th>
                                 <th style="padding: 12px;">ژمارەی مۆبایل</th>
                                 <th style="padding: 12px;">دۆخی ئامادەبوون</th>
-                                <th style="padding: 12px;">پەیامی پیرۆزبایی</th>
                             </tr>
                         </thead>
-                        <tbody id="table-rsvps-body">
-                            <!-- Dynamic RSVPs -->
-                        </tbody>
+                        <tbody id="table-rsvps-body"></tbody>
                     </table>
                 </div>
             </div>
@@ -735,27 +674,18 @@
     </section>
 
     <!-- ==========================================================================
-       VIEW 4: PUBLIC GUEST EXPERIENCE (3D ENVELOPE + UNVEILED CARD)
+       VIEW 4: PUBLIC GUEST EXPERIENCE (CINEMATIC 3D OPENERS)
        ========================================================================== -->
     <section id="view-guest" class="hidden">
-        <!-- STEP 1: 3D WAX SEAL ENVELOPE -->
-        <div id="guest-envelope-step" class="envelope-viewport">
-            <div class="envelope-3d" id="envelope-3d-element" onclick="unseal3DEnvelope()">
-                <div class="env-back-panel"></div>
-                <div class="env-card-inside">
-                    <div style="font-size: 0.75rem; letter-spacing: 2px;">داوەتنامەی فەرمی</div>
-                    <div style="font-size: 1.5rem; margin-top: 12px;" id="env-card-names">ئاری & دەريا</div>
-                </div>
-                <div class="env-flap-panel"></div>
-                <div class="env-pocket-panel"></div>
-                <div class="wax-seal-stamp">👑</div>
-            </div>
-            <div style="margin-top: 30px; color: var(--gold-light); font-size: 0.9rem; letter-spacing: 1px;">
-                👇 پەنجە لە مۆرە زێڕینەکە بدە بۆ کردنەوەی زەرفەکە
+        
+        <!-- OPENER CONTAINER (DYNAMICALLY LOADED ACCORDING TO TEMPLATE) -->
+        <div id="guest-opener-step" class="envelope-viewport">
+            <div id="opener-dynamic-box">
+                <!-- Javascript injects Wax Seal / Door / Ringbox here -->
             </div>
         </div>
 
-        <!-- STEP 2: MAIN UNVEILED LUXURY CARD -->
+        <!-- MAIN UNVEILED INVITATION CARD -->
         <div id="guest-card-step" class="guest-invitation-card hidden" data-theme="tpl-gold">
             <audio id="guest-audio-element" loop></audio>
 
@@ -786,17 +716,11 @@
                     <a id="g-maps" href="#" target="_blank" class="btn-gold">📍 بینینی شوێن لە نەخشەدا</a>
                     <button class="btn-glass" onclick="openGuestRsvpModal()">💌 پشتڕاستکردنەوەی ئامادەبوون (RSVP)</button>
                 </div>
-
-                <!-- Wishes Wall -->
-                <div style="margin-top: 30px; text-align: right;">
-                    <h3 style="font-size: 1.1rem; color: var(--gold-light); margin-bottom: 12px;">پەیامی پیرۆزبایی میوانەکان</h3>
-                    <div id="g-wishes-container" style="display: grid; gap: 10px;"></div>
-                </div>
             </div>
         </div>
     </section>
 
-    <!-- MODAL: RSVP GUEST -->
+    <!-- RSVP Modal -->
     <div id="modal-guest-rsvp" style="position: fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(15px); z-index:1000; display:flex; align-items:center; justify-content:center; padding: 16px;" class="hidden">
         <div class="glass-card" style="max-width: 400px; width: 100%;">
             <h3 style="font-size: 1.2rem; color: var(--gold-light); margin-bottom: 16px;">پشتڕاستکردنەوەی ئامادەبوون</h3>
@@ -824,13 +748,12 @@
         </div>
     </div>
 
-    <!-- JavaScript Core Engine -->
+    <!-- JavaScript Master Engine -->
     <script>
         const DEFAULT_PASS = 'admin123';
-        const STORAGE_KEY_INVITES = 'kart_royal_invites_v9';
-        const STORAGE_KEY_RSVPS = 'kart_royal_rsvps_v9';
+        const STORAGE_KEY_INVITES = 'kart_royal_invites_v10';
+        const STORAGE_KEY_RSVPS = 'kart_royal_rsvps_v10';
 
-        /* Sample Invitations Initial Data */
         const INITIAL_INVITATIONS = [
             {
                 id: 'inv_101',
@@ -854,38 +777,25 @@
             const data = localStorage.getItem(STORAGE_KEY_INVITES);
             return data ? JSON.parse(data) : INITIAL_INVITATIONS;
         }
+        function saveInvites(data) { localStorage.setItem(STORAGE_KEY_INVITES, JSON.stringify(data)); }
+        function getRSVPs() { return JSON.parse(localStorage.getItem(STORAGE_KEY_RSVPS) || '[]'); }
+        function saveRSVPs(data) { localStorage.setItem(STORAGE_KEY_RSVPS, JSON.stringify(data)); }
 
-        function saveInvites(data) {
-            localStorage.setItem(STORAGE_KEY_INVITES, JSON.stringify(data));
-        }
-
-        function getRSVPs() {
-            const data = localStorage.getItem(STORAGE_KEY_RSVPS);
-            return data ? JSON.parse(data) : [];
-        }
-
-        function saveRSVPs(data) {
-            localStorage.setItem(STORAGE_KEY_RSVPS, JSON.stringify(data));
-        }
-
-        /* Routing Engine */
+        /* Routing Logic */
         function handleRouting() {
             const hash = window.location.hash;
-
             document.getElementById('view-landing').classList.add('hidden');
             document.getElementById('view-login').classList.add('hidden');
             document.getElementById('view-dashboard').classList.add('hidden');
             document.getElementById('view-guest').classList.add('hidden');
 
             if (hash.startsWith('#invite/')) {
-                const slug = hash.replace('#invite/', '');
-                renderGuestView(slug);
+                renderGuestView(hash.replace('#invite/', ''));
             } else if (hash === '#admin-login') {
                 document.getElementById('view-login').classList.remove('hidden');
             } else if (hash === '#dashboard' && localStorage.getItem('kart_royal_logged') === 'true') {
                 document.getElementById('view-dashboard').classList.remove('hidden');
-                renderAdminTable();
-                renderRSVPTable();
+                renderAdminTable(); renderRSVPTable();
             } else {
                 document.getElementById('view-landing').classList.remove('hidden');
             }
@@ -893,7 +803,7 @@
         window.addEventListener('hashchange', handleRouting);
         window.addEventListener('load', handleRouting);
 
-        /* Currency Switcher Engine */
+        /* Currency Switcher */
         const currencySelect = document.getElementById('currency-select');
         if (currencySelect) {
             currencySelect.addEventListener('change', (e) => {
@@ -904,48 +814,6 @@
             });
         }
 
-        /* Interactive Phone Demo Stage Logic (Competitor Dynamic Stage) */
-        const demoPhoneHTMLs = [
-            `
-                <div style="font-size:0.75rem; color:#8696a0; margin-bottom:10px;">ئاماری زیندوی میوانەکان (RSVP)</div>
-                <div style="font-size:2.2rem; font-weight:900; color:var(--gold-primary);">١٢٤</div>
-                <div style="font-size:0.8rem; color:#4ade80; margin-bottom:14px;">ئامادە دەبن (١٢٤ کەس)</div>
-                <div style="text-align:right; font-size:0.75rem; background:rgba(255,255,255,0.06); padding:8px; border-radius:8px; margin-bottom:6px;">✔ سارة ئەحمەد (+١ مرافق)</div>
-                <div style="text-align:right; font-size:0.75rem; background:rgba(255,255,255,0.06); padding:8px; border-radius:8px; margin-bottom:6px;">✔ مصطفى علی (+٢ مرافق)</div>
-                <div style="text-align:right; font-size:0.75rem; background:rgba(255,255,255,0.06); padding:8px; border-radius:8px;">✔ زهراء حسن (+١ مرافق)</div>
-            `,
-            `
-                <div style="font-size:0.75rem; color:#8696a0; margin-bottom:10px;">لێدانی مۆسیقای تایبەت 🎵</div>
-                <div style="font-size:2.8rem; margin:16px 0;">🎶</div>
-                <div style="font-size:0.85rem; font-weight:700; color:var(--gold-light);">گۆرانی هەڵبژێردراو بە شێوازی خودکار</div>
-                <div style="font-size:0.75rem; opacity:0.8; margin-top:4px;">دەستپێکردن لەگەڵ کردنەوەی زەرفەکەدا</div>
-            `,
-            `
-                <div style="font-size:0.75rem; color:#8696a0; margin-bottom:10px;">دۆزینەوەی شوێنی هۆڵ 📍</div>
-                <div style="font-size:2.8rem; margin:16px 0;">🗺️</div>
-                <div style="font-size:0.85rem; font-weight:700; color:#38bdf8;">هۆڵی سەعد عەبدوڵڵا - هەولێر</div>
-                <div style="font-size:0.75rem; opacity:0.8; margin-top:4px;">کردنەوە ڕاستەوخۆ لە گۆگل ماپس</div>
-            `,
-            `
-                <div style="font-size:0.75rem; color:#8696a0; margin-bottom:10px;">دیواری پیرۆزبایی میوانەکان 💬</div>
-                <div style="text-align:right; font-size:0.75rem; background:rgba(255,255,255,0.06); padding:10px; border-radius:8px; margin-bottom:8px;">
-                    <b style="color:var(--gold-primary);">کاوە ئازاد:</b> هەزار پیرۆزە بەهیوای بەختەوەری!
-                </div>
-                <div style="text-align:right; font-size:0.75rem; background:rgba(255,255,255,0.06); padding:10px; border-radius:8px;">
-                    <b style="color:var(--gold-primary);">دڵنیا ئاراس:</b> پیرۆز بێت شایستەی باشترینەکانن 🤍
-                </div>
-            `
-        ];
-
-        function switchFeatureTab(index) {
-            document.querySelectorAll('.tab-btn').forEach((btn, i) => {
-                btn.classList.toggle('active', i === index);
-            });
-            document.getElementById('phone-demo-stage').innerHTML = demoPhoneHTMLs[index];
-        }
-        // Init default tab
-        switchFeatureTab(0);
-
         function previewSpecificTheme(themeKey) {
             const invites = getInvites();
             if (invites.length > 0) {
@@ -955,14 +823,9 @@
             }
         }
 
-        function previewDemoEnvelope() {
-            window.location.hash = '#invite/ari-wedding';
-        }
-
         function navigateToAdminLogin() { window.location.hash = '#admin-login'; }
         function showLandingView() { window.location.hash = ''; }
 
-        /* Admin Functions */
         function handleAdminLogin(e) {
             e.preventDefault();
             if (document.getElementById('login-pass').value === DEFAULT_PASS) {
@@ -979,18 +842,14 @@
         }
 
         function switchAdminTab(tabId) {
-            ['dash-all', 'dash-builder', 'dash-rsvps'].forEach(t => {
-                document.getElementById(`tab-${t}`).classList.add('hidden');
-            });
+            ['dash-all', 'dash-builder', 'dash-rsvps'].forEach(t => document.getElementById(`tab-${t}`).classList.add('hidden'));
             document.getElementById(`tab-${tabId}`).classList.remove('hidden');
         }
 
         function renderAdminTable() {
-            const invites = getInvites();
             const tbody = document.getElementById('table-invites-body');
             tbody.innerHTML = '';
-
-            invites.forEach(inv => {
+            getInvites().forEach(inv => {
                 const tr = document.createElement('tr');
                 tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
                 tr.innerHTML = `
@@ -999,28 +858,19 @@
                     <td style="padding:12px; color:var(--gold-light);">${inv.theme}</td>
                     <td style="padding:12px;">${inv.eventDate}</td>
                     <td style="padding:12px; color:#4ade80;">چالاک</td>
-                    <td style="padding:12px;">
-                        <button class="btn-glass" onclick="previewInvite('${inv.slug}')" style="min-height:30px; padding:4px 10px; font-size:0.75rem;">👁️ بینین</button>
-                    </td>
+                    <td style="padding:12px;"><button class="btn-glass" onclick="previewInvite('${inv.slug}')" style="min-height:30px; padding:4px 10px; font-size:0.75rem;">👁️ بینین</button></td>
                 `;
                 tbody.appendChild(tr);
             });
         }
 
         function renderRSVPTable() {
-            const rsvps = getRSVPs();
             const tbody = document.getElementById('table-rsvps-body');
             tbody.innerHTML = '';
-
-            rsvps.forEach(r => {
+            getRSVPs().forEach(r => {
                 const tr = document.createElement('tr');
                 tr.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
-                tr.innerHTML = `
-                    <td style="padding:12px; font-weight:700;">${r.name}</td>
-                    <td style="padding:12px;">${r.phone}</td>
-                    <td style="padding:12px; color:#4ade80;">${r.status}</td>
-                    <td style="padding:12px;">-</td>
-                `;
+                tr.innerHTML = `<td style="padding:12px; font-weight:700;">${r.name}</td><td style="padding:12px;">${r.phone}</td><td style="padding:12px; color:#4ade80;">${r.status}</td>`;
                 tbody.appendChild(tr);
             });
         }
@@ -1032,8 +882,7 @@
 
         function syncLivePreview() {
             const theme = document.getElementById('field-theme').value;
-            const previewContainer = document.getElementById('live-preview-container');
-            previewContainer.setAttribute('data-theme', theme);
+            document.getElementById('live-preview-container').setAttribute('data-theme', theme);
             document.getElementById('prev-names').textContent = `${document.getElementById('field-groom').value} & ${document.getElementById('field-bride').value}`;
             document.getElementById('prev-title').textContent = document.getElementById('field-title').value;
             document.getElementById('prev-date').textContent = document.getElementById('field-date').value;
@@ -1063,27 +912,24 @@
             invites.unshift(newObj);
             saveInvites(invites);
             alert('داوەتنامەکە بە سەرکەوتوویی دروستکرا!');
-            renderAdminTable();
-            switchAdminTab('dash-all');
+            renderAdminTable(); switchAdminTab('dash-all');
         }
 
         function previewInvite(slug) { window.location.hash = `#invite/${slug}`; }
 
-        /* 3D Envelope & Guest View Logic */
+        /* Dynamic Opener Construction & Guest View Engine */
         function renderGuestView(slug) {
             const inv = getInvites().find(i => i.slug === slug);
             document.getElementById('view-guest').classList.remove('hidden');
 
-            const envStep = document.getElementById('guest-envelope-step');
+            const openerBox = document.getElementById('opener-dynamic-box');
             const cardStep = document.getElementById('guest-card-step');
 
-            envStep.classList.remove('hidden');
+            document.getElementById('guest-opener-step').classList.remove('hidden');
             cardStep.classList.add('hidden');
-            document.getElementById('envelope-3d-element').classList.remove('open');
 
             if (inv) {
                 cardStep.setAttribute('data-theme', inv.theme || 'tpl-gold');
-                document.getElementById('env-card-names').textContent = `${inv.groomName} & ${inv.brideName}`;
                 document.getElementById('g-names').textContent = `${inv.groomName} & ${inv.brideName}`;
                 document.getElementById('g-title').textContent = inv.eventTitle;
                 document.getElementById('g-text').textContent = inv.inviteText;
@@ -1091,15 +937,65 @@
                 document.getElementById('g-time').textContent = inv.eventTime;
                 document.getElementById('g-venue').textContent = inv.venueName;
                 document.getElementById('g-maps').href = inv.mapsUrl || '#';
+
+                // Build Custom Cinematic Opener Effect Based on Theme
+                if (inv.theme === 'tpl-bab') {
+                    openerBox.innerHTML = `
+                        <div class="door-viewport" id="door-element" onclick="openDoorEffect()">
+                            <div class="door-panel door-left"><div class="door-handle"></div></div>
+                            <div class="door-panel door-right"><div class="door-handle"></div></div>
+                            <div style="position:absolute; bottom:20px; width:100%; text-align:center; z-index:10; color:var(--gold-light); font-weight:700;">🚪 ٣ جار لە دەرگاکە بدە بۆ کردنەوە</div>
+                        </div>
+                    `;
+                } else if (inv.theme === 'tpl-ring') {
+                    openerBox.innerHTML = `
+                        <div class="ringbox-viewport" id="ringbox-element" onclick="openRingboxEffect()">
+                            <div class="ringbox-lid">💍</div>
+                            <div class="ringbox-base"><span style="color:var(--gold-light);">پەنجە داگرە بۆ کردنەوەی صندوقەکە</span></div>
+                        </div>
+                    `;
+                } else {
+                    // Default 3D Wax Seal Envelope
+                    openerBox.innerHTML = `
+                        <div class="envelope-3d" id="envelope-3d-element" onclick="unseal3DEnvelope()">
+                            <div class="env-back-panel"></div>
+                            <div class="env-card-inside">
+                                <div style="font-size: 0.75rem; letter-spacing: 2px;">داوەتنامەی فەرمی</div>
+                                <div style="font-size: 1.5rem; margin-top: 12px;">${inv.groomName} & ${inv.brideName}</div>
+                            </div>
+                            <div class="env-flap-panel"></div>
+                            <div class="env-pocket-panel"></div>
+                            <div class="wax-seal-stamp">👑</div>
+                        </div>
+                        <div style="margin-top: 30px; color: var(--gold-light); font-size: 0.9rem;">👇 پەنجە لە مۆرە زێڕینەکە بدە بۆ کردنەوەی زەرفەکە</div>
+                    `;
+                }
+
                 startGuestCountdown(inv.countdownDate);
             }
         }
 
+        /* Opener Animations */
         function unseal3DEnvelope() {
-            const env = document.getElementById('envelope-3d-element');
-            env.classList.add('open');
+            document.getElementById('envelope-3d-element').classList.add('open');
             setTimeout(() => {
-                document.getElementById('guest-envelope-step').classList.add('hidden');
+                document.getElementById('guest-opener-step').classList.add('hidden');
+                document.getElementById('guest-card-step').classList.remove('hidden');
+            }, 1000);
+        }
+
+        function openDoorEffect() {
+            document.getElementById('door-element').classList.add('open');
+            setTimeout(() => {
+                document.getElementById('guest-opener-step').classList.add('hidden');
+                document.getElementById('guest-card-step').classList.remove('hidden');
+            }, 1200);
+        }
+
+        function openRingboxEffect() {
+            document.getElementById('ringbox-element').classList.add('open');
+            setTimeout(() => {
+                document.getElementById('guest-opener-step').classList.add('hidden');
                 document.getElementById('guest-card-step').classList.remove('hidden');
             }, 1000);
         }
@@ -1113,8 +1009,7 @@
                 document.getElementById('cd-m').textContent = String(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
                 document.getElementById('cd-s').textContent = String(Math.floor((diff % (1000 * 60)) / 1000)).padStart(2, '0');
             }
-            update();
-            setInterval(update, 1000);
+            update(); setInterval(update, 1000);
         }
 
         function openGuestRsvpModal() { document.getElementById('modal-guest-rsvp').classList.remove('hidden'); }
@@ -1123,31 +1018,24 @@
         function submitGuestRSVP(e) {
             e.preventDefault();
             const rsvps = getRSVPs();
-            rsvps.unshift({
-                name: document.getElementById('rsvp-name').value,
-                phone: document.getElementById('rsvp-phone').value,
-                status: document.getElementById('rsvp-status').value
-            });
-            saveRSVPs(rsvps);
-            closeGuestRsvpModal();
-            alert('سوپاس! وەڵامەکەت تۆمارکرا.');
+            rsvps.unshift({ name: document.getElementById('rsvp-name').value, phone: document.getElementById('rsvp-phone').value, status: document.getElementById('rsvp-status').value });
+            saveRSVPs(rsvps); closeGuestRsvpModal(); alert('سوپاس! وەڵامەکەت تۆمارکرا.');
         }
 
-        /* Ambient Canvas Engine */
+        /* Particles Animation Canvas */
         const canvas = document.getElementById('bg-canvas');
         const ctx = canvas.getContext('2d');
         function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-        window.addEventListener('resize', resizeCanvas);
-        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas); resizeCanvas();
 
-        let particles = Array.from({length: 25}, () => ({
+        let particles = Array.from({length: 30}, () => ({
             x: Math.random() * canvas.width, y: Math.random() * canvas.height,
             size: Math.random() * 2 + 1, speedX: (Math.random() - 0.5) * 0.3, speedY: (Math.random() - 0.5) * 0.3
         }));
 
         function animParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = 'rgba(212, 175, 55, 0.3)';
+            ctx.fillStyle = 'rgba(212, 175, 55, 0.35)';
             particles.forEach(p => {
                 p.x += p.speedX; p.y += p.speedY;
                 if(p.x < 0 || p.x > canvas.width || p.y < 0 || p.y > canvas.height) { p.x = Math.random() * canvas.width; p.y = Math.random() * canvas.height; }
